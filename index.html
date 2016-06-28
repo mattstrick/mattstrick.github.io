@@ -1,1 +1,77 @@
-Hello World
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+
+
+    <title>CodePen - HTML5 deviceorientation </title>
+    
+    
+    
+    
+    
+    
+    
+    
+  </head>
+
+  <body translate="no" >
+
+    <div id="dataContainerOrientation">
+      No orientation data
+    </div>
+    <div id="dataContainerMotion">
+      No motion data
+    </div>
+
+    <div id="myConsole">
+      No data
+    </div>
+    
+    
+        <script>
+      init = function() {
+  document.getElementById('myConsole').innerHTML = "goo";
+
+  //Find our div containers in the DOM
+  var dataContainerOrientation = document.getElementById('dataContainerOrientation');
+  var dataContainerMotion = document.getElementById('dataContainerMotion');
+
+  if (window.DeviceOrientationEvent) {
+    dataContainerOrientation.innerHTML = "woo";
+    window.addEventListener('deviceorientation', function(event) {
+      var alpha = event.alpha;
+      var beta = event.beta;
+      var gamma = event.gamma;
+
+      if (alpha != null || beta != null || gamma != null)
+        dataContainerOrientation.innerHTML = 'alpha: ' + alpha + '<br/>beta: ' + beta + '<br />gamma: ' + gamma;
+    }, true);
+  }
+
+  // Check for support for DeviceMotion events
+  if (window.DeviceMotionEvent) {
+    dataContainerMotion.innerHTML = "girl";
+    window.addEventListener('devicemotion', function(event) {
+      var x = event.accelerationIncludingGravity.x;
+      var y = event.accelerationIncludingGravity.y;
+      var z = event.accelerationIncludingGravity.z;
+      var r = event.rotationRate;
+      var html = 'Acceleration:<br />';
+      html += 'x: ' + x + '<br />y: ' + y + '<br/>z: ' + z + '<br />';
+      html += 'Rotation rate:<br />';
+      if (r != null) html += 'alpha: ' + r.alpha + '<br />beta: ' + r.beta + '<br/>gamma: ' + r.gamma + '<br />';
+      dataContainerMotion.innerHTML = html;
+    }, true);
+  }
+}
+
+init();
+      //# sourceURL=pen.js
+    </script>
+
+    
+    
+    
+  </body>
+</html>
