@@ -99,7 +99,12 @@
   }
 
   var step = function () {
-    maxMinDataContainer.innerHTML = JSON.stringify(maxMinHolder);
+    maxMinDataContainer.innerHTML = "Orientation <br />" +
+      JSON.stringify(maxMinHolder.orientation) + 
+      "<br />Acceleration <br />" +
+      JSON.stringify(maxMinHolder.acceleration) + 
+      "<br />Rotation <br />" +
+      JSON.stringify(maxMinHolder.rotation);
 
     window.requestAnimationFrame(step);
   };
