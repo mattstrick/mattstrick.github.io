@@ -16,54 +16,146 @@
   </head>
 
   <body translate="no" >
-
+  <section>
+  <h2>Current</h2>
     <div id="dataContainerOrientation">
       No orientation data
     </div>
     <div id="dataContainerMotion">
       No motion data
     </div>
+  </section>
+
+  <section>
+  <h2>Max/Min</h2>
+  <div id="maxMinDataContainer">
+    No Max/Min data
+  </div>
+  </section>
 
     <div id="myConsole">
       No data
-    </div>
+    </div>  
     
     
         <script>
       init = function() {
-  document.getElementById('myConsole').innerHTML = "goo";
 
   //Find our div containers in the DOM
   var dataContainerOrientation = document.getElementById('dataContainerOrientation');
   var dataContainerMotion = document.getElementById('dataContainerMotion');
 
+  var maxMinHolder = {
+    orientation : {
+      alpha : {
+        max : 0,
+        min : 0
+      },
+      beta : {
+        max : 0,
+        min : 0
+      },
+      gamma : {
+        max : 0,
+        min : 0
+      }
+    },
+    acceleration : {
+      x : {
+        max : 0,
+        min : 0
+      },
+      y : {
+        max : 0,
+        min : 0
+      },
+      z : {
+        max : 0,
+        min : 0
+      }
+    },
+    rotation : {
+      alpha : {
+        max : 0,
+        min : 0
+      },
+      beta : {
+        max : 0,
+        min : 0
+      },
+      gamma : {
+        max : 0,
+        min : 0
+      }
+    }
+  };
+
+  var checkAbsoluteLargest = function (x, obj) {
+    if (!x) return;
+
+    if (x > obj.max) obj.max = x;
+
+    if (x < obj.min) obj.min = x;
+  }
+
+  var step = function () {
+    maxMinDataContainer.innerHTML = JSON.stringify(maxMinHolder);
+
+    window.requestAnimationFrame(step);
+  };
+
+
+
   if (window.DeviceOrientationEvent) {
-    dataContainerOrientation.innerHTML = "woo";
     window.addEventListener('deviceorientation', function(event) {
       var alpha = event.alpha;
       var beta = event.beta;
       var gamma = event.gamma;
 
-      if (alpha != null || beta != null || gamma != null)
-        dataContainerOrientation.innerHTML = 'alpha: ' + alpha + '<br/>beta: ' + beta + '<br />gamma: ' + gamma;
+      if (alpha != null || beta != null || gamma != null) {
+        if (alpha != null) {
+          checkAbsoluteLargest(alpha, maxMinHolder.orientation.alpha);
+        }
+
+        if (beta != null) {
+          checkAbsoluteLargest(beta, maxMinHolder.orientation.beta);
+        }
+
+        if (gamma != null) {
+          checkAbsoluteLargest(gamma, maxMinHolder.orientation.gamma);
+        }
+
+        dataContainerOrientation.innerHTML = 'alpha: ' + alpha + '<br/>beta: ' + beta + '<br />gamma: ' + gamma;        
+      }
     }, true);
   }
 
   // Check for support for DeviceMotion events
   if (window.DeviceMotionEvent) {
-    dataContainerMotion.innerHTML = "girl";
     window.addEventListener('devicemotion', function(event) {
       var x = event.accelerationIncludingGravity.x;
       var y = event.accelerationIncludingGravity.y;
       var z = event.accelerationIncludingGravity.z;
       var r = event.rotationRate;
+
+      checkAbsoluteLargest(x, maxMinHolder.acceleration.x);
+      checkAbsoluteLargest(y, maxMinHolder.acceleration.y);
+      checkAbsoluteLargest(z, maxMinHolder.acceleration.z);
+
       var html = 'Acceleration:<br />';
       html += 'x: ' + x + '<br />y: ' + y + '<br/>z: ' + z + '<br />';
       html += 'Rotation rate:<br />';
-      if (r != null) html += 'alpha: ' + r.alpha + '<br />beta: ' + r.beta + '<br/>gamma: ' + r.gamma + '<br />';
+      if (r != null) {
+        checkAbsoluteLargest(r.alpha, maxMinHolder.rotation.alpha);
+        checkAbsoluteLargest(r.beta, maxMinHolder.rotation.beta);
+        checkAbsoluteLargest(r.gamma, maxMinHolder.rotation.gamma);
+        html += 'alpha: ' + r.alpha + '<br />beta: ' + r.beta + '<br/>gamma: ' + r.gamma + '<br />';
+      }
       dataContainerMotion.innerHTML = html;
     }, true);
   }
+
+  window.requestAnimationFrame(step);
 }
 
 init();
