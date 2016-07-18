@@ -1,44 +1,4 @@
-<!DOCTYPE html>
-<html >
-  <head>
-    <meta charset="UTF-8">
-
-
-    <title>HTML5 deviceorientation </title>
-    
-   
-  </head>
-
-  <body translate="no" >
-<!--   <section id="createTimer">
-    <h2>Create Timer</h2>
-    <div id="dataContainerOrientation">
-      No orientation data
-    </div>
-
-  </section> -->
-
-  <section id="timer">
-    <h2>Timer</h2>
-    <div id="display">
-      <span class="value">X</span><span class="units">X</span>
-    </div>
-    <div id="controls">
-      <input type="button" value="Start" id="startBtn" />
-      <input type="button" value="Pause" id="pauseBtn" />
-    </div>
-  </section>
-    
-    
-  <script>
-
-  if('serviceWorker' in navigator) {
-    navigator.serviceWorker
-             .register('./sw.js')
-             .then(function() { console.log("Service Worker Registered"); });
-  }
-
-  init = function(sec) {
+init = function(sec) {
 
     //Find our div containers in the DOM
 
@@ -95,11 +55,4 @@
     window.requestAnimationFrame(step);
   }
 
-  init(7);
-    </script>
-
-    
-    
-    
-  </body>
-</html>
+init(7);
