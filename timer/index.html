@@ -34,12 +34,12 @@
 
   if('serviceWorker' in navigator) {
     navigator.serviceWorker
-             .register('./sw.js')
+             .register('/timer/sw.js')
              .then(function() { console.log("Service Worker Registered"); });
   }
   </script>
 
-  <script src="./timer.js"></script>
+  <script src="/timer/app.js"></script>
 
     
     

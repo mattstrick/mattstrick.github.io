@@ -2,9 +2,9 @@ self.addEventListener('install', function(e) {
   e.waitUntil(
   	caches.open('timer').then(function(cache) {
   		return cache.addAll([
-		'/',
-		'/index.html',
-		'/timer.js'
+		'/timer/',
+		'/timer/index.html',
+		'/timer/app.js'
 		]);
   	})
   );
