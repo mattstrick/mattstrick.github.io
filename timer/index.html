@@ -18,28 +18,36 @@
 
   </section> -->
 
-  <section id="timer">
-    <h2>Timer</h2>
+  <h2>Timer</h2>
+  <section id="timer" style="display: none;">    
     <div id="display">
-      <span class="value">X</span><span class="units">X</span>
+      <span class="value"></span><span class="units"></span>
     </div>
     <div id="controls">
       <input type="button" value="Start" id="startBtn" />
       <input type="button" value="Pause" id="pauseBtn" />
+      <input type="button" value="Reset" id="resetBtn" />      
+    </div>
+  </section>
+
+  <section id="setup">
+    <div>
+      <label>Number of seconds</label>
+      <input type="text" value=10 id="timerVal" />
+      <input type="button" value="Set" id="setBtn" />
     </div>
   </section>
     
     
   <script>
-
   if('serviceWorker' in navigator) {
     navigator.serviceWorker
-             .register('/timer/sw.js')
+             .register('../timer/sw.js')
              .then(function() { console.log("Service Worker Registered"); });
   }
   </script>
 
-  <script src="/timer/app.js"></script>
+  <script src="../timer/app.js"></script>
 
     
     
