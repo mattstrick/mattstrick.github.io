@@ -1,6 +1,6 @@
 self.addEventListener('install', function(e) {
   e.waitUntil(
-  	caches.open('timer').then(function(cache) {
+  	caches.open('v2').then(function(cache) {
   		return cache.addAll([
 		'/timer/',
 		'/timer/index.html',
