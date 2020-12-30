@@ -17,9 +17,38 @@
       }
     </script>
     <style type="text/css">
-        span {
-          background-color: aliceblue;
-          text-decoration: underline;
+        #displayForm {
+            font-family: sans-serif;
+            line-height: 1.8em;
+            margin: 0 auto;
+            padding: 0 1.5em;
+            max-width: 8.5in;
+            font-size: 0.8em;
+        }
+
+        #displayForm span {
+            background-color: aliceblue;
+            text-decoration: underline;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+
+        #displayForm h2 {
+            text-align: center;
+            border-bottom: 4px solid;
+            text-transform: uppercase;
+        }
+
+        .vehicleInformation{
+            text-align: left;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .right {
+            text-align: right;
         }
     </style>
 </head>
@@ -71,20 +100,36 @@
         </div>
         <div>
             <h3>Vehicle Information</h3>
+            <div class="center">
+                <div class="vehicleInformation">
+                    <span class="vehicleModel">__________</span>
+                    <span class="vehicleMake">__________</span>
+                    <span class="vehicleYear">__________</span>
+                    <span class="vehiclePrice">__________</span>
+                </div>
+                <div class="vehicleInformation">
+                    <span class="vehicleBodyStyle">__________</span>
+                    <span class="vehicleColor">__________</span>
+                    <span class="vehicleVIN">__________</span>
+                </div>
+                <div class="vehicleInformation">
+                    <span class="vehicleCondition">__________</span>
+                </div>
+            </div>
             <div>
-                <span class="vehicleModel">__________</span>
-                <span class="vehicleMake">__________</span>
-                <span class="vehicleYear">__________</span>
-                <span class="vehiclePrice">__________</span>
-                <span class="vehicleBodyStyle">__________</span>
-                <span class="vehicleColor">__________</span>
-                <span class="vehicleVIN">__________</span>
-                <span class="vehicleCondition">__________</span>
-                <span class="vehicleOdometer">__________</span>
+                Federal and state law require the mileage of the vehicle to be provided upon transfer of ownership. Failure to complete this or providing a false statement may
+result in fines and/or imprisonment. I certify to the best of my knowledge that the vehicle’s odometer reading now reads: <span class="vehicleOdometer">__________</span> Miles.
             </div>
         </div>
-        <div>
+        <div class="right">
+            <span class="buyerName">__________</span>
+            <span class="buyerSignature">__________</span> (signature)
+            <span class="date">__________</span> (date)
+        </div>
+        <div class="right">
             <span class="sellerName">__________</span>
+            <span class="sellerSignature">__________</span> (signature)
+            <span class="date">__________</span> (date)
         </div>
     </div>
 
