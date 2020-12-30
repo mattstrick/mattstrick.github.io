@@ -16,6 +16,12 @@
           .save();
       }
     </script>
+    <style type="text/css">
+        span {
+          background-color: aliceblue;
+          text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <h1>Selling a Car</h1>
@@ -49,32 +55,36 @@
     <div id="displayForm">
         <h2>Bill of Sale</h2>
         <div>
-            <div id="sellerName"></div>
-            <div id="sellerAddress"></div>
-            <div id="sellerCity"></div>
-            <div id="sellerState"></div>
-            <div id="sellerZip"></div>
+            I, <span class="sellerName">__________</span>, of 
+            <span class="sellerAddress">__________</span>
+            <span class="sellerCity">__________</span>
+            <span class="sellerState">__________</span>
+            <span class="sellerZip">__________</span>, agree to sell, transfer and convey all rights, title, and interest in the below described vehicle to
         </div>
         <div>
-            <div id="buyerName"></div>
-            <div id="buyerAddress"></div>
-            <div id="buyerCity"></div>
-            <div id="buyerState"></div>
-            <div id="buyerZip"></div>
+            <span class="buyerName">__________</span>, of
+            <span class="buyerAddress">__________</span>
+            <span class="buyerCity">__________</span>
+            <span class="buyerState">__________</span>
+            <span class="buyerZip">__________</span> for the total sum of $ 
+            <span class="salePrice">__________</span>, the receipt of which is hereby acknowledged.
         </div>
         <div>
-            <div id="salePrice"></div>
+            <h3>Vehicle Information</h3>
+            <div>
+                <span class="vehicleModel">__________</span>
+                <span class="vehicleMake">__________</span>
+                <span class="vehicleYear">__________</span>
+                <span class="vehiclePrice">__________</span>
+                <span class="vehicleBodyStyle">__________</span>
+                <span class="vehicleColor">__________</span>
+                <span class="vehicleVIN">__________</span>
+                <span class="vehicleCondition">__________</span>
+                <span class="vehicleOdometer">__________</span>
+            </div>
         </div>
         <div>
-            <div id="vehicleModel"></div>
-            <div id="vehicleMake"></div>
-            <div id="vehicleYear"></div>
-            <div id="vehiclePrice"></div>
-            <div id="vehicleBodyStyle"></div>
-            <div id="vehicleColor"></div>
-            <div id="vehicleVIN"></div>
-            <div id="vehicleCondition"></div>
-            <div id="vehicleOdometer"></div>
+            <span class="sellerName">__________</span>
         </div>
     </div>
 
@@ -82,13 +92,14 @@
         var testForm  = document.forms.testForm;
         testForm.elements.sellerName.placeholder = "Name";
         testForm.elements.buyerName.placeholder = "Name";
-        testForm.elements.sellerCity.placeholder = "123 Oak Street";
-        testForm.elements.buyerCity.placeholder = "123 Oak Street";
+        testForm.elements.sellerAddress.placeholder = "123 Oak Street";
+        testForm.elements.buyerAddress.placeholder = "123 Oak Street";
 
         function updateDisplayForm(event, id) {
-            console.log(event.target.value, id);
-            var targetElement = document.querySelector('#'+id)
-            targetElement.textContent = event.target.value;
+            var targetElement = document.querySelectorAll('.'+id);
+            targetElement.forEach(
+                element => element.textContent = event.target.value
+            )
         }
     </script>
 </body>
