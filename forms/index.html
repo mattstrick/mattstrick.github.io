@@ -6,10 +6,21 @@
     <title>Forms Tests</title>
 </head>
 <body>
-    Test
+    Selling a Car
     <form action="" name="testForm">
         <div class="question">What is your Full Legal Name?<input name="sellerName" onchange="alert(document.forms.testForm.elements.sellerName.value)" type="text"></div>
+        <div class="question">What is your Address?<input name="sellerAddress" type="text" /></div>
         <div class="question">What is the buyer's Full Legal Name?<input name="buyerName" onchange="alert(document.forms.testForm.elements.buyerName.value)" type="text"></div>
+        <div class="question">What is the buyer's Address?<input name="buyerAddress" type="text" /></div>
+
     </form>
+
+    <script>
+        var testForm  = document.forms.testForm;
+        testForm.elements.sellerName.placeholder = "Name";
+        testForm.elements.buyerName.placeholder = "Name";
+        testForm.elements.sellerAddress.placeholder = "123 Oak Street, Chicago, IL";
+        testForm.elements.buyerAddress.placeholder = "123 Oak Street, Chicago, IL";
+    </script>
 </body>
 </html>
