@@ -3,27 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forms Tests</title>
+    <title>Forms Test</title>
 </head>
 <body>
-    Selling a Car
+    <h1>Selling a Car</h1>
     <form action="" name="testForm">
-        <div class="question">What is your Full Legal Name?<input name="sellerName" onchange="updateDisplayForm(document.forms.testForm.elements.sellerName.value, 'sellerName')" type="text"></div>
-        <div class="question">What is your Address?<input name="sellerAddress" type="text" onchange="updateDisplayForm(event.target.value, 'sellerAddress')" /></div>
-        <div class="question">What is the buyer's Full Legal Name?<input name="buyerName" onchange="updateDisplayForm(document.forms.testForm.elements.buyerName.value, 'buyerName')" type="text"></div>
-        <div class="question">What is the buyer's Address?<input name="buyerAddress" type="text" /></div>
-
+        <h2>Your Information</h2>
+        <div class="question">What is your Full Legal Name?<input name="sellerName" onchange="updateDisplayForm(event, 'sellerName')" type="text"></div>
+        <div class="question">What is your Address?<input name="sellerAddress" type="text" onchange="updateDisplayForm(event, 'sellerAddress')" /></div>
+        <div class="question">What is your City?<input name="sellerCity" type="text" onchange="updateDisplayForm(event, 'sellerCity')" /></div>
+        <div class="question">What is your State?<input name="sellerState" type="text" onchange="updateDisplayForm(event, 'sellerState')" /></div>
+        <div class="question">What is your Zip Code?<input name="sellerZip" type="text" onchange="updateDisplayForm(event, 'sellerZip')" /></div>
+        <h2>The Buyer's Information </h2>
+        <div class="question">What is the buyer's Full Legal Name?<input name="buyerName" onchange="updateDisplayForm(event, 'buyerName')" type="text"></div>
+        <div class="question">What is the buyer's Address?<input name="buyerAddress" type="text" onchange="updateDisplayForm(event, 'buyerAddress')" /></div>
+        <div class="question">What is the buyer's City?<input name="buyerCity" type="text" onchange="updateDisplayForm(event, 'buyerCity')" /></div>
+        <div class="question">What is the buyer's State?<input name="buyerState" type="text" onchange="updateDisplayForm(event, 'buyerState')" /></div>
+        <div class="question">What is the buyer's Zip Code?<input name="buyerZip" type="text" onchange="updateDisplayForm(event, 'buyerZip')" /></div>
+        <div class="question">What is the amount you are selling for?<input name="salePrice" type="text" onchange="updateDisplayForm(event, 'salePrice')" /></div>
+        <h2>The Vehicle's Information</h2>
+        <div class="question">What is the vehicle Model?<input name="vehicleModel" type="text" onchange="updateDisplayForm(event, 'vehicleModel')" /></div>
+        <div class="question">What is the vehicle Make?<input name="vehicleMake" type="text" onchange="updateDisplayForm(event, 'vehicleMake')" /></div>
+        <div class="question">What is the vehicle Year?<input name="vehicleYear" type="text" onchange="updateDisplayForm(event, 'vehicleYear')" /></div>
+        <div class="question">What is the vehicle Price?<input type="text" onchange="updateDisplayForm(event, 'vehiclePrice')" /></div>
+        <div class="question">What is the vehicle Body Style?<input type="text" onchange="updateDisplayForm(event, 'vehicleBodyStyle')" /></div>
+        <div class="question">What is the vehicle Color?<input type="text" onchange="updateDisplayForm(event, 'vehicleColor')" /></div>
+        <div class="question">What is the vehicle Vehicle Identification Number (VIN)?<input type="text" onchange="updateDisplayForm(event, 'vehicleVIN')" /></div>
+        <div class="question">What is the vehicle Condition?<input type="text" onchange="updateDisplayForm(event, 'vehicleCondition')" /></div>
+        <div class="question">What is the odometer reading?<input type="text" onchange="updateDisplayForm(event, 'vehicleOdometer')" /></div>
     </form>
+
+    <div class="displayForm">
+        <h2>Bill of Sale</h2>
+        <div id="sellerName"></div>
+        <div id="sellerCity"></div>
+        <div id="buyerName"></div>
+        <div id="buyerCity"></div>        
+    </div>
 
     <script>
         var testForm  = document.forms.testForm;
         testForm.elements.sellerName.placeholder = "Name";
         testForm.elements.buyerName.placeholder = "Name";
-        testForm.elements.sellerAddress.placeholder = "123 Oak Street, Chicago, IL";
-        testForm.elements.buyerAddress.placeholder = "123 Oak Street, Chicago, IL";
+        testForm.elements.sellerCity.placeholder = "123 Oak Street";
+        testForm.elements.buyerCity.placeholder = "123 Oak Street";
 
-        function updateDisplayForm(val, id) {
-            console.log(val, id);
+        function updateDisplayForm(event, id) {
+            console.log(event.target.value, id);
+            var targetElement = document.querySelector('#'+id)
+            targetElement.textContent = event.target.value;
         }
     </script>
 </body>
