@@ -4,6 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forms Test</title>
+    <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+
+    <script>
+      function generatePDF() {
+        // Choose the element that our invoice is rendered in.
+        const element = document.getElementById("displayForm");
+        // Choose the element and save the PDF for our user.
+        html2pdf()
+          .from(element)
+          .save();
+      }
+    </script>
 </head>
 <body>
     <h1>Selling a Car</h1>
@@ -33,8 +45,8 @@
         <h2>Other Information</h2>
         <div class="question">What is the amount you are selling for?<input name="salePrice" type="text" onchange="updateDisplayForm(event, 'salePrice')" /></div>
     </form>
-
-    <div class="displayForm">
+    <button onclick="generatePDF()">Download as PDF</button>
+    <div id="displayForm">
         <h2>Bill of Sale</h2>
         <div>
             <div id="sellerName"></div>
