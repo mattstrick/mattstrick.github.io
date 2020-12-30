@@ -20,7 +20,6 @@
         <div class="question">What is the buyer's City?<input name="buyerCity" type="text" onchange="updateDisplayForm(event, 'buyerCity')" /></div>
         <div class="question">What is the buyer's State?<input name="buyerState" type="text" onchange="updateDisplayForm(event, 'buyerState')" /></div>
         <div class="question">What is the buyer's Zip Code?<input name="buyerZip" type="text" onchange="updateDisplayForm(event, 'buyerZip')" /></div>
-        <div class="question">What is the amount you are selling for?<input name="salePrice" type="text" onchange="updateDisplayForm(event, 'salePrice')" /></div>
         <h2>The Vehicle's Information</h2>
         <div class="question">What is the vehicle Model?<input name="vehicleModel" type="text" onchange="updateDisplayForm(event, 'vehicleModel')" /></div>
         <div class="question">What is the vehicle Make?<input name="vehicleMake" type="text" onchange="updateDisplayForm(event, 'vehicleMake')" /></div>
@@ -31,14 +30,40 @@
         <div class="question">What is the vehicle Vehicle Identification Number (VIN)?<input type="text" onchange="updateDisplayForm(event, 'vehicleVIN')" /></div>
         <div class="question">What is the vehicle Condition?<input type="text" onchange="updateDisplayForm(event, 'vehicleCondition')" /></div>
         <div class="question">What is the odometer reading?<input type="text" onchange="updateDisplayForm(event, 'vehicleOdometer')" /></div>
+        <h2>Other Information</h2>
+        <div class="question">What is the amount you are selling for?<input name="salePrice" type="text" onchange="updateDisplayForm(event, 'salePrice')" /></div>
     </form>
 
     <div class="displayForm">
         <h2>Bill of Sale</h2>
-        <div id="sellerName"></div>
-        <div id="sellerCity"></div>
-        <div id="buyerName"></div>
-        <div id="buyerCity"></div>        
+        <div>
+            <div id="sellerName"></div>
+            <div id="sellerAddress"></div>
+            <div id="sellerCity"></div>
+            <div id="sellerState"></div>
+            <div id="sellerZip"></div>
+        </div>
+        <div>
+            <div id="buyerName"></div>
+            <div id="buyerAddress"></div>
+            <div id="buyerCity"></div>
+            <div id="buyerState"></div>
+            <div id="buyerZip"></div>
+        </div>
+        <div>
+            <div id="salePrice"></div>
+        </div>
+        <div>
+            <div id="vehicleModel"></div>
+            <div id="vehicleMake"></div>
+            <div id="vehicleYear"></div>
+            <div id="vehiclePrice"></div>
+            <div id="vehicleBodyStyle"></div>
+            <div id="vehicleColor"></div>
+            <div id="vehicleVIN"></div>
+            <div id="vehicleCondition"></div>
+            <div id="vehicleOdometer"></div>
+        </div>
     </div>
 
     <script>
