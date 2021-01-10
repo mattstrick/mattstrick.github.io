@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms Test</title>
+    <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+
+    <script>
+      function generatePDF() {
+        // Choose the element that our invoice is rendered in.
+        const element = document.getElementById("displayForm");
+        // Choose the element and save the PDF for our user.
+        html2pdf()
+          .from(element)
+          .save();
+      }
+    </script>
+    <style type="text/css">
+        button {
+            margin: 2em 0;
+        }
+
+        #displayForm {
+            font-family: sans-serif;
+            line-height: 2em;
+            margin: 0 auto;
+            max-width: 8.5in;
+            font-size: 0.8em;
+        }
+
+        #displayForm > div {
+            margin: 100px;
+        }
+
+        #displayForm span {
+            background-color: aliceblue;
+            text-decoration: underline;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+
+        #displayForm h2 {
+            text-align: center;
+            border-bottom: 8px double;
+            text-transform: uppercase;
+        }
+
+        .vehicleInformation {
+            text-align: left;
+        }
+
+        .signatures {
+            margin-top: 2em;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .right {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <h1>Automobile Bill of Sale</h1>
+    <p>
+        Complete the form below to fill out the Bill of Sale, and when you are done download a PDF.
+    </p>
+    <div class="form">
+    <form action="" name="testForm">
+        <h2>Your Information</h2>
+        <div class="question">What is your Full Legal Name?<input name="sellerName" onchange="updateDisplayForm(event, 'sellerName')" type="text"></div>
+        <div class="question">What is your Address?<input name="sellerAddress" type="text" onchange="updateDisplayForm(event, 'sellerAddress')" /></div>
+        <div class="question">What is your City?<input name="sellerCity" type="text" onchange="updateDisplayForm(event, 'sellerCity')" /></div>
+        <div class="question">What is your State?<input name="sellerState" type="text" onchange="updateDisplayForm(event, 'sellerState')" /></div>
+        <div class="question">What is your Zip Code?<input name="sellerZip" type="text" onchange="updateDisplayForm(event, 'sellerZip')" /></div>
+        <h2>The Buyer's Information </h2>
+        <div class="question">What is the buyer's Full Legal Name?<input name="buyerName" onchange="updateDisplayForm(event, 'buyerName')" type="text"></div>
+        <div class="question">What is the buyer's Address?<input name="buyerAddress" type="text" onchange="updateDisplayForm(event, 'buyerAddress')" /></div>
+        <div class="question">What is the buyer's City?<input name="buyerCity" type="text" onchange="updateDisplayForm(event, 'buyerCity')" /></div>
+        <div class="question">What is the buyer's State?<input name="buyerState" type="text" onchange="updateDisplayForm(event, 'buyerState')" /></div>
+        <div class="question">What is the buyer's Zip Code?<input name="buyerZip" type="text" onchange="updateDisplayForm(event, 'buyerZip')" /></div>
+        <h2>The Vehicle's Information</h2>
+        <div class="question">What is the vehicle Model?<input name="vehicleModel" type="text" onchange="updateDisplayForm(event, 'vehicleModel')" /></div>
+        <div class="question">What is the vehicle Make?<input name="vehicleMake" type="text" onchange="updateDisplayForm(event, 'vehicleMake')" /></div>
+        <div class="question">What is the vehicle Year?<input name="vehicleYear" type="text" onchange="updateDisplayForm(event, 'vehicleYear')" /></div>
+        <div class="question">What is the vehicle Price?<input type="text" onchange="updateDisplayForm(event, 'vehiclePrice')" /></div>
+        <div class="question">What is the vehicle Body Style?<input type="text" onchange="updateDisplayForm(event, 'vehicleBodyStyle')" /></div>
+        <div class="question">What is the vehicle Color?<input type="text" onchange="updateDisplayForm(event, 'vehicleColor')" /></div>
+        <div class="question">What is the vehicle Vehicle Identification Number (VIN)?<input type="text" onchange="updateDisplayForm(event, 'vehicleVIN')" /></div>
+        <div class="question">What is the vehicle Condition?<input type="text" onchange="updateDisplayForm(event, 'vehicleCondition')" /></div>
+        <div class="question">What is the odometer reading?<input type="text" onchange="updateDisplayForm(event, 'vehicleOdometer')" /></div>
+        <h2>Other Information</h2>
+        <div class="question">What is the amount you are selling for?<input name="salePrice" type="text" onchange="updateDisplayForm(event, 'salePrice')" /></div>
+    </form>
+    </div>
+    <button onclick="generatePDF()">Download as PDF</button>
+    <div id="displayForm">
+        <div>
+            <div><h2>Bill of Sale</h2></div>
+            <div>
+                I, <span class="sellerName">__________</span>, of 
+                <span class="sellerAddress">__________</span>
+                <span class="sellerCity">__________</span>
+                <span class="sellerState">__________</span>
+                <span class="sellerZip">__________</span>, agree to sell, transfer and convey all rights, title, and interest in the below described vehicle to
+            </div>
+            <div>
+                <span class="buyerName">__________</span>, of
+                <span class="buyerAddress">__________</span>
+                <span class="buyerCity">__________</span>
+                <span class="buyerState">__________</span>
+                <span class="buyerZip">__________</span> for the total sum of $ 
+                <span class="salePrice">__________</span>, the receipt of which is hereby acknowledged.
+            </div>
+            <div>
+                <h3>Vehicle Information</h3>
+                <div class="center">
+                    <div class="vehicleInformation">
+                        <span class="vehicleModel">__________</span>
+                        <span class="vehicleMake">__________</span>
+                        <span class="vehicleYear">__________</span>
+                        <span class="vehiclePrice">__________</span>
+                    </div>
+                    <div class="vehicleInformation">
+                        <span class="vehicleBodyStyle">__________</span>
+                        <span class="vehicleColor">__________</span>
+                        <span class="vehicleVIN">__________</span>
+                    </div>
+                    <div class="vehicleInformation">
+                        <span class="vehicleCondition">__________</span>
+                    </div>
+                </div>
+                <div>
+                    Federal and state law require the mileage of the vehicle to be provided upon transfer of ownership. Failure to complete this or providing a false statement may
+    result in fines and/or imprisonment. I certify to the best of my knowledge that the vehicle’s odometer reading now reads: <span class="vehicleOdometer">__________</span> Miles.
+                </div>
+            </div>
+            <div class="signatures">
+                <div class="right">
+                    <span class="buyerName">__________</span>
+                    <span class="buyerSignature">____________________</span> (signature)
+                    <span class="date">__________</span> (date)
+                </div>
+                <div class="right">
+                    <span class="sellerName">__________</span>
+                    <span class="sellerSignature">____________________</span> (signature)
+                    <span class="date">__________</span> (date)
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // var testForm  = document.forms.testForm;
+        // testForm.elements.sellerName.placeholder = "Name";
+        // testForm.elements.buyerName.placeholder = "Name";
+        // testForm.elements.sellerAddress.placeholder = "123 Oak Street";
+        // testForm.elements.buyerAddress.placeholder = "123 Oak Street";
+
+        /*
+        <h2>Your Information</h2>
+        <div class="question">What is your Full Legal Name?<input name="sellerName" onchange="updateDisplayForm(event, 'sellerName')" type="text"></div>
+        <div class="question">What is your Address?<input name="sellerAddress" type="text" onchange="updateDisplayForm(event, 'sellerAddress')" /></div>
+        <div class="question">What is your City?<input name="sellerCity" type="text" onchange="updateDisplayForm(event, 'sellerCity')" /></div>
+        <div class="question">What is your State?<input name="sellerState" type="text" onchange="updateDisplayForm(event, 'sellerState')" /></div>
+        <div class="question">What is your Zip Code?<input name="sellerZip" type="text" onchange="updateDisplayForm(event, 'sellerZip')" /></div>
+        <h2>The Buyer's Information </h2>
+        <div class="question">What is the buyer's Full Legal Name?<input name="buyerName" onchange="updateDisplayForm(event, 'buyerName')" type="text"></div>
+        <div class="question">What is the buyer's Address?<input name="buyerAddress" type="text" onchange="updateDisplayForm(event, 'buyerAddress')" /></div>
+        <div class="question">What is the buyer's City?<input name="buyerCity" type="text" onchange="updateDisplayForm(event, 'buyerCity')" /></div>
+        <div class="question">What is the buyer's State?<input name="buyerState" type="text" onchange="updateDisplayForm(event, 'buyerState')" /></div>
+        <div class="question">What is the buyer's Zip Code?<input name="buyerZip" type="text" onchange="updateDisplayForm(event, 'buyerZip')" /></div>
+        <h2>The Vehicle's Information</h2>
+        <div class="question">What is the vehicle Model?<input name="vehicleModel" type="text" onchange="updateDisplayForm(event, 'vehicleModel')" /></div>
+        <div class="question">What is the vehicle Make?<input name="vehicleMake" type="text" onchange="updateDisplayForm(event, 'vehicleMake')" /></div>
+        <div class="question">What is the vehicle Year?<input name="vehicleYear" type="text" onchange="updateDisplayForm(event, 'vehicleYear')" /></div>
+        <div class="question">What is the vehicle Price?<input type="text" onchange="updateDisplayForm(event, 'vehiclePrice')" /></div>
+        <div class="question">What is the vehicle Body Style?<input type="text" onchange="updateDisplayForm(event, 'vehicleBodyStyle')" /></div>
+        <div class="question">What is the vehicle Color?<input type="text" onchange="updateDisplayForm(event, 'vehicleColor')" /></div>
+        <div class="question">What is the vehicle Vehicle Identification Number (VIN)?<input type="text" onchange="updateDisplayForm(event, 'vehicleVIN')" /></div>
+        <div class="question">What is the vehicle Condition?<input type="text" onchange="updateDisplayForm(event, 'vehicleCondition')" /></div>
+        <div class="question">What is the odometer reading?<input type="text" onchange="updateDisplayForm(event, 'vehicleOdometer')" /></div>
+        <h2>Other Information</h2>
+        <div class="question">What is the amount you are selling for?<input name="salePrice"
+
+        */
+
+        function updateDisplayForm(event, id) {
+            var targetElement = document.querySelectorAll('.'+id);
+            targetElement.forEach(
+                element => element.textContent = event.target.value
+            )
+        }
+    </script>
+</body>
+</html>
