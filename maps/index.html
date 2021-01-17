@@ -7,44 +7,13 @@
     <meta name="msvalidate.01" content="C036FD7FE6F9C4782FAC3CC31A8EBEFB" />
     <title>BarbellFinder - Fast and Easy Gym Search</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWUIVQ6XyFm2qpZwJD1OY2rdJ1BOKw9lE&callback=initMap&libraries=&v=weekly"
-      defer
-    ></script>
-    <style type="text/css">
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-        height: 100%;
-        width: 100%;
-      }
-
-      #side {
-          width: 400px;
-          overflow-y: scroll;
-      }
-
-      #content {
-        display: flex;
-        height: calc(100% - 64px);
-      }
-
+    <style type="text/css">      
       /* Optional: Makes the sample page fill the window. */
       html,
       body {
         height: 100%;
         margin: 0;
         padding: 0;
-      }
-
-      #floating-panel {
-        position: absolute;
-        top: 75px;
-        left: 50%;
-        z-index: 5;
-        text-align: center;
-        font-family: "Roboto", "sans-serif";
-        line-height: 30px;
       }
     </style>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -60,7 +29,7 @@
     </script>
   </head>
   <body>
-    <nav class="navbar navbar-expand-sm navbar-expand-md navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-sm navbar-expand-md navbar-expand-lg navbar-light">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">BarbellFinder</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -78,6 +47,9 @@
                 <a class="nav-link" href="./register.html">Add your gym</a>
               </li>
               <li class="nav-item">
+                <a class="nav-link" href="http://www.barbellfinder.com/blog">Blog</a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link" href="./skipTheSearch.html">Skip the search</a>
               </li>
             </ul>
@@ -87,14 +59,14 @@
       <div class="container">
         <div class="row">
             <div class="col-12">
-                <h1 class="">Search for gyms</h1>
+                <h1 class="text-center">Search for gyms</h1>
             </div>
         </div>  
-        <div class="row">
-            <div class="col-auto">
+        <div class="row justify-content-center">
+            <div class="col-4">
                 <input type="text" class="form-control" id="searchQuery">
             </div>
-            <div class="col-auto">
+            <div class="col-2">
                 <button id="submit" type="submit" class="btn btn-primary">Submit</button>
             </div>
           </div>          
