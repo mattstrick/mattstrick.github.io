@@ -83,6 +83,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="./skipTheSearch.html">Skip the search</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./contact.html">Contact Us</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -93,8 +96,15 @@
       </div>
       <div id="content">
           <div id="side">
-            <h1>Search near Chicago, IL</h1>
-            <div id="gymsShown"></div>
+              <div class="container">
+                  <div class="row">
+                    <div class="col-12">
+                        <h1 class="h2">Searching gyms near Chicago, IL</h1>
+                        <div id="gymsShown"></div>
+                    </div>
+                  </div>
+              </div>
+            
           </div>
           <div id="map"></div>
       </div>
@@ -110,9 +120,8 @@
         function updatePageValuesWithSearchQuery() {            
             const query = urlParams.get('search') || 'Chicago, IL';
             
-            console.log('Query', query);            
             document.getElementById('address').value = query;
-            document.querySelector('#side h1').innerHTML = `Search near ${query}`;
+            document.querySelector('#side h1').innerHTML = `Searching gyms near ${query}`;
         }
 
         function initMap() {
