@@ -425,6 +425,44 @@ let gyms_chicago = [
     {name: "Washington Sports Clubs", coords: {lat: 38.9295555, lng: -77.0332379}, address: "3100 14th St NW, Washington, DC 20010", phone: "(202) 986-2281"},
   ];
 
+  let gyms_elPaso = [
+    {name: "The Backstreet Gym", coords: {lat: 31.8066141, lng: -106.5084176}, address: "4798 N Mesa St, El Paso, TX 79912", phone: "(915) 833-0935"},
+    {name: "Gold's Gym, Wedgewood", coords: {lat: 31.7610471, lng: -106.3527257}, address: "1224 Wedgewood Dr, El Paso, TX 79925", phone: "(915) 307-2489"},
+    {name: "Planet Fitness", coords: {lat: 31.927507, lng: -106.434135}, address: "10861 Gateway Blvd S, El Paso, TX 79934", phone: "(915) 822-1002"},
+    {name: "Anytime Fitness", coords: {lat: 31.7874029, lng: -106.5055105}, address: "3800 N Mesa St, El Paso, TX 79912", phone: "(915) 257-5990"},
+    {name: "IronGrind True Fitness", coords: {lat: 31.7990465, lng: -106.319477}, address: "10934 Montana Ave, El Paso, TX 79936", phone: "(915) 206-5953"},
+    {name: "Planet Fitness", coords: {lat: 31.7391601, lng: -106.2923945}, address: "1505 N Zaragoza Rd, El Paso, TX 79936", phone: "(915) 856-7867"},
+    {name: "Wolves Den Gym", coords: {lat: 31.7728365, lng: -106.3911318}, address: "1010 Wall St, El Paso, TX 79915", phone: "(915) 242-6890"},
+    {name: "Anytime Fitness", coords: {lat: 31.7728308, lng: -106.3689122}, address: "9120 Viscount Blvd, El Paso, TX 79925", phone: "(915) 219-9211"},
+    {name: "Her Gym", coords: {lat: 31.8241768, lng: -106.5207628}, address: "5700 N Mesa St, El Paso, TX 79912", phone: "(915) 587-7867"},
+    {name: "Crossfit 915 East", coords: {lat: 31.7454988, lng: -106.3273403}, address: "11160 Rojas Dr door 2, El Paso, TX 79935", phone: "(915) 591-6000"},
+    {name: "Snap Fitness El Paso Far East", coords: {lat: 31.7929842, lng: -106.2612702}, address: "12371 Edgemere Blvd, El Paso, TX 79938", phone: "(915) 503-2915"},
+    {name: "Elev8 Gym", coords: {lat: 31.7454988, lng: -106.3273403}, address: "11160 Rojas Dr, El Paso, TX 79935", phone: "(915) 591-6000"},
+    {name: "Anytime Fitness", coords: {lat: 31.9199772, lng: -106.4403049}, address: "10641 Kenworthy St, El Paso, TX 79924", phone: "(915) 236-1912"},
+    {name: "Anytime Fitness", coords: {lat: 31.769351, lng: -106.317257}, address: "1900 Amy Sue Dr, El Paso, TX 79936", phone: "(915) 500-9940"},
+    {name: "Rush Fitness Gym", coords: {lat: 31.8168644, lng: -106.5123298}, address: "120 Paragon Ln Ste 211, El Paso, TX 79912", phone: "(915) 304-0297"},
+    {name: "Planet Fitness", coords: {lat: 31.7341497, lng: -106.3161202}, address: "1317 Pendale Rd, El Paso, TX 79936", phone: "(915) 590-7867"},
+    {name: "EP Fitness - Transmountain", coords: {lat: 31.90122089999999, lng: -106.4196994}, address: "10060 Rushing Rd, El Paso, TX 79924", phone: "(915) 751-4959"},
+    {name: "EP Fitness Lee Trevino", coords: {lat: 31.7463727, lng: -106.3173561}, address: "1430 Lee Trevino Dr, El Paso, TX 79936", phone: "(915) 593-3133"},
+    {name: "EP Fitness - Montwood", coords: {lat: 31.7689235, lng: -106.2840268}, address: "11705 Montwood Dr, El Paso, TX 79936", phone: "(915) 849-8491"},
+    {name: "Anytime Fitness", coords: {lat: 31.8389849, lng: -106.5735535}, address: "101 Village Ct, El Paso, TX 79922", phone: "(915) 257-4900"},
+  ];
+
+  let gyms_boston = [
+    {name: "Fisique Boston", coords: {lat: 42.3581886, lng: -71.0556648}, address: "50 Congress Street suite 7, first floor Main Entrance Off Of, Kilby St, Boston, MA 02109", phone: "(617) 228-5131"},
+    {name: "Equinox Sports Club Boston", coords: {lat: 42.35301399999999, lng: -71.063256}, address: "4 Avery St, Boston, MA 02111", phone: "(617) 375-8200"},
+    {name: "Peter Welch's Gym", coords: {lat: 42.335444, lng: -71.0580404}, address: "371 Dorchester Ave, Boston, MA 02127", phone: "(617) 269-4641"},
+    {name: "UFC GYM Boston Financial District", coords: {lat: 42.3520213, lng: -71.0579195}, address: "76 Lincoln St, Boston, MA 02111", phone: "(857) 930-1926"},
+    {name: "EverybodyFights", coords: {lat: 42.3456617, lng: -71.05135729999999}, address: "15 Channel Center St, Boston, MA 02210", phone: "(857) 250-4140"},
+    {name: "EastieFit", coords: {lat: 42.3684789, lng: -71.03747299999999}, address: "1 Everett St, Boston, MA 02128", phone: "(978) 494-3009"},
+    {name: "Equinox Franklin Street", coords: {lat: 42.3559701, lng: -71.0539553}, address: "225 Franklin St, Boston, MA 02110", phone: "(617) 426-2140"},
+    {name: "Lifted Fitness + Performance", coords: {lat: 42.3390509, lng: -71.0372873}, address: "72 K St, South Boston, MA 02127", phone: "(857) 496-1022"},
+    {name: "Equinox Dartmouth", coords: {lat: 42.34704139999999, lng: -71.0753582}, address: "131 Dartmouth St, Boston, MA 02116", phone: "(617) 578-8918"},
+    {name: "South End Fitness Center", coords: {lat: 42.3335076, lng: -71.0741275}, address: "785 Albany St 4th floor, Boston, MA 02118", phone: "(617) 534-5822"},
+    {name: "Commonwealth Sports Club", coords: {lat: 42.352424, lng: -71.1241582}, address: "1079 Commonwealth Avenue, Boston, MA 02215", phone: "(617) 254-1711"},
+    {name: "BodyScapes Fitness Longwood", coords: {lat: 42.3383148, lng: -71.1027264}, address: "77 Avenue Louis Pasteur, Boston, MA 02115", phone: "(617) 738-9229"},
+  ];
+
   let gyms = []
   .concat(gyms_chicago)
   .concat(gyms_amherst)
@@ -446,4 +484,6 @@ let gyms_chicago = [
   .concat(gyms_indianapolis)
   .concat(gyms_seattle)
   .concat(gyms_denver)
-  .concat(gyms_washington);
+  .concat(gyms_washington)
+  .concat(gyms_elPaso)
+  .concat(gyms_boston);
