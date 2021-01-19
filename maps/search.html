@@ -58,6 +58,13 @@
 
     gtag('config', 'G-38QF05WV91');
     </script>
+    <!-- Media.net snippet -->
+    <script type="text/javascript">
+        window._mNHandle = window._mNHandle || {};
+        window._mNHandle.queue = window._mNHandle.queue || [];
+        medianet_versionId = "3121199";
+    </script>
+    <script src="https://contextual.media.net/dmedianet.js?cid=8CU1PCJ1A" async="async"></script>
   </head>
   <body>
     <nav class="navbar navbar-expand-sm navbar-expand-md navbar-expand-lg navbar-light">
@@ -95,16 +102,63 @@
         <input id="submit" type="button" value="Search" />
       </div>
       <div id="content">
-          <div id="side">
+          <div id="side" class="d-none d-sm-block">
               <div class="container">
                   <div class="row">
                     <div class="col-12">
                         <h1 class="h2">Searching gyms near Chicago, IL</h1>
                         <div id="gymsShown"></div>
+                        <!-- <div id="amenities">
+                            <h3>Amenities</h3>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="amenities" value="openGym" id="flexCheckDefault1">
+                                <label class="form-check-label" for="flexCheckDefault1">
+                                  Open Gym
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="amenities" value="personalCoaching" id="flexCheckDefault2">
+                                <label class="form-check-label" for="flexCheckDefault2">
+                                  1:1 Coaching
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="amenities" value="nutrition" id="flexCheckDefault3">
+                                <label class="form-check-label" for="flexCheckDefault3">
+                                  Nutrition
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="amenities" value="pool" id="flexCheckDefault4">
+                                <label class="form-check-label" for="flexCheckDefault4">
+                                  Pool
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="amenities" value="showers" id="flexCheckDefault5">
+                                <label class="form-check-label" for="flexCheckDefault5">
+                                  Showers
+                                </label>
+                            </div>
+                        </div>
+                        <div id="classes">
+
+                        </div> -->
+                        <div id="389421707">
+                            <script type="text/javascript">
+                            if (document.location.origin != 'file://') {
+                                try {
+                                    window._mNHandle.queue.push(function (){
+                                        window._mNDetails.loadTag("389421707", "300x250", "389421707");
+                                    });
+                                }
+                                catch (error) {}
+                            }
+                            </script>
+                        </div>
                     </div>
                   </div>
               </div>
-            
           </div>
           <div id="map"></div>
       </div>
@@ -112,12 +166,20 @@
       <script>
         let map;
         let markers = [];
-        const urlParams = new URLSearchParams(window.location.search);
         updatePageValuesWithSearchQuery();
         
+        document.getElementById("submit").addEventListener("click", () => {                       
+            // Update url with search query
+            let address = document.getElementById('address').value;
+            const urlParams = new URLSearchParams(window.location.search);
+
+            urlParams.set('search', address);
+            document.location = `${location.pathname}?${urlParams.toString()}`;
+        });
         
         /* Functions */
-        function updatePageValuesWithSearchQuery() {            
+        function updatePageValuesWithSearchQuery() {   
+            const urlParams = new URLSearchParams(window.location.search);         
             const query = urlParams.get('search') || 'Chicago, IL';
             
             document.getElementById('address').value = query;
@@ -126,9 +188,7 @@
 
         function initMap() {
           const myLatLng = { lat: 41.8781, lng: -87.6298 };
-          const myAddress = "3727 North Broadway 60613";
           const geocoder = new google.maps.Geocoder();
-
 
           map = new google.maps.Map(document.getElementById("map"), {
             zoom: 12,
@@ -154,13 +214,6 @@
           });
   
           geocodeAddress(geocoder, map); 
-
-          document.getElementById("submit").addEventListener("click", () => {                       
-            // Update url with search query
-            let address = document.getElementById('address').value;
-            urlParams.set('search', address);
-            document.location = `${location.pathname}?${urlParams.toString()}`;
-          });
         }
   
         function geocodeAddress(geocoder, resultsMap) {

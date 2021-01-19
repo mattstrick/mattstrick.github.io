@@ -463,6 +463,29 @@ let gyms_chicago = [
     {name: "BodyScapes Fitness Longwood", coords: {lat: 42.3383148, lng: -71.1027264}, address: "77 Avenue Louis Pasteur, Boston, MA 02115", phone: "(617) 738-9229"},
   ];
 
+  let gyms_nashville = [
+    {name: "Gym 5", coords: {lat: 36.1770444, lng: -86.753069}, address: "952 Main St, Nashville, TN 37206", phone: "(615) 226-5559"},
+    {name: "QNTM Fit Life", coords: {lat: 36.1570801, lng: -86.7891927}, address: "114 George L Davis Blvd, Nashville, TN 37203", phone: "(615) 942-9006"},
+    {name: "getFIT615", coords: {lat: 36.1470656, lng: -86.7927447}, address: "65 Music Square E, Nashville, TN 37203", phone: "(615) 426-4785"},
+    {name: "Fit Factory Nashville", coords: {lat: 36.157549, lng: -86.79424499999999}, address: "207 Mcmillin St, Nashville, TN 37203", phone: "(615) 657-9653"},
+    {name: "HOTBOX Fitness Nashville", coords: {lat: 36.1642539, lng: -86.79044460000001}, address: "1006 Nelson Merry St, Nashville, TN 37203", phone: "(615) 881-5795"},
+    {name: "Takes 2 Fitness - Downtown", coords: {lat: 36.161715, lng: -86.7786725}, address: "401 Commerce St # 130, Nashville, TN 37219", phone: "(615) 313-8686"},
+    {name: "Barry's Nashville", coords: {lat: 36.1534592, lng: -86.78366109999999}, address: "308 11th Ave S, Nashville, TN 37203", phone: "(615) 457-1571"},
+    {name: "GetFit Anytime", coords: {lat: 36.1236857, lng: -86.77380409999999}, address: "2807 Biloxi Ave, Nashville, TN 37204", phone: "(615) 642-2875"},
+    {name: "URBN Fitness - East Nashville", coords: {lat: 36.2075971, lng: -86.736176}, address: "3231 Gallatin Pike, Nashville, TN 37216", phone: "(615) 431-9737"},
+    {name: "Gold's Gym", coords: {lat: 36.0759721, lng: -86.9201265}, address: "7062 Hwy 70 S, Nashville, TN 37221", phone: "(615) 956-6016"},
+    {name: "Poe's Gym", coords: {lat: 36.1676855, lng: -86.8584985}, address: "6100 Centennial Blvd, Nashville, TN 37209", phone: "(615) 668-8760"},
+    {name: "Takes 2 Fitness LLC", coords: {lat: 36.1434967, lng: -86.8172432}, address: "3102 West End Ave #125, Nashville, TN 37203", phone: "(615) 727-0012"},
+    {name: "CrossFit Nashville", coords: {lat: 36.095902, lng: -86.749106}, address: "3628 Trousdale Dr, Nashville, TN 37204", phone: "(615) 756-5771"},
+    {name: "Crossfit East Nashville", coords: {lat: 36.1603094, lng: -86.76209130000001}, address: "400 Davidson St, Nashville, TN 37213", phone: "(865) 804-5945"},
+    {name: "Planet Fitness", coords: {lat: 36.0642669, lng: -86.7158206}, address: "4880 Nolensville Pike, Nashville, TN 37211", phone: "(615) 333-2888"},
+    {name: "Quantify Fitness", coords: {lat: 36.1743974, lng: -86.75044729999999}, address: "224 S 11th St, Nashville, TN 37206", phone: "(615) 697-3481"},
+    {name: "Takes 2 Fitness - Music Row", coords: {lat: 36.1525429, lng: -86.7922933}, address: "1600 Division St # 240, Nashville, TN 37203", phone: "(615) 313-0016"},
+    {name: "Shed Group Fitness Gulch", coords: {lat: 36.1539262, lng: -86.78695530000002}, address: "1201 Demonbreun St #201, Nashville, TN 37203", phone: "(615) 241-0999"},
+    {name: "Nashville Weightlifting Club", coords: {lat: 36.2624127, lng: -86.7144629}, address: "119 Douglas St, Nashville, TN 37115", phone: "(615) 275-7221"},
+    {name: "CrossFit West Nashville", coords: {lat: 36.0736074, lng: -86.9217883}, address: "7103 B Hwy 70 S, Nashville, TN 37221", phone: "(615) 436-0984"},
+  ];
+
   let gyms = []
   .concat(gyms_chicago)
   .concat(gyms_amherst)
@@ -486,4 +509,5 @@ let gyms_chicago = [
   .concat(gyms_denver)
   .concat(gyms_washington)
   .concat(gyms_elPaso)
-  .concat(gyms_boston);
+  .concat(gyms_boston)
+  .concat(gyms_nashville);
