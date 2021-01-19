@@ -486,6 +486,23 @@ let gyms_chicago = [
     {name: "CrossFit West Nashville", coords: {lat: 36.0736074, lng: -86.9217883}, address: "7103 B Hwy 70 S, Nashville, TN 37221", phone: "(615) 436-0984"},
   ];
 
+  let gyms_portland = [
+    {name: "Lloyd Athletic Club", coords: {lat: 45.5340972, lng: -122.6568922}, address: "815 NE Halsey St, Portland, OR 97232", phone: "(503) 287-4594"},
+    {name: "Loprinzi's Gym", coords: {lat: 45.5052992, lng: -122.6200862}, address: "2414 SE 41st Ave, Portland, OR 97214", phone: "(503) 232-8311"},
+    {name: "Peak Performance - NE Portland Gym", coords: {lat: 45.5588252, lng: -122.6382195}, address: "2640 NE Alberta St, Portland, OR 97211", phone: "(503) 288-4500"},
+    {name: "Hollywood Fitness", coords: {lat: 45.54056809999999, lng: -122.6096805}, address: "5223 NE Sandy Blvd, Portland, OR 97213", phone: "(503) 281-4776"},
+    {name: "Peak Performance - N Portland Gym", coords: {lat: 45.5768132, lng: -122.6906813}, address: "2310 N Lombard St, Portland, OR 97217", phone: "(503) 688-5130"},
+    {name: "PDXstrength", coords: {lat: 45.58900269999999, lng: -122.7621729}, address: "8835 N Bradford St, Portland, OR 97203", phone: "(503) 680-2571"},
+    {name: "Fulcrum Fitness", coords: {lat: 45.5512968, lng: -122.661209}, address: "3934 NE Martin Luther King Jr Blvd, Portland, OR 97212", phone: "(844) 390-5783"},
+    {name: "Foster Fitness Center", coords: {lat: 45.4943157, lng: -122.604738}, address: "5623 SE Center St, Portland, OR 97206", phone: "(971) 401-1392"},
+    {name: "Industrial Strength Gym", coords: {lat: 45.5372722, lng: -122.7046804}, address: "2034 NW 26th Ave, Portland, OR 97210", phone: "(971) 242-8471"},
+    {name: "Snap Fitness Portland-Sellwood", coords: {lat: 45.4728485, lng: -122.6484077}, address: "7110 SE Milwaukie Ave, Portland, OR 97202", phone: "(503) 334-1887"},
+    {name: "The Refinery", coords: {lat: 45.5484966, lng: -122.6134865}, address: "4803 NE Fremont St, Portland, OR 97213", phone: "(503) 341-4781"},
+    {name: "Rivet Athletic Club & RVT CrossFit", coords: {lat: 45.4861977, lng: -122.6489365}, address: "5035 SE McLoughlin Blvd, Portland, OR 97202", phone: "(503) 837-3534"},
+    {name: "XL Fitness - Portland's 1st Overweight-Only Gym", coords: {lat: 45.4806106, lng: -122.568323}, address: "5802 SE 92nd Ave, Portland, OR 97266", phone: "(503) 206-6095"},
+    {name: "Portland Team Fitness", coords: {lat: 45.5470298, lng: -122.6622981}, address: "3311 NE Martin Luther King Jr Blvd Suite 103, Portland, OR 97212", phone: "(828) 773-2280"},
+  ];
+
   let gyms = []
   .concat(gyms_chicago)
   .concat(gyms_amherst)
@@ -510,4 +527,5 @@ let gyms_chicago = [
   .concat(gyms_washington)
   .concat(gyms_elPaso)
   .concat(gyms_boston)
-  .concat(gyms_nashville);
+  .concat(gyms_nashville)
+  .concat(gyms_portland);
