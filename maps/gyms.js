@@ -568,6 +568,28 @@ let gyms_chicago = [
     {name: "Gold's Gym Quail Springs", coords: {lat: 35.611186, lng: -97.55400639999999}, address: "2301 W Memorial Rd, Oklahoma City, OK 73134", phone: "(405) 749-6435"},
   ];
 
+  let gyms_memphis = [
+    {name: "InsideOut Gym", coords: {lat: 35.1324214, lng: -89.989471}, address: "2162 Courtland Pl, Memphis, TN 38104", phone: "(901) 278-5433"},
+    {name: "East Memphis Athletic Club", coords: {lat: 35.1197067, lng: -89.9108551}, address: "426 S Grove Park Rd, Memphis, TN 38117", phone: "(901) 509-8905"},
+    {name: "Planet Fitness", coords: {lat: 35.1421975, lng: -90.00613860000001}, address: "1635 Poplar Ave, Memphis, TN 38104", phone: "(901) 509-2074"},
+    {name: "LA Fitness", coords: {lat: 35.1191085, lng: -89.90969869999999}, address: "4572 Poplar Ave, Memphis, TN 38117", phone: "(901) 203-5361"},
+    {name: "Envision Memphis", coords: {lat: 35.1436691, lng: -90.0517258}, address: "149 Monroe Ave, Memphis, TN 38103", phone: "(901) 521-8117"},
+    {name: "LA Fitness", coords: {lat: 35.0964206, lng: -89.8602767}, address: "1285 Ridgeway Rd, Memphis, TN 38119", phone: "(901) 291-1114"},
+    {name: "LA Fitness", coords: {lat: 35.0528631, lng: -89.80930169999999}, address: "7630 Polo Grounds Blvd, Memphis, TN 38125", phone: "(901) 291-1101"},
+    {name: "Iron Tribe Fitness", coords: {lat: 35.1190325, lng: -89.907989}, address: "454 Perkins Extd, Memphis, TN 38117", phone: "(901) 590-2095"},
+    {name: "CrossFit Hit and Run", coords: {lat: 35.131806, lng: -90.05865709999999}, address: "574 S Main St, Memphis, TN 38103", phone: "(901) 282-9642"},
+    {name: "Crossfit Hit and Run - Midtown", coords: {lat: 35.1507974, lng: -90.0143015}, address: "439 N Cleveland St, Memphis, TN 38104", phone: "(901) 282-9642"},
+    {name: "Shred415 East Memphis", coords: {lat: 35.1007355, lng: -89.8479412}, address: "6450 Poplar Ave Suite 115, Memphis, TN 38119", phone: "(901) 701-7473"},
+    {name: "CrossFit 901", coords: {lat: 35.1480992, lng: -89.9605649}, address: "580 Tillman St ste a, Memphis, TN 38112", phone: "(901) 317-3286"},
+    {name: "Orangetheory Fitness", coords: {lat: 35.1157132, lng: -89.9083019}, address: "4615 Poplar Ave #12, Memphis, TN 38117", phone: "(901) 421-5785"},
+    {name: "Planet Fitness", coords: {lat: 35.1494534, lng: -89.90436629999999}, address: "4700 Summer Ave, Memphis, TN 38122", phone: "(901) 410-9400"},
+    {name: "ATC Fitness", coords: {lat: 35.0703356, lng: -89.8442464}, address: "6558 Quince Rd, Memphis, TN 38119", phone: "(901) 756-2480"},
+    {name: "HarborTown Fitness", coords: {lat: 35.1604187, lng: -90.0519315}, address: "710 Harbor Bend Rd, Memphis, TN 38103", phone: "(901) 522-1559"},
+    {name: "Blitz45 Fitness Memphis", coords: {lat: 35.1279682, lng: -89.9461333}, address: "3477 Poplar Ave, Memphis, TN 38111", phone: "(901) 454-5555"},
+    {name: "Planet Fitness", coords: {lat: 35.051056, lng: -89.82517089999999}, address: "7114 Winchester Rd, Memphis, TN 38125", phone: "(901) 757-3300"},
+    {name: "NBS Fitness", coords: {lat: 35.1404232, lng: -89.7998977}, address: "556 Trinity Creek Cove Suite A, Cordova, TN 38018", phone: "(901) 244-6529"},
+  ];
+
   let gyms = []
   .concat(gyms_chicago)
   .concat(gyms_amherst)
@@ -596,4 +618,5 @@ let gyms_chicago = [
   .concat(gyms_portland)
   .concat(gyms_lasVegas)
   .concat(gyms_detroit)
-  .concat(gyms_oklahomaCity);
+  .concat(gyms_oklahomaCity)
+  .concat(gyms_memphis);
