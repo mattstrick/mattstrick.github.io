@@ -590,6 +590,25 @@ let gyms_chicago = [
     {name: "NBS Fitness", coords: {lat: 35.1404232, lng: -89.7998977}, address: "556 Trinity Creek Cove Suite A, Cordova, TN 38018", phone: "(901) 244-6529"},
   ];
 
+  let gyms_louisville = [
+    {name: "Louisville Athletic Club - Westport Rd.", coords: {lat: 38.28823060000001, lng: -85.5764858}, address: "9451 Westport Rd, Louisville, KY 40241", phone: "(502) 412-4522"},
+    {name: "The Factory Gym", coords: {lat: 38.1785574, lng: -85.7556896}, address: "4709 Allmond Ave #3b, Louisville, KY 40209", phone: "(502) 290-4960"},
+    {name: "Fitness 19", coords: {lat: 38.2430591, lng: -85.54436129999999}, address: "109 Blankenbaker Pkwy, Louisville, KY 40243", phone: "(502) 244-0919"},
+    {name: "Get Fit 24/7 Inc", coords: {lat: 38.2401419, lng: -85.7234527}, address: "1015 Bardstown Rd, Louisville, KY 40204", phone: "(502) 290-2040"},
+    {name: "LA Fitness", coords: {lat: 38.2486558, lng: -85.6266241}, address: "4900 Shelbyville Rd, Louisville, KY 40207", phone: "(502) 894-9911"},
+    {name: "Louisville Athletic Club- Jeffersontown", coords: {lat: 38.2061038, lng: -85.57801309999999}, address: "9565 Taylorsville Rd, Louisville, KY 40299", phone: "(502) 753-0999"},
+    {name: "LA Fitness", coords: {lat: 38.2165223, lng: -85.59700749999999}, address: "4620 Taylorsville Rd, Louisville, KY 40220", phone: "(502) 671-8233"},
+    {name: "Orangetheory Fitness", coords: {lat: 38.2418779, lng: -85.7259378}, address: "918 Baxter Ave, Louisville, KY 40204", phone: "(502) 968-1400"},
+    {name: "My Gym Louisville", coords: {lat: 38.2465226, lng: -85.5364245}, address: "11770 Shelbyville Rd, Louisville, KY 40243", phone: "(502) 614-6001"},
+    {name: "Workout Anytime Fern Creek", coords: {lat: 38.1447727, lng: -85.58850240000001}, address: "9350 Cedar Center Way, Louisville, KY 40291", phone: "(502) 742-7055"},
+    {name: "Anytime Fitness", coords: {lat: 38.085923, lng: -85.66507949999999}, address: "5406 Antle Dr, Louisville, KY 40229", phone: "(502) 797-2348"},
+    {name: "Fitness On Frankfort", coords: {lat: 38.2544818, lng: -85.6925397}, address: "2726 Frankfort Ave, Louisville, KY 40206", phone: "(502) 895-4321"},
+    {name: "Derby City CrossFit", coords: {lat: 38.2630328, lng: -85.7132603}, address: "1860 Mellwood Ave #285, Louisville, KY 40206", phone: "(502) 551-5413"},
+    {name: "Glassworks Fitness", coords: {lat: 38.2562915, lng: -85.7644617}, address: "815 W Market St, Louisville, KY 40202", phone: "(502) 992-3200"},
+    {name: "Flex Appeal", coords: {lat: 38.2289949, lng: -85.7388624}, address: "946 Goss Ave, Louisville, KY 40217", phone: "(502) 807-8498"},
+    {name: "Planet Fitness", coords: {lat: 38.1654941, lng: -85.8308698}, address: "5138 Dixie Hwy, Louisville, KY 40216", phone: "(502) 618-2781"},
+  ];
+
   let gyms = []
   .concat(gyms_chicago)
   .concat(gyms_amherst)
@@ -619,4 +638,5 @@ let gyms_chicago = [
   .concat(gyms_lasVegas)
   .concat(gyms_detroit)
   .concat(gyms_oklahomaCity)
-  .concat(gyms_memphis);
+  .concat(gyms_memphis)
+  .concat(gyms_louisville);
