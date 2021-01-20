@@ -525,6 +525,49 @@ let gyms_chicago = [
     {name: "The StrongHouse Gym", coords: {lat: 36.1487348, lng: -115.2099431}, address: "2101 S Decatur Blvd #19, Las Vegas, NV 89102", phone: "(702) 862-0214"},
   ];
 
+  let gyms_detroit = [
+    {name: "Detroit Body Garage", coords: {lat: 42.3697391, lng: -82.9997727}, address: "8635 Mack Ave, Detroit, MI 48214", phone: "(210) 875-7688"},
+    {name: "Bedrock Wellness Center", coords: {lat: 42.33234890000001, lng: -83.0473266}, address: "1 Campus Martius, 1092 Woodward Ave, Detroit, MI 48226", phone: "(313) 373-8770"},
+    {name: "Detroit Fit", coords: {lat: 42.3504489, lng: -83.0507832}, address: "601 Mack Ave, Detroit, MI 48201", phone: "(313) 265-6725"},
+    {name: "Proving Grounds Strength & Konditioning", coords: {lat: 42.37827310000001, lng: -83.0609261}, address: "1600 Clay St #129, Detroit, MI 48211", phone: "(248) 909-9972"},
+    {name: "True Body Fitness", coords: {lat: 42.3317043, lng: -83.066324}, address: "1438 Michigan Ave, Detroit, MI 48216", phone: "(810) 923-6705"},
+    {name: "Vinewood Gym", coords: {lat: 42.3146117, lng: -83.0836985}, address: "3815 W Fort St #138, Detroit, MI 48216", phone: "(313) 819-2629"},
+    {name: "CrossFit in the D", coords: {lat: 42.3319714, lng: -83.04914269999999}, address: "110 Michigan Ave, Detroit, MI 48226", phone: "(734) 578-6754"},
+    {name: "Jabs Gym Eastern Market", coords: {lat: 42.34597, lng: -83.040511}, address: "2501 Russell Street Floors 2 & 3, Detroit, MI 48207", phone: "(313) 344-1272"},
+    {name: "Powerhouse Gym", coords: {lat: 42.4018811, lng: -83.2202753}, address: "18230 Grand River Ave, Detroit, MI 48223", phone: "(313) 397-3615"},
+    {name: "CrossFit BMW: Benchmark Workouts", coords: {lat: 42.3391807, lng: -83.0188285}, address: "2909 Woodbridge St, Detroit, MI 48207", phone: "(313) 452-8294"},
+    {name: "Mort Harris Recreation and Fitness Center", coords: {lat: 42.3579699, lng: -83.0700087}, address: "5210 Gullen Mall, Detroit, MI 48202", phone: "(313) 577-2348"},
+    {name: "SOS Fitness", coords: {lat: 42.4163631, lng: -83.1411534}, address: "16915 Livernois, Detroit, MI 48221", phone: "(313) 270-7425"},
+    {name: "Planet Fitness", coords: {lat: 42.444689, lng: -83.121433}, address: "1395 M-102, Detroit, MI 48203", phone: "(313) 775-1422"},
+    {name: "LA Fitness", coords: {lat: 42.4189406, lng: -82.9119242}, address: "22327 Moross Rd, Detroit, MI 48236", phone: "(313) 732-9188"},
+    {name: "Downtown Boxing Gym Youth Program (DBG Detroit)", coords: {lat: 42.356046, lng: -83.015293}, address: "6445 E Vernor Hwy, Detroit, MI 48207", phone: "(313) 209-3029"},
+    {name: "Grindtime Fitness LLC", coords: {lat: 42.4268189, lng: -83.1609938}, address: "18451 Wyoming Ave, Detroit, MI 48221", phone: "(313) 205-3107"},
+    {name: "TRV|FIT Detroit (TruFit)", coords: {lat: 42.3721762, lng: -83.0659196}, address: "6545 St Antoine Ste 302, Detroit, MI 48202", phone: "(313) 474-7338"},
+    {name: "JC Jones Bootcamp", coords: {lat: 42.415534, lng: -83.20731599999999}, address: "16219 W McNichols Rd, Detroit, MI 48235", phone: "(313) 522-1089"},
+  ];
+
+  let gyms_oklahomaCity = [
+    {name: "Planet Fitness", coords: {lat: 35.5385889, lng: -97.5960894}, address: "4202 Northwest Expy, Oklahoma City, OK 73116", phone: "(405) 242-4141"},
+    {name: "City Gym", coords: {lat: 35.3777914, lng: -97.5332284}, address: "1013 SW 89th St STE F, Oklahoma City, OK 73139", phone: "(405) 779-9597"},
+    {name: "Life Time Athletic Oklahoma City", coords: {lat: 35.609842, lng: -97.5601284}, address: "2563 W Memorial Rd, Oklahoma City, OK 73134", phone: "(405) 832-5200"},
+    {name: "Colaw Fitness of Oklahoma City Gyms", coords: {lat: 35.5128276, lng: -97.5823903}, address: "3645 NW 39th St, Oklahoma City, OK 73112", phone: "(405) 838-1644"},
+    {name: "Brewhouse Barbell", coords: {lat: 35.5231459, lng: -97.5312103}, address: "1124 NW 51st St, Oklahoma City, OK 73118", phone: "(405) 323-4223"},
+    {name: "Anytime Fitness", coords: {lat: 35.4935902, lng: -97.5215937}, address: "519 NW 23rd St, Oklahoma City, OK 73103", phone: "(405) 605-6200"},
+    {name: "VASA Fitness", coords: {lat: 35.42408959999999, lng: -97.5287353}, address: "4106 S Western Ave, Oklahoma City, OK 73109", phone: "(405) 992-0210"},
+    {name: "VASA Fitness", coords: {lat: 35.4943464, lng: -97.5462167}, address: "2500 N Pennsylvania Ave, Oklahoma City, OK 73107", phone: "(405) 992-0670"},
+    {name: "Tribe Gym", coords: {lat: 35.5397934, lng: -97.52646209999999}, address: "6710 N Classen Blvd, Oklahoma City, OK 73116", phone: "(405) 923-2141"},
+    {name: "Koda Fitness OKC", coords: {lat: 35.5337892, lng: -97.5174057}, address: "228 NW 60th St, Oklahoma City, OK 73118", phone: "(405) 623-9814"},
+    {name: "Four Star Fitness - Downtown", coords: {lat: 35.4764763, lng: -97.5145927}, address: "911 N Broadway Ave, Oklahoma City, OK 73102", phone: "(405) 604-3614"},
+    {name: "Gold's Gym Northwest", coords: {lat: 35.5346704, lng: -97.58270809999999}, address: "3625 Northwest Expy, Oklahoma City, OK 73112", phone: "(405) 601-8998"},
+    {name: "Snap Fitness Oklahoma City (Warr Acres)", coords: {lat: 35.5170032, lng: -97.6194281}, address: "4415 N MacArthur Blvd, Oklahoma City, OK 73122", phone: "(405) 603-7451"},
+    {name: "Womens Gym and Swim Oklahoma City", coords: {lat: 35.536509, lng: -97.56619599999999}, address: "2960 NW 63rd St, Oklahoma City, OK 73116", phone: "(405) 848-1199"},
+    {name: "The Weight Room 24", coords: {lat: 35.5101762, lng: -97.59281949999999}, address: "3901 N Tulsa Ave, Oklahoma City, OK 73112", phone: "(405) 943-7600"},
+    {name: "10GYM", coords: {lat: 35.362517, lng: -97.5339022}, address: "1020 South, West 104th, Oklahoma City, OK 73139", phone: "(405) 691-0037"},
+    {name: "10GYM", coords: {lat: 35.5537007, lng: -97.6255295}, address: "6209 Northwest Expy, Oklahoma City, OK 73132", phone: "(405) 728-3600"},
+    {name: "University Health Club", coords: {lat: 35.4771665, lng: -97.5011214}, address: "1000 N Lincoln Blvd, Oklahoma City, OK 73104", phone: "(405) 271-1650"},
+    {name: "Gold's Gym Quail Springs", coords: {lat: 35.611186, lng: -97.55400639999999}, address: "2301 W Memorial Rd, Oklahoma City, OK 73134", phone: "(405) 749-6435"},
+  ];
+
   let gyms = []
   .concat(gyms_chicago)
   .concat(gyms_amherst)
@@ -551,4 +594,6 @@ let gyms_chicago = [
   .concat(gyms_boston)
   .concat(gyms_nashville)
   .concat(gyms_portland)
-  .concat(gyms_lasVegas);
+  .concat(gyms_lasVegas)
+  .concat(gyms_detroit)
+  .concat(gyms_oklahomaCity);
