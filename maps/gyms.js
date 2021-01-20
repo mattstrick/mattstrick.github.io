@@ -503,6 +503,28 @@ let gyms_chicago = [
     {name: "Portland Team Fitness", coords: {lat: 45.5470298, lng: -122.6622981}, address: "3311 NE Martin Luther King Jr Blvd Suite 103, Portland, OR 97212", phone: "(828) 773-2280"},
   ];
 
+  let gyms_lasVegas = [
+    {name: "Las Vegas Athletic Clubs - Central", coords: {lat: 36.141464, lng: -115.138334}, address: "2655 S Maryland Pkwy, Las Vegas, NV 89109", phone: "(702) 734-5822"},
+    {name: "Las Vegas Athletic Clubs - Northwest", coords: {lat: 36.1918003, lng: -115.2432872}, address: "1725 N Rainbow Blvd, Las Vegas, NV 89108", phone: "(702) 835-5822"},
+    {name: "Las Vegas Athletic Clubs - West", coords: {lat: 36.1458438, lng: -115.2129072}, address: "5200 W Sahara Ave, Las Vegas, NV 89146", phone: "(702) 364-5822"},
+    {name: "Las Vegas Athletic Clubs - North", coords: {lat: 36.2702619, lng: -115.2051264}, address: "6050 N Decatur Blvd, North Las Vegas, NV 89031", phone: "(702) 647-5822"},
+    {name: "REAL RESULTS Fitness", coords: {lat: 36.1572897, lng: -115.1546165}, address: "1201 S Commerce St, Las Vegas, NV 89102", phone: "(702) 331-3172"},
+    {name: "EōS Fitness", coords: {lat: 36.1426219, lng: -115.2690339}, address: "8125 W Sahara Ave #100, Las Vegas, NV 89117", phone: "(702) 463-2277"},
+    {name: "Raw Fitness Las Vegas - Northwest", coords: {lat: 36.2417747, lng: -115.2501424}, address: "4450 N Tenaya Way #160, Las Vegas, NV 89129", phone: "(702) 324-6583"},
+    {name: "Life Time Athletic", coords: {lat: 36.1581722, lng: -115.327743}, address: "10721 W Charleston Blvd, Las Vegas, NV 89135", phone: "(702) 228-2611"},
+    {name: "Open Gym Fitness", coords: {lat: 36.2186223, lng: -115.3134371}, address: "10010 W Cheyenne Ave # 110, Las Vegas, NV 89129", phone: "(702) 907-8907"},
+    {name: "LVAC", coords: {lat: 36.141464, lng: -115.138334}, address: "2655 S Maryland Pkwy #201, Las Vegas, NV 89109", phone: "(888) 867-5822"},
+    {name: "Anytime Fitness", coords: {lat: 36.1588995, lng: -115.0507231}, address: "5635 E Charleston Blvd, Las Vegas, NV 89142", phone: "(702) 207-6483"},
+    {name: "EōS Fitness", coords: {lat: 36.1946326, lng: -115.25755}, address: "7501 W Lake Mead Blvd Ste 109, Las Vegas, NV 89128", phone: "(702) 360-8205"},
+    {name: "F45 Training Las Vegas Arts District", coords: {lat: 36.155982, lng: -115.154686}, address: "1301 S Commerce St Unit A, Las Vegas, NV 89102", phone: "(702) 601-3298"},
+    {name: "Dula Gym", coords: {lat: 36.1747389, lng: -115.1385881}, address: "441 E Bonanza Rd, Las Vegas, NV 89101", phone: "(702) 229-6307"},
+    {name: "Orangetheory Fitness", coords: {lat: 36.1455812, lng: -115.2996251}, address: "9326 W Sahara Ave STE 4, Las Vegas, NV 89117", phone: "(702) 910-4445"},
+    {name: "Anytime Fitness", coords: {lat: 36.1303568, lng: -115.2763948}, address: "8490 W Desert Inn Rd, Las Vegas, NV 89117", phone: "(702) 820-0660"},
+    {name: "Relentless Warrior Fitness", coords: {lat: 36.1636253, lng: -115.1465331}, address: "353 E Bonneville Ave #187, Las Vegas, NV 89101", phone: "(702) 819-8582"},
+    {name: "Filthy Power Gym North", coords: {lat: 36.2623316, lng: -115.1914634}, address: "3880 W Ann Rd, North Las Vegas, NV 89031", phone: "(702) 888-2310"},
+    {name: "The StrongHouse Gym", coords: {lat: 36.1487348, lng: -115.2099431}, address: "2101 S Decatur Blvd #19, Las Vegas, NV 89102", phone: "(702) 862-0214"},
+  ];
+
   let gyms = []
   .concat(gyms_chicago)
   .concat(gyms_amherst)
@@ -528,4 +550,5 @@ let gyms_chicago = [
   .concat(gyms_elPaso)
   .concat(gyms_boston)
   .concat(gyms_nashville)
-  .concat(gyms_portland);
+  .concat(gyms_portland)
+  .concat(gyms_lasVegas);
