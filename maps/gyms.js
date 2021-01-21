@@ -652,6 +652,32 @@ let gyms_chicago = [
     {name: "CrossFit 414", coords: {lat: 43.056999, lng: -87.8855811}, address: "2071 N Summit Ave, Milwaukee, WI 53202", phone: "(414) 810-7670"},
   ];
 
+  let gyms_albuquerque = [
+    {name: "The Open Gym Albuquerque", coords: {lat: 35.1288202, lng: -106.5500378}, address: "4200 Wyoming Blvd NE, Albuquerque, NM 87111", phone: "(505) 299-2475"},
+    {name: "Iron Soul Gym", coords: {lat: 35.1087032, lng: -106.6159601}, address: "2400 Menaul Blvd NE, Albuquerque, NM 87107", phone: "(505) 247-1524"},
+    {name: "Chuze Fitness", coords: {lat: 35.1014849, lng: -106.5629866}, address: "7400 Indian School Rd NE, Albuquerque, NM 87110", phone: "(505) 596-2950"},
+    {name: "Snap Fitness ABQ Tramway", coords: {lat: 35.0940031, lng: -106.4978637}, address: "1530 Tramway Blvd NE, Albuquerque, NM 87112", phone: "(505) 839-1535"},
+    {name: "Liberty Gym", coords: {lat: 35.1058336, lng: -106.5938119}, address: "2401 Jefferson St NE, Albuquerque, NM 87110", phone: "(505) 884-8012"},
+    {name: "Snap Fitness ABQ Unser", coords: {lat: 35.216052, lng: -106.6985408}, address: "5740 Night Whisper Rd NW, Albuquerque, NM 87114", phone: "(505) 890-5377"},
+    {name: "Anytime Fitness", coords: {lat: 35.1471827, lng: -106.5253096}, address: "5809 Juan Tabo Blvd NE Suite E, Albuquerque, NM 87111", phone: "(505) 934-0524"},
+    {name: "Defined Fitness Sandia Club", coords: {lat: 35.1180303, lng: -106.5170706}, address: "3301 Juan Tabo Blvd NE, Albuquerque, NM 87111", phone: "(505) 296-7000"},
+    {name: "Defined Fitness Mesa Club", coords: {lat: 35.0766882, lng: -106.7241288}, address: "8050 Central Ave SW, Albuquerque, NM 87121", phone: "(505) 836-6000"},
+    {name: "Defined Fitness Bosque Club", coords: {lat: 35.1542504, lng: -106.6806218}, address: "6210 Riverside Plaza Ln, Albuquerque, NM 87120", phone: "(505) 899-0086"},
+    {name: "Republiq", coords: {lat: 35.1488707, lng: -106.5858428}, address: "6300 San Mateo Blvd NE Q, Albuquerque, NM 87109", phone: "(505) 341-4269"},
+    {name: "Snap Fitness ABQ Carmel", coords: {lat: 35.1765603, lng: -106.5579342}, address: "7900 Carmel Ave NE, Albuquerque, NM 87122", phone: "(505) 332-3944"},
+    {name: "Anytime Fitness - Albuquerque", coords: {lat: 35.1103803, lng: -106.6087766}, address: "3301 Menaul Blvd NE, Albuquerque, NM 87107", phone: "(505) 296-0000"},
+    {name: "Simms Fitness", coords: {lat: 35.0833514, lng: -106.6521937}, address: "400 Gold Ave SW #130, Albuquerque, NM 87102", phone: "(505) 508-3138"},
+    {name: "Powerflex Gym", coords: {lat: 35.099486, lng: -106.5334109}, address: "1635 Eubank Blvd NE Ste A, Albuquerque, NM 87112", phone: "(505) 299-1454"},
+    {name: "Anytime Fitness", coords: {lat: 35.0756977, lng: -106.5973563}, address: "4212 Coal Ave SE, Albuquerque, NM 87108", phone: "(505) 375-2020"},
+    {name: "Gainz Fitness", coords: {lat: 35.1279982, lng: -106.6225912}, address: "4201 Yale Blvd NE, Albuquerque, NM 87107", phone: "(505) 490-4933"},
+    {name: "Crunch Fitness - Albuquerque", coords: {lat: 35.085228, lng: -106.514606}, address: "840 Juan Tabo Blvd NE Suite A, Albuquerque, NM 87123", phone: "(505) 395-9090"},
+    {name: "Powerflex Gym", coords: {lat: 35.0900543, lng: -106.5770366}, address: "1214 San Pedro Dr NE, Albuquerque, NM 87110", phone: "(505) 508-0718"},
+  ];
+
+  let gyms_tucson = [
+
+  ];
+
   let gyms = []
   .concat(gyms_chicago)
   .concat(gyms_amherst)
@@ -684,4 +710,6 @@ let gyms_chicago = [
   .concat(gyms_memphis)
   .concat(gyms_louisville)
   .concat(gyms_baltimore)
-  .concat(gyms_milwaukee);
+  .concat(gyms_milwaukee)
+  .concat(gyms_albuquerque)
+  .concat(gyms_tucson);
