@@ -711,6 +711,21 @@ let gyms_chicago = [
     {name: "Title 29 Fitness", coords: {lat: 36.8290732, lng: -119.8632925}, address: "4025 W Figarden Dr Suite 107, Fresno, CA 93722", phone: "(559) 356-7168"},
   ];
 
+  let gyms_sacramento = [
+    {name: "East Sac Fitness | Fitness in Sacramento", coords: {lat: 38.5747399, lng: -121.4441609}, address: "4471 D St, Sacramento, CA 95819", phone: "(916) 599-3181"},
+    {name: "Fitness Rangers", coords: {lat: 38.5644469, lng: -121.4646524}, address: "1717 34th St, Sacramento, CA 95816", phone: "(916) 739-1100"},
+    {name: "CrossFit Sacramento", coords: {lat: 38.5860882, lng: -121.40048}, address: "1146 Fulton Ave, Sacramento, CA 95864", phone: "(916) 799-9749"},
+    {name: "California Family Fitness", coords: {lat: 38.5638583, lng: -121.467545}, address: "1671 Alhambra Blvd, Sacramento, CA 95816", phone: "(916) 457-9300"},
+    {name: "Anytime Fitness Natomas", coords: {lat: 38.6518959, lng: -121.5032229}, address: "4421 Gateway Park Blvd #100, Sacramento, CA 95834", phone: "(916) 575-9999"},
+    {name: "Fitness System Land Park", coords: {lat: 38.53786340000001, lng: -121.5049563}, address: "1250 Sutterville Rd, Sacramento, CA 95822", phone: "(916) 455-5800"},
+    {name: "California Family Fitness", coords: {lat: 38.6396269, lng: -121.5083683}, address: "3880 Innovator Dr, Sacramento, CA 95834", phone: "(916) 239-4455"},
+    {name: "Crunch Fitness - Howe Ave.", coords: {lat: 38.5879675, lng: -121.4129928}, address: "1250 Howe Ave, Sacramento, CA 95825", phone: "(916) 333-3209"},
+    {name: "HIIT Fitness", coords: {lat: 38.5606481, lng: -121.4429343}, address: "5141 Folsom Blvd, Sacramento, CA 95819", phone: "(916) 456-4448"},
+    {name: "Aquila Fitness", coords: {lat: 38.565458, lng: -121.4321977}, address: "891 57th St, Sacramento, CA 95819", phone: "(916) 476-4174"},
+    {name: "9Round Kickboxing | Midtown - Sacramento", coords: {lat: 38.5700459, lng: -121.4835763}, address: "1914 P St, Sacramento, CA 95811", phone: "(916) 758-8225"},
+    {name: "Sacramento Eco Fitness", coords: {lat: 38.5744711, lng: -121.4816575}, address: "1914 L St, Sacramento, CA 95811", phone: "(916) 841-5416"},
+  ];
+
   let gyms = []
   .concat(gyms_chicago)
   .concat(gyms_amherst)
@@ -746,4 +761,5 @@ let gyms_chicago = [
   .concat(gyms_milwaukee)
   .concat(gyms_albuquerque)
   .concat(gyms_tucson)
-  .concat(gyms_fresno);
+  .concat(gyms_fresno)
+  .concat(gyms_sacramento);
