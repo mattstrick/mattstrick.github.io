@@ -632,7 +632,24 @@ let gyms_chicago = [
   ];
 
   let gyms_milwaukee = [
-
+    {name: "Brew Fitness", coords: {lat: 43.027677, lng: -87.9162425}, address: "408 W Florida St, Milwaukee, WI 53204", phone: "(414) 909-2739"},
+    {name: "Gold's Gym", coords: {lat: 43.0393538, lng: -87.9096904}, address: "731 N Water St Ste M100, Milwaukee, WI 53202", phone: "(414) 312-7582"},
+    {name: "Planet Fitness", coords: {lat: 43.038625, lng: -87.910521}, address: "101 W Wisconsin Ave, Milwaukee, WI 53203", phone: "(414) 223-3380"},
+    {name: "Impact Ultra Fitness LLC", coords: {lat: 43.0320062, lng: -87.9060882}, address: "173 N Milwaukee St, Milwaukee, WI 53202", phone: "(414) 395-5070"},
+    {name: "Orangetheory Fitness", coords: {lat: 43.0349318, lng: -87.9056686}, address: "336 N Milwaukee St, Milwaukee, WI 53202", phone: "(414) 269-5311"},
+    {name: "SPIRE Fitness", coords: {lat: 43.0314706, lng: -87.9088895}, address: "102 N Water St d, Milwaukee, WI 53202", phone: "(414) 219-9118"},
+    {name: "Wisconsin Athletic Club", coords: {lat: 43.0385255, lng: -87.90585829999999}, address: "411 E Wisconsin Ave, Milwaukee, WI 53202", phone: "(414) 212-2000"},
+    {name: "The Barre Code", coords: {lat: 43.0331806, lng: -87.9093872}, address: "225 N Water St, Milwaukee, WI 53202", phone: "(414) 763-1314"},
+    {name: "Brickyard Gym", coords: {lat: 42.99659690000001, lng: -87.8982815}, address: "2651 S Kinnickinnic Ave, Milwaukee, WI 53207", phone: "(414) 481-7113"},
+    {name: "Anytime Fitness", coords: {lat: 43.058851, lng: -87.886416}, address: "2170 N Farwell Ave, Milwaukee, WI 53202", phone: "(414) 319-1111"},
+    {name: "BrewCity CrossFit", coords: {lat: 43.0345382, lng: -87.9328918}, address: "1539 W St Paul Ave, Milwaukee, WI 53233", phone: "(414) 207-7851"},
+    {name: "Bay View Fitness 24 Hours", coords: {lat: 43.0062739, lng: -87.9076594}, address: "2121 S Kinnickinnic Ave, Milwaukee, WI 53207", phone: "(414) 486-7600"},
+    {name: "Anytime Fitness", coords: {lat: 43.0504963, lng: -87.9071455}, address: "1555 N Water St, Milwaukee, WI 53202", phone: "(414) 210-2598"},
+    {name: "CoMotion Fitness", coords: {lat: 43.0213884, lng: -87.9104567}, address: "126 E Mineral St, Milwaukee, WI 53204", phone: "(414) 465-2263"},
+    {name: "Milwaukee Athletic Club", coords: {lat: 43.03955759999999, lng: -87.909551}, address: "735 N Water St, Milwaukee, WI 53202", phone: "(414) 273-5080"},
+    {name: "Fit Pro Milwaukee", coords: {lat: 43.0394477, lng: -87.90444029999999}, address: "731 N Jackson St, Milwaukee, WI 53202", phone: "(414) 520-2803"},
+    {name: "F45 Training Milwaukee Lakefront", coords: {lat: 43.066904, lng: -87.87785799999999}, address: "2636 N Downer Ave, Milwaukee, WI 53211", phone: "(414) 748-0084"},
+    {name: "CrossFit 414", coords: {lat: 43.056999, lng: -87.8855811}, address: "2071 N Summit Ave, Milwaukee, WI 53202", phone: "(414) 810-7670"},
   ];
 
   let gyms = []
