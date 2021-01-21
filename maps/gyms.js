@@ -726,6 +726,33 @@ let gyms_chicago = [
     {name: "Sacramento Eco Fitness", coords: {lat: 38.5744711, lng: -121.4816575}, address: "1914 L St, Sacramento, CA 95811", phone: "(916) 841-5416"},
   ];
 
+  let gyms_mesa = [
+    {name: "Anytime Fitness", coords: {lat: 33.4493068, lng: -111.8036663}, address: "1239 E McKellips Rd, Mesa, AZ 85203", phone: "(480) 464-5646"},
+    {name: "Blast! Fitness - Mesa", coords: {lat: 33.3933715, lng: -111.8550296}, address: "1080 W Southern Ave, Mesa, AZ 85210", phone: "(480) 590-1574"},
+    {name: "Anytime Fitness Dobson Ranch (Mesa)", coords: {lat: 33.3636791, lng: -111.8736341}, address: "1837 W Guadalupe Rd, Mesa, AZ 85202", phone: "(480) 378-3810"},
+    {name: "Fitness 1440 Mesa- Mckellips", coords: {lat: 33.4504789, lng: -111.7870778}, address: "1927 N Gilbert Rd, Mesa, AZ 85203", phone: "(480) 534-2740"},
+    {name: "EōS Fitness", coords: {lat: 33.38039790000001, lng: -111.7855938}, address: "2156 E Baseline Rd, Mesa, AZ 85204", phone: "(480) 497-8686"},
+    {name: "Tone Zone Mesa", coords: {lat: 33.4507373, lng: -111.7725904}, address: "2727 E McKellips Rd UNIT 108, Mesa, AZ 85213", phone: "(480) 834-1242"},
+    {name: "The Cell Gym", coords: {lat: 33.4142844, lng: -111.6940199}, address: "6343 E Main St UNIT 16, Mesa, AZ 85205", phone: "(480) 389-5750"},
+    {name: "Mesa Personal Training", coords: {lat: 33.392845, lng: -111.6798014}, address: "7015 E Southern Ave Suite 105, Mesa, AZ 85209", phone: "(480) 399-7999"},
+    {name: "Anytime Fitness", coords: {lat: 33.3632614, lng: -111.655732}, address: "8257 E Guadalupe Rd, Mesa, AZ 85212", phone: "(480) 354-0666"},
+    {name: "Planet Fitness", coords: {lat: 33.4068457, lng: -111.7742285}, address: "2643 E Broadway Rd, Mesa, AZ 85204", phone: "(480) 219-8484"},
+    {name: "Planet Fitness", coords: {lat: 33.4207575, lng: -111.8491266}, address: "825 W University Dr, Mesa, AZ 85201", phone: "(480) 307-8478"},
+    {name: "Esporta Fitness", coords: {lat: 33.3830549, lng: -111.736426}, address: "1731 S Greenfield Rd, Mesa, AZ 85206", phone: "(480) 635-9600"},
+    {name: "Dan's Gym", coords: {lat: 33.4156539, lng: -111.7096779}, address: "5626 E Main St, Mesa, AZ 85205", phone: "(623) 258-9296"},
+    {name: "Esporta Fitness", coords: {lat: 33.4237588, lng: -111.8033868}, address: "445 N Stapley Dr, Mesa, AZ 85203", phone: "(480) 751-1992"},
+    {name: "MaxFit", coords: {lat: 33.3783216, lng: -111.8719032}, address: "1731 W Baseline Rd, Mesa, AZ 85202", phone: "(480) 359-6166"},
+    {name: "LA Fitness", coords: {lat: 33.3808145, lng: -111.5988168}, address: "1905 S Signal Butte Rd, Mesa, AZ 85209", phone: "(480) 984-4900"},
+    {name: "LA Fitness", coords: {lat: 33.4629156, lng: -111.6826546}, address: "2605 N Power Rd, Mesa, AZ 85215", phone: "(480) 296-0242"},
+    {name: "Mountainside Fitness Mesa", coords: {lat: 33.4387496, lng: -111.7349162}, address: "1253 N Greenfield Rd, Mesa, AZ 85205", phone: "(480) 889-1865"},
+    {name: "Orangetheory Fitness", coords: {lat: 33.3811649, lng: -111.7569712}, address: "3426 E Baseline Rd #118, Mesa, AZ 85204", phone: "(480) 350-7750"},
+    {name: "East Mesa Fit Body Boot Camp", coords: {lat: 33.3634932, lng: -111.6340727}, address: "9245 E Guadalupe Rd #103, Mesa, AZ 85212", phone: "(480) 737-1512"},
+  ];
+
+  let gyms_atlanta = [
+
+  ];
+
   let gyms = []
   .concat(gyms_chicago)
   .concat(gyms_amherst)
@@ -762,4 +789,6 @@ let gyms_chicago = [
   .concat(gyms_albuquerque)
   .concat(gyms_tucson)
   .concat(gyms_fresno)
-  .concat(gyms_sacramento);
+  .concat(gyms_sacramento)
+  .concat(gyms_mesa)
+  .concat(gyms_atlanta);
