@@ -696,6 +696,21 @@ let gyms_chicago = [
     {name: "Tucson Strength", coords: {lat: 32.23522760000001, lng: -110.8613456}, address: "6130 E Speedway Blvd, Tucson, AZ 85712", phone: "(520) 445-6800"},
   ];
 
+  let gyms_fresno = [
+    {name: "Fort Washington Fitness", coords: {lat: 36.8752775, lng: -119.7767507}, address: "9471 N Fort Washington Rd, Fresno, CA 93730", phone: "(559) 434-0700"},
+    {name: "GB3 Palm- George Brown Sports Club", coords: {lat: 36.850961, lng: -119.8076479}, address: "7825 N Palm Ave, Fresno, CA 93711", phone: "(559) 438-3003"},
+    {name: "GB3", coords: {lat: 36.85298909999999, lng: -119.7547285}, address: "1570 E Nees Ave, Fresno, CA 93720", phone: "(559) 297-8656"},
+    {name: "GB3 West", coords: {lat: 36.8364303, lng: -119.8821531}, address: "6783 N Milburn Ave, Fresno, CA 93722", phone: "(559) 448-9300"},
+    {name: "Fit Republic", coords: {lat: 36.7779321, lng: -119.800241}, address: "3003 N Maroa Ave, Fresno, CA 93704", phone: "(559) 369-2486"},
+    {name: "Fresno Fit", coords: {lat: 36.8221295, lng: -119.8463676}, address: "3093 W Bullard Ave, Fresno, CA 93711", phone: "(559) 721-7001"},
+    {name: "Fit Republic", coords: {lat: 36.8365286, lng: -119.7747226}, address: "6735 N First St, Fresno, CA 93710", phone: "(559) 500-1344"},
+    {name: "The Camp Transformation Center - Fresno", coords: {lat: 36.7963758, lng: -119.7910408}, address: "4323 N Blackstone Ave Suite 101, Fresno, CA 93726", phone: "(559) 994-7382"},
+    {name: "Orangetheory Fitness", coords: {lat: 36.8483859, lng: -119.7920102}, address: "7735 N Blackstone Ave suite 106-112, Fresno, CA 93720", phone: "(559) 326-9255"},
+    {name: "CrossFit Iron Buffalo", coords: {lat: 36.7434838, lng: -119.8005786}, address: "1929 Fulton St Unit 106, Fresno, CA 93721", phone: "(559) 492-6460"},
+    {name: "CrossFit Fresno", coords: {lat: 36.8271542, lng: -119.7888796}, address: "66 E Escalon Ave Ste. 107, Fresno, CA 93710", phone: "(559) 492-0432"},
+    {name: "Title 29 Fitness", coords: {lat: 36.8290732, lng: -119.8632925}, address: "4025 W Figarden Dr Suite 107, Fresno, CA 93722", phone: "(559) 356-7168"},
+  ];
+
   let gyms = []
   .concat(gyms_chicago)
   .concat(gyms_amherst)
@@ -730,4 +745,5 @@ let gyms_chicago = [
   .concat(gyms_baltimore)
   .concat(gyms_milwaukee)
   .concat(gyms_albuquerque)
-  .concat(gyms_tucson);
+  .concat(gyms_tucson)
+  .concat(gyms_fresno);
