@@ -675,7 +675,25 @@ let gyms_chicago = [
   ];
 
   let gyms_tucson = [
-
+    {name: "Undisputed Tucson Gym | Jiu Jitsu - Boxing - Kickboxing - MMA - Fitness", coords: {lat: 32.2379245, lng: -110.9714337}, address: "1240 N Stone Ave, Tucson, AZ 85705", phone: "(520) 882-8788"},
+    {name: "Prestige Fitness", coords: {lat: 32.2881109, lng: -110.9604898}, address: "4490 N 1st Ave, Tucson, AZ 85719", phone: "(520) 334-0205"},
+    {name: "Chuze Fitness", coords: {lat: 32.2904784, lng: -110.9798164}, address: "4619 N Oracle Rd, Tucson, AZ 85705", phone: "(520) 600-2713"},
+    {name: "LET'S SWEAT | Downtown Tucson Fitness Gym | Spin Classes and Yoga", coords: {lat: 32.2273726, lng: -110.9691714}, address: "439 N 6th Ave #101, Tucson, AZ 85705", phone: "(520) 485-9812"},
+    {name: "The Gym of Tucson", coords: {lat: 32.3386943, lng: -111.0538865}, address: "4140 W Ina Rd Suite 118, Tucson, AZ 85741", phone: "(520) 389-8890"},
+    {name: "Chuze Fitness", coords: {lat: 32.2078244, lng: -110.8393662}, address: "7145 E 22nd St, Tucson, AZ 85710", phone: "(520) 600-2710"},
+    {name: "Anytime Fitness", coords: {lat: 32.2574265, lng: -110.8033477}, address: "8868 E Tanque Verde Rd, Tucson, AZ 85749", phone: "(520) 760-1200"},
+    {name: "Planet Fitness", coords: {lat: 32.2933858, lng: -110.9793973}, address: "4848 N Old Oracle Rd, Tucson, AZ 85705", phone: "(520) 293-4200"},
+    {name: "VASA Fitness", coords: {lat: 32.2492971, lng: -110.9085126}, address: "3920 E Grant Rd, Tucson, AZ 85712", phone: "(520) 232-2044"},
+    {name: "Snap Fitness Tucson", coords: {lat: 32.1148218, lng: -110.7717072}, address: "7545 S Houghton Rd #3, Tucson, AZ 85747", phone: "(520) 572-8788"},
+    {name: "Desert Sports & Fitness - Northeast", coords: {lat: 32.2525028, lng: -110.8228756}, address: "2480 N Pantano Rd, Tucson, AZ 85715", phone: "(520) 722-6300"},
+    {name: "Transformation Gym", coords: {lat: 32.1774317, lng: -110.9185309}, address: "3820 S Palo Verde Rd, Tucson, AZ 85714", phone: "(520) 807-2011"},
+    {name: "Chuze Fitness", coords: {lat: 32.179374, lng: -110.9812834}, address: "3693 S 16th Ave, Tucson, AZ 85713", phone: "(520) 600-2711"},
+    {name: "LA Fitness", coords: {lat: 32.2187281, lng: -110.8593829}, address: "240 S Wilmot Rd, Tucson, AZ 85711", phone: "(520) 748-1295"},
+    {name: "Center Gym", coords: {lat: 32.2218494, lng: -110.92845}, address: "2919 E Broadway Blvd, Tucson, AZ 85716", phone: "(520) 325-9610"},
+    {name: "Desert Sports & Fitness - Southwest", coords: {lat: 32.1347707, lng: -111.0318363}, address: "3030 W Valencia Rd Suite 272, Tucson, AZ 85746", phone: "(520) 908-3319"},
+    {name: "Planet Fitness", coords: {lat: 32.2207106, lng: -110.8908228}, address: "4722 E Broadway Blvd, Tucson, AZ 85711", phone: "(520) 829-7300"},
+    {name: "Planet Fitness", coords: {lat: 32.1882082, lng: -110.954296}, address: "1125 E Tucson Marketplace Blvd, Tucson, AZ 85713", phone: "(520) 867-6888"},
+    {name: "Tucson Strength", coords: {lat: 32.23522760000001, lng: -110.8613456}, address: "6130 E Speedway Blvd, Tucson, AZ 85712", phone: "(520) 445-6800"},
   ];
 
   let gyms = []
