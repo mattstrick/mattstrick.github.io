@@ -609,6 +609,32 @@ let gyms_chicago = [
     {name: "Planet Fitness", coords: {lat: 38.1654941, lng: -85.8308698}, address: "5138 Dixie Hwy, Louisville, KY 40216", phone: "(502) 618-2781"},
   ];
 
+  let gyms_baltimore = [
+    {name: "FX Studios & Under Armour Performance Center powered by FX Fitness", coords: {lat: 39.2892, lng: -76.614104}, address: "10 Light St #1, Baltimore, MD 21202", phone: "(410) 646-8272"},
+    {name: "Fivex3 Training: A Strength and Conditioning Gym", coords: {lat: 39.2841528, lng: -76.5624586}, address: "4015 Foster Ave STE 200, Baltimore, MD 21224", phone: "(410) 205-9254"},
+    {name: "Under Armour Performance Center Powered By FX Fitness", coords: {lat: 39.275091, lng: -76.5913832}, address: "1020 Hull St #1, Baltimore, MD 21230", phone: "(410) 752-0300"},
+    {name: "Brick Bodies", coords: {lat: 39.3350638, lng: -76.6304911}, address: "727 W 40th St, Baltimore, MD 21211", phone: "(443) 388-8511"},
+    {name: "Meadow Mill Athletic Club", coords: {lat: 39.3311818, lng: -76.6425347}, address: "3600 Clipper Mill Rd, Baltimore, MD 21211", phone: "(410) 235-7000"},
+    {name: "Grind Baltimore", coords: {lat: 39.2863591, lng: -76.6072429}, address: "601 E Pratt St UNIT 400, Baltimore, MD 21202", phone: "(443) 504-8808"},
+    {name: "Planet Fitness", coords: {lat: 39.28698809999999, lng: -76.61536720000001}, address: "100 S Charles St, Baltimore, MD 21201", phone: "(443) 388-9962"},
+    {name: "Knockout Fitness", coords: {lat: 39.2764483, lng: -76.6126366}, address: "1108 Light St, Baltimore, MD 21230", phone: "(443) 703-9260"},
+    {name: "Merritt Clubs Fort Avenue/Federal Hill", coords: {lat: 39.2710415, lng: -76.6006199}, address: "921 E Fort Ave, Baltimore, MD 21230", phone: "(410) 576-2004"},
+    {name: "Merritt Clubs Downtown Athletic Club", coords: {lat: 39.2970162, lng: -76.6118468}, address: "210 E Centre St, Baltimore, MD 21202", phone: "(410) 332-0906"},
+    {name: "MV Fitness", coords: {lat: 39.3017472, lng: -76.6162446}, address: "1016 N Charles St, Baltimore, MD 21201", phone: "(410) 878-2990"},
+    {name: "Charm City Fitness", coords: {lat: 39.2861998, lng: -76.5730588}, address: "3039 Eastern Ave, Baltimore, MD 21224", phone: "(410) 327-8783"},
+    {name: "Orangetheory Fitness", coords: {lat: 39.2832143, lng: -76.59747039999999}, address: "1415 Aliceanna St, Baltimore, MD 21231", phone: "(410) 675-1201"},
+    {name: "Federal Hill Fitness", coords: {lat: 39.2765543, lng: -76.6128623}, address: "39 E Cross St, Baltimore, MD 21230", phone: "(410) 752-3004"},
+    {name: "CrossFit Federal Hill", coords: {lat: 39.2757548, lng: -76.60652069999999}, address: "1220 Key Hwy, Baltimore, MD 21230", phone: "(443) 840-7211"},
+    {name: "PUSH511 Fitness", coords: {lat: 39.2810521, lng: -76.56533329999999}, address: "3700 O'Donnell St Suite 240, Baltimore, MD 21224", phone: "(410) 424-0565"},
+    {name: "Charm City CrossFit", coords: {lat: 39.3015963, lng: -76.6167889}, address: "1012 Morton St, Baltimore, MD 21201", phone: "(443) 518-9451"},
+    {name: "Planet Fitness", coords: {lat: 39.2897805, lng: -76.71788839999999}, address: "5425 Baltimore National Pike, Baltimore, MD 21229", phone: "(410) 975-4850"},
+    {name: "Maryland Athletic Club", coords: {lat: 39.283727, lng: -76.60142019999999}, address: "655 President St, Baltimore, MD 21202", phone: "(410) 625-5000"},
+  ];
+
+  let gyms_milwaukee = [
+
+  ];
+
   let gyms = []
   .concat(gyms_chicago)
   .concat(gyms_amherst)
@@ -639,4 +665,6 @@ let gyms_chicago = [
   .concat(gyms_detroit)
   .concat(gyms_oklahomaCity)
   .concat(gyms_memphis)
-  .concat(gyms_louisville);
+  .concat(gyms_louisville)
+  .concat(gyms_baltimore)
+  .concat(gyms_milwaukee);
