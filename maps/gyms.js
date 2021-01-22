@@ -750,6 +750,52 @@ let gyms_chicago = [
   ];
 
   let gyms_atlanta = [
+    {name: "CrossFit Downtown Atlanta and Atl Barbell", coords: {lat: 33.748436, lng: -84.35985}, address: "215 Chester Ave SE B, Atlanta, GA 30316", phone: "(404) 702-0548"},
+    {name: "The Forum Athletic Club", coords: {lat: 33.8465156, lng: -84.3626785}, address: "3393 Peachtree Rd #2010A, Atlanta, GA 30326", phone: "(678) 904-1940"},
+    {name: "LIV Fitness", coords: {lat: 33.7470653, lng: -84.3266156}, address: "1853 Memorial Dr SE, Atlanta, GA 30317", phone: "(404) 549-7767"},
+    {name: "Equilibrium Fitness", coords: {lat: 33.7956505, lng: -84.3688884}, address: "1529 Piedmont Ave NE ste l, Atlanta, GA 30324", phone: "(404) 304-4674"},
+    {name: "Snap Fitness Atlanta (Glenwood Park)", coords: {lat: 33.7399064, lng: -84.3577375}, address: "920 Glenwood Ave SE suite 102/103, Atlanta, GA 30316", phone: "(404) 627-8000"},
+    {name: "Urban Body Fitness", coords: {lat: 33.788422, lng: -84.370015}, address: "500 Amsterdam Ave NE, Atlanta, GA 30306", phone: "(404) 885-1499"},
+    {name: "Anytime Fitness Midtown", coords: {lat: 33.7924324, lng: -84.385621}, address: "1375 Peachtree St NE, Atlanta, GA 30309", phone: "(404) 963-5739"},
+    {name: "Snap Fitness Atlanta (Inman Park)", coords: {lat: 33.7616744, lng: -84.3597502}, address: "245 North Highland Avenue Northeast #250, Atlanta, GA 30307", phone: "(404) 584-9669"},
+    {name: "Snap Fitness Atlanta", coords: {lat: 33.8042242, lng: -84.3362101}, address: "1799 Briarcliff Rd NE q2, Atlanta, GA 30306", phone: "(404) 875-5656"},
+    {name: "CrossFit Midtown", coords: {lat: 33.7877608, lng: -84.3895417}, address: "1210 Spring St NW, Atlanta, GA 30309", phone: "(678) 223-3308"},
+    {name: "CrossFit Atlanta", coords: {lat: 33.801697, lng: -84.4211646}, address: "1730 Taylor St NW, Atlanta, GA 30318", phone: "(404) 355-4500"},
+    {name: "Anytime Fitness", coords: {lat: 33.837292, lng: -84.37001769999999}, address: "550 Pharr Rd NE, Atlanta, GA 30305", phone: "(404) 549-3523"},
+    {name: "The Forum Athletic Club", coords: {lat: 33.7721849, lng: -84.3650895}, address: "675 Ponce De Leon Ave NE Suite E179, Atlanta, GA 30308", phone: "(678) 904-1940"},
+    {name: "Gravity Fitness", coords: {lat: 33.813121, lng: -84.35768399999999}, address: "2201 Faulkner Rd NE, Atlanta, GA 30324", phone: "(404) 486-0506"},
+    {name: "The Refinery", coords: {lat: 33.8169836, lng: -84.44869}, address: "2260 Marietta Blvd NW #108, Atlanta, GA 30318", phone: "(678) 270-2676"},
+    {name: "LA Fitness", coords: {lat: 33.8441207, lng: -84.374043}, address: "3232 Peachtree Rd NE Ste A, Atlanta, GA 30305", phone: "(404) 233-8311"},
+    {name: "MADabolic", coords: {lat: 33.7556488, lng: -84.3656029}, address: "661 Auburn Ave NE #260, Atlanta, GA 30312", phone: "(470) 393-9934"},
+    {name: "Snap Fitness Atlanta (LaVista Walk)", coords: {lat: 33.8177602, lng: -84.3503078}, address: "1167 Lavista Rd NE, Atlanta, GA 30324", phone: "(404) 793-7398"},
+    {name: "Planet Fitness", coords: {lat: 33.7394778, lng: -84.41619969999999}, address: "854 Oak St SW, Atlanta, GA 30310", phone: "(404) 755-6922"},
+    {name: "LA Fitness", coords: {lat: 33.77744300000001, lng: -84.38912309999999}, address: "75 5th St NW Ste E, Atlanta, GA 30308", phone: "(404) 212-1065"},
+  ];
+
+  let gyms_kansasCity = [
+    {name: "Olympic Gym Kansas City", coords: {lat: 39.2386841, lng: -94.5768308}, address: "7932 N Oak Trafficway, Kansas City, MO 64118", phone: "(816) 216-1578"},
+    {name: "City Gym KC", coords: {lat: 38.9933274, lng: -94.5945895}, address: "7416 Wornall Rd, Kansas City, MO 64114", phone: "(816) 326-8790"},
+    {name: "Onelife Fitness - Power & Light", coords: {lat: 39.0991682, lng: -94.5830873}, address: "1261 Main St, Kansas City, MO 64105", phone: "(816) 268-2300"},
+    {name: "theGYMkc: Uptown", coords: {lat: 39.0620079, lng: -94.59202909999999}, address: "3600 Broadway Blvd, Kansas City, MO 64111", phone: "(816) 960-0502"},
+    {name: "theGYMkc: Westside", coords: {lat: 39.0887161, lng: -94.59022809999999}, address: "2020 Washington St, Kansas City, MO 64108", phone: "(816) 960-0502"},
+    {name: "The Port KC Fitness and Performance", coords: {lat: 39.0542057, lng: -94.5905609}, address: "4001 Broadway Blvd, Kansas City, MO 64111", phone: "(816) 841-2929"},
+    {name: "theGYMkc: River Market", coords: {lat: 39.1099365, lng: -94.58642499999999}, address: "200 Wyandotte St, Kansas City, MO 64105", phone: "(816) 960-0502"},
+    {name: "North Kansas City YMCA", coords: {lat: 39.1425796, lng: -94.5704221}, address: "1999 Iron St, North Kansas City, MO 64116", phone: "(816) 300-0531"},
+    {name: "Zone 6 Fitness", coords: {lat: 39.1487469, lng: -94.58109189999999}, address: "2700 Burlington St, North Kansas City, MO 64116", phone: "(816) 965-1300"},
+    {name: "Bodyfit KC", coords: {lat: 39.0568904, lng: -94.58632419999999}, address: "3838 Main St, Kansas City, MO 64111", phone: "(816) 834-9430"},
+    {name: "Hitch Fit Gym - Kansas City, MO", coords: {lat: 39.0711668, lng: -94.57908809999999}, address: "3036 Gillham Rd, Kansas City, MO 64108", phone: "(816) 753-8900"},
+    {name: "Kansas City Barbell", coords: {lat: 39.0767448, lng: -94.5802772}, address: "2734 McGee Trafficway, Kansas City, MO 64108", phone: "(516) 232-6999"},
+    {name: "Metro KC Fitness", coords: {lat: 39.1695479, lng: -94.59767099999999}, address: "4157 N Mulberry Dr, Kansas City, MO 64116", phone: "(816) 810-9931"},
+    {name: "Anytime Fitness", coords: {lat: 39.2444074, lng: -94.66147850000002}, address: "7000 NW 83 St, Kansas City, MO 64152", phone: "(816) 746-6400"},
+    {name: "Synergy Fitness Studio", coords: {lat: 39.0421932, lng: -94.5990049}, address: "4700 Belleview Ave, Kansas City, MO 64112", phone: "(816) 786-7854"},
+    {name: "CrossFit Matters", coords: {lat: 39.0630414, lng: -94.6183643}, address: "735 Southwest Blvd, Kansas City, KS 66103", phone: "(913) 948-3112"},
+    {name: "Planet Fitness", coords: {lat: 39.2491497, lng: -94.5733241}, address: "470 NE Barry Rd, Kansas City, MO 64155", phone: "(816) 420-0700"},
+    {name: "CORE Strong Fitness", coords: {lat: 39.0807431, lng: -94.591926}, address: "2540 W Pennway St, Kansas City, MO 64108", phone: "(816) 281-9691"},
+    {name: "The Foundation Westport 24hr Gym", coords: {lat: 39.0579172, lng: -94.5958596}, address: "3800 Summit St, Kansas City, MO 64111", phone: "(816) 702-1010"},
+    {name: "Genesis Health Clubs - Ward Parkway", coords: {lat: 38.9706721, lng: -94.60683999999999}, address: "8600 Ward Pkwy Ste 1002, Kansas City, MO 64114", phone: "(816) 490-4223"},
+  ];
+
+  let gyms_coloradoSprings = [
 
   ];
 
@@ -791,4 +837,6 @@ let gyms_chicago = [
   .concat(gyms_fresno)
   .concat(gyms_sacramento)
   .concat(gyms_mesa)
-  .concat(gyms_atlanta);
+  .concat(gyms_atlanta)
+  .concat(gyms_kansasCity)
+  .concat(gyms_coloradoSprings);
