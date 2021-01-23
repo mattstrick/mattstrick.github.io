@@ -817,6 +817,27 @@ let gyms_chicago = [
     {name: "VASA Fitness", coords: {lat: 38.8759283, lng: -104.8219323}, address: "3020 N Nevada Ave, Colorado Springs, CO 80907", phone: "(719) 302-2273"},
   ];
 
+  let gyms_miami = [
+    {name: "Legacy Fit", coords: {lat: 25.800114, lng: -80.1931295}, address: "77 NE 24th St, Miami, FL 33137", phone: "(305) 799-0850"},
+    {name: "Ferrino Sports Fitness Club : Downtown Miami", coords: {lat: 25.7774459, lng: -80.20596499999999}, address: "341 NW S River Dr, Miami, FL 33128", phone: "(305) 640-5859"},
+    {name: "Miami Strong Gym", coords: {lat: 25.794158, lng: -80.18668029999999}, address: "1830 N Bayshore Dr, Miami, FL 33132", phone: "(305) 520-7029"},
+    {name: "Fight Club Miami", coords: {lat: 25.7954982, lng: -80.1925193}, address: "120 NE 20th St, Miami, FL 33137", phone: "(305) 573-7400"},
+    {name: "RYPT Gym", coords: {lat: 25.8272604, lng: -80.18737569999999}, address: "5580 NE 4th Ct, Miami, FL 33137", phone: "(305) 423-1514"},
+    {name: "Barry's Miami Midtown", coords: {lat: 25.8073096, lng: -80.1934825}, address: "3250 NE 1st Ave #105, Miami, FL 33137", phone: "(786) 725-5791"},
+    {name: "CrossFit 305 of Miami", coords: {lat: 25.8304281, lng: -80.18832359999999}, address: "5940 NE 4th Ave, Miami, FL 33137", phone: "(305) 809-6390"},
+    {name: "Elev8tion Fitness", coords: {lat: 25.790966, lng: -80.194476}, address: "1625 N Miami Ave, Miami, FL 33136", phone: "(305) 570-3559"},
+    {name: "Orangetheory Fitness", coords: {lat: 25.7746003, lng: -80.13988479999999}, address: "1115 5th St, Miami Beach, FL 33139", phone: "(305) 695-0085"},
+    {name: "MPower Project Fitness", coords: {lat: 25.860659, lng: -80.18484749999999}, address: "9301 NE 6th Ave, Miami Shores, FL 33138", phone: "(305) 758-8600"},
+    {name: "Crossfit Downtown Miami", coords: {lat: 25.787316, lng: -80.1921028}, address: "1311 NE 1st Ave, Miami, FL 33132", phone: "(305) 915-0358"},
+    {name: "Anatomy", coords: {lat: 25.808749, lng: -80.1909501}, address: "3415 NE 2nd Ave, Miami, FL 33137", phone: "(786) 300-7415"},
+    {name: "5th St. Gym", coords: {lat: 25.7748342, lng: -80.1388022}, address: "1019 5th St, Miami Beach, FL 33139", phone: "(305) 763-8110"},
+    {name: "Jose Marti Gym", coords: {lat: 25.7693459, lng: -80.19938230000001}, address: "434 SW 3rd Ave, Miami, FL 33130", phone: "(305) 960-2940"},
+    {name: "Barry's Miami Beach", coords: {lat: 25.7942568, lng: -80.1442114}, address: "1835 Purdy Ave, Miami Beach, FL 33139", phone: "(786) 888-1699"},
+    {name: "UFC GYM Midtown", coords: {lat: 25.810988, lng: -80.1930402}, address: "3635 NE 1st Ave, Miami, FL 33137", phone: "(305) 549-5150"},
+    {name: "Downtown Miami YMCA", coords: {lat: 25.7707173, lng: -80.1895467}, address: "200 S Biscayne Blvd #15A, Miami, FL 33131", phone: "(305) 779-9622"},
+    {name: "Sweat440", coords: {lat: 25.7950607, lng: -80.14397050000001}, address: "1916 Bay Rd, Miami Beach, FL 33139", phone: "(305) 458-3959"},
+  ];
+
   let gyms = []
   .concat(gyms_chicago)
   .concat(gyms_amherst)
@@ -857,4 +878,5 @@ let gyms_chicago = [
   .concat(gyms_mesa)
   .concat(gyms_atlanta)
   .concat(gyms_kansasCity)
-  .concat(gyms_coloradoSprings);
+  .concat(gyms_coloradoSprings)
+  .concat(gyms_miami);
