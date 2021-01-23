@@ -838,6 +838,29 @@ let gyms_chicago = [
     {name: "Sweat440", coords: {lat: 25.7950607, lng: -80.14397050000001}, address: "1916 Bay Rd, Miami Beach, FL 33139", phone: "(305) 458-3959"},
   ];
 
+  let gyms_raleigh = [
+    {name: "Tapout Fitness - Raleigh", coords: {lat: 35.8160013, lng: -78.6142567}, address: "900 E Six Forks Rd, Raleigh, NC 27604", phone: "(984) 269-5538"},
+    {name: "Capital Strength & Conditioning", coords: {lat: 35.8126145, lng: -78.6178082}, address: "2422 Atlantic Ave, Raleigh, NC 27604", phone: "(919) 200-0348"},
+    {name: "Anytime Fitness", coords: {lat: 35.8438116, lng: -78.6106757}, address: "4500 Falls of Neuse Rd, Raleigh, NC 27609", phone: "(919) 533-5722"},
+    {name: "Fitness 19", coords: {lat: 35.8961451, lng: -78.7252273}, address: "9101 Leesville Rd STE 129, Raleigh, NC 27613", phone: "(919) 870-0281"},
+    {name: "Snap Fitness Raleigh", coords: {lat: 35.9072245, lng: -78.5892386}, address: "1141 Falls River Ave #100, Raleigh, NC 27614", phone: "(984) 202-5326"},
+    {name: "O2 Fitness Brennan Station", coords: {lat: 35.8989319, lng: -78.68292500000001}, address: "8111 Creedmoor Rd, Raleigh, NC 27613", phone: "(919) 676-5802"},
+    {name: "Planet Fitness", coords: {lat: 35.8188729, lng: -78.6262198}, address: "404 E Six Forks Rd, Raleigh, NC 27609", phone: "(877) 959-3973"},
+    {name: "Fitness Connection", coords: {lat: 35.8593736, lng: -78.7009388}, address: "6240 Glenwood Ave, Raleigh, NC 27612", phone: "(919) 781-6755"},
+    {name: "O2 Fitness Seaboard Station", coords: {lat: 35.79054199999999, lng: -78.63969639999999}, address: "802 Semart Dr, Raleigh, NC 27604", phone: "(919) 833-5800"},
+    {name: "G.I. Gym Bootcamp Fitness", coords: {lat: 35.8853947, lng: -78.58329549999999}, address: "3125 Gresham Lake Rd #112, Raleigh, NC 27615", phone: "(919) 971-5230"},
+    {name: "Oak City CrossFit", coords: {lat: 35.8136287, lng: -78.6149114}, address: "1317 Hodges St, Raleigh, NC 27604", phone: "(919) 809-8001"},
+    {name: "Anytime Fitness", coords: {lat: 35.9297608, lng: -78.5645325}, address: "3607 Falls River Ave, Raleigh, NC 27614", phone: "(919) 803-2932"},
+    {name: "Life Time Athletic", coords: {lat: 35.89669000000001, lng: -78.616998}, address: "8515 Falls of Neuse Rd, Raleigh, NC 27615", phone: "(919) 582-7000"},
+    {name: "Spider Strength Gym", coords: {lat: 35.7899652, lng: -78.6444616}, address: "804 N. West St, Lower Unit, Raleigh, NC 27603", phone: "(919) 307-5634"},
+    {name: "Healthtrax Fitness & Wellness", coords: {lat: 35.8957546, lng: -78.65927669999999}, address: "8300 Health Park Suite 125, Raleigh, NC 27615", phone: "(919) 847-2393"},
+    {name: "Core Fitness", coords: {lat: 35.7970877, lng: -78.64193499999999}, address: "1105 Capital Blvd, Raleigh, NC 27603", phone: "(919) 414-0903"},
+    {name: "The Resistance Studio", coords: {lat: 35.8076875, lng: -78.7291035}, address: "5430 Wade Park Blvd #104, Raleigh, NC 27607", phone: "(919) 342-0454"},
+    {name: "MADabolic", coords: {lat: 35.7753285, lng: -78.6440567}, address: "410 S Dawson St STE 120, Raleigh, NC 27601", phone: "(919) 322-0775"},
+    {name: "Crunch Fitness - Cameron Village", coords: {lat: 35.7913807, lng: -78.6582238}, address: "1900 Cameron St, Raleigh, NC 27605", phone: "(919) 948-6445"},
+    {name: "CrossFit Invoke", coords: {lat: 35.7577751, lng: -78.648696}, address: "1701 S Saunders St, Raleigh, NC 27603", phone: "(919) 649-8737"},
+  ];
+
   let gyms = []
   .concat(gyms_chicago)
   .concat(gyms_amherst)
@@ -879,4 +902,5 @@ let gyms_chicago = [
   .concat(gyms_atlanta)
   .concat(gyms_kansasCity)
   .concat(gyms_coloradoSprings)
-  .concat(gyms_miami);
+  .concat(gyms_miami)
+  .concat(gyms_raleigh);
