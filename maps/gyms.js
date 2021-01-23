@@ -796,7 +796,25 @@ let gyms_chicago = [
   ];
 
   let gyms_coloradoSprings = [
-
+    {name: "VASA Fitness", coords: {lat: 38.7882409, lng: -104.8208818}, address: "455 E Cheyenne Mountain Blvd, Colorado Springs, CO 80906", phone: "(719) 630-8272"},
+    {name: "Flex Gym & Fitness", coords: {lat: 38.9199906, lng: -104.787146}, address: "6054 Hollow Tree Ct, Colorado Springs, CO 80918", phone: "(719) 599-4653"},
+    {name: "Crunch Fitness - North Colorado Springs", coords: {lat: 38.9121681, lng: -104.7896077}, address: "5620 N Academy Blvd, Colorado Springs, CO 80918", phone: "(719) 265-6565"},
+    {name: "Anytime Fitness", coords: {lat: 38.93276520000001, lng: -104.7406547}, address: "6945 Austin Bluffs Pkwy, Colorado Springs, CO 80923", phone: "(719) 284-5200"},
+    {name: "24 Hour Fitness", coords: {lat: 38.8926907, lng: -104.7601156}, address: "3650 Austin Bluffs Pkwy Unit 197, Colorado Springs, CO 80918", phone: "(719) 262-0024"},
+    {name: "Anytime Fitness", coords: {lat: 38.9229404, lng: -104.8445955}, address: "820 Village Center Dr, Colorado Springs, CO 80919", phone: "(719) 260-2387"},
+    {name: "Planet Fitness", coords: {lat: 38.82678629999999, lng: -104.7822683}, address: "2516 Airport Rd, Colorado Springs, CO 80910", phone: "(719) 632-2500"},
+    {name: "Planet Fitness", coords: {lat: 38.9327696, lng: -104.8054297}, address: "1025 E Woodmen Rd, Colorado Springs, CO 80920", phone: "(719) 600-5999"},
+    {name: "Planet Fitness", coords: {lat: 38.8961216, lng: -104.7514559}, address: "4316 Austin Bluffs Pkwy, Colorado Springs, CO 80918", phone: "(719) 598-5100"},
+    {name: "Orangetheory Fitness", coords: {lat: 38.91335249999999, lng: -104.716503}, address: "5990 Stetson Hills Blvd, Colorado Springs, CO 80923", phone: "(719) 632-3777"},
+    {name: "Elevation Fitness", coords: {lat: 38.8408861, lng: -104.7674539}, address: "3231 Chelton Cir, Colorado Springs, CO 80909", phone: "(719) 205-1147"},
+    {name: "Planet Fitness", coords: {lat: 38.8695467, lng: -104.7182801}, address: "5849 Constitution Ave, Colorado Springs, CO 80915", phone: "(719) 573-4300"},
+    {name: "Results Fitness", coords: {lat: 38.8453041, lng: -104.7150449}, address: "6015 Galley Rd, Colorado Springs, CO 80915", phone: "(719) 574-5555"},
+    {name: "Accolade Fitness", coords: {lat: 38.8958842, lng: -104.8692578}, address: "4390 Arrowswest Dr, Colorado Springs, CO 80907", phone: "(719) 592-1111"},
+    {name: "Kineo Fit Group Training Studio", coords: {lat: 38.89920619999999, lng: -104.8499237}, address: "4663 Centennial Blvd, Colorado Springs, CO 80919", phone: "(719) 260-4891"},
+    {name: "Crunch Fitness - Colorado Springs", coords: {lat: 38.80717, lng: -104.7552893}, address: "1801 S Academy Blvd, Colorado Springs, CO 80916", phone: "(719) 301-1760"},
+    {name: "VillaSport Athletic Club and Spa", coords: {lat: 38.9363981, lng: -104.7220166}, address: "5904 Prairie Schooner Dr, Colorado Springs, CO 80923", phone: "(719) 522-1221"},
+    {name: "Fit 365", coords: {lat: 38.8349592, lng: -104.8248505}, address: "25 N Cascade Ave suite 90, Colorado Springs, CO 80903", phone: "(719) 471-3935"},
+    {name: "VASA Fitness", coords: {lat: 38.8759283, lng: -104.8219323}, address: "3020 N Nevada Ave, Colorado Springs, CO 80907", phone: "(719) 302-2273"},
   ];
 
   let gyms = []
