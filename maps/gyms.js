@@ -861,6 +861,80 @@ let gyms_chicago = [
     {name: "CrossFit Invoke", coords: {lat: 35.7577751, lng: -78.648696}, address: "1701 S Saunders St, Raleigh, NC 27603", phone: "(919) 649-8737"},
   ];
 
+  let gyms_longBeach = [
+    {name: "Metroflex Gym Long Beach", coords: {lat: 33.8625202, lng: -118.1553306}, address: "3200 E 59th St, Long Beach, CA 90805", phone: "(562) 531-7040"},
+    {name: "Crunch Fitness - Downtown Long Beach", coords: {lat: 33.7668357, lng: -118.1989539}, address: "100 Oceangate, Long Beach, CA 90802", phone: "(562) 453-1030"},
+    {name: "Long Beach Fitness", coords: {lat: 33.8057321, lng: -118.1650879}, address: "2684 Dawson Ave, Signal Hill, CA 90755", phone: "(562) 331-0138"},
+    {name: "UFC GYM Long Beach", coords: {lat: 33.7890657, lng: -118.143126}, address: "4290 CA-1 A, Long Beach, CA 90804", phone: "(562) 498-4269"},
+    {name: "Metcon Long Beach (Formerly Crossfit Belmont Heights)", coords: {lat: 33.7746581, lng: -118.1640125}, address: "2304 E 7th St, Long Beach, CA 90804", phone: "(562) 666-2423"},
+    {name: "Crunch Fitness - Long Beach", coords: {lat: 33.8359683, lng: -118.1888825}, address: "4280 Long Beach Blvd, Long Beach, CA 90807", phone: "(562) 472-1780"},
+    {name: "Long Beach United Boxing Club", coords: {lat: 33.7715098, lng: -118.1679914}, address: "1936 E 4th St, Long Beach, CA 90802", phone: "(562) 436-2649"},
+    {name: "Groundwork Fitness", coords: {lat: 33.771215, lng: -118.1927847}, address: "333 Pine Ave, Long Beach, CA 90802", phone: "(562) 624-0900"},
+    {name: "Fourth Street Annex", coords: {lat: 33.771824, lng: -118.1592157}, address: "2741 E 4th St d, Long Beach, CA 90814", phone: "(562) 719-5017"},
+    {name: "Anytime Fitness", coords: {lat: 33.8223388, lng: -118.1072843}, address: "3599 N Los Coyotes Diagonal, Long Beach, CA 90808", phone: "(562) 354-6773"},
+    {name: "Naples Fitness", coords: {lat: 33.7572799, lng: -118.1261319}, address: "5542 2nd St, Long Beach, CA 90803", phone: "(562) 342-6539"},
+    {name: "Iconix Fitness", coords: {lat: 33.7589833, lng: -118.1452287}, address: "4101 E Olympic Plaza, Long Beach, CA 90803", phone: "(562) 366-4600"},
+    {name: "Orangetheory Fitness", coords: {lat: 33.7540865, lng: -118.1089014}, address: "6620 Pacific Coast Hwy, Long Beach, CA 90803", phone: "(562) 475-4788"},
+  ];
+
+  let gyms_virginiaBeach = [
+    {name: "Natural Bodyz Fitness 24/7 Kempsville - Gyms in Virginia Beach", coords: {lat: 36.7990371, lng: -76.17363569999999}, address: "1320 Kempsville Rd, Virginia Beach, VA 23464", phone: "(757) 390-4478"},
+    {name: "Onelife Fitness - VA Beach Blvd.", coords: {lat: 36.8456117, lng: -76.069468}, address: "2844 Virginia Beach Blvd, Virginia Beach, VA 23452", phone: "(757) 340-4800"},
+    {name: "The Iron Asylum Gym", coords: {lat: 36.7771143, lng: -76.0382664}, address: "2400 Castleton Commerce Way #606, Virginia Beach, VA 23456", phone: "(757) 689-4207"},
+    {name: "Virginia Beach Iron Gym", coords: {lat: 36.8120444, lng: -76.05898189999999}, address: "2682-2698 Reliance Dr, Virginia Beach, VA 23452", phone: "(757) 273-5138"},
+    {name: "iNLeT Fitness", coords: {lat: 36.9045045, lng: -76.070465}, address: "2101 W Great Neck Rd, Virginia Beach, VA 23451", phone: "(757) 412-0600"},
+    {name: "Wareing's Gym", coords: {lat: 36.8453183, lng: -75.9837728}, address: "700 19th St, Virginia Beach, VA 23451", phone: "(757) 491-0700"},
+    {name: "Natural Bodyz Fitness - Bayside's Gym in Virginia Beach", coords: {lat: 36.8952617, lng: -76.1403713}, address: "1608 Pleasure House Rd STE 113, Virginia Beach, VA 23455", phone: "(757) 464-3333"},
+    {name: "Anytime Fitness", coords: {lat: 36.8579705, lng: -75.9896363}, address: "968 Laskin Rd, Virginia Beach, VA 23451", phone: "(757) 962-0802"},
+    {name: "Flex Gym Inc", coords: {lat: 36.8389798, lng: -76.11464459999999}, address: "4020 Bonney Rd, Virginia Beach, VA 23452", phone: "(757) 631-2445"},
+    {name: "Onelife Fitness - Princess Anne", coords: {lat: 36.785201, lng: -76.1088907}, address: "3809 Princess Anne Rd, Virginia Beach, VA 23456", phone: "(757) 471-6900"},
+    {name: "Anytime Fitness", coords: {lat: 36.7497318, lng: -76.01062999999999}, address: "2090 Princess Anne Rd, Virginia Beach, VA 23456", phone: "(757) 689-4712"},
+    {name: "CrossFit Virginia Beach", coords: {lat: 36.8265951, lng: -76.07894019999999}, address: "413 S Lynnhaven Rd #106, Virginia Beach, VA 23452", phone: "(757) 672-0196"},
+    {name: "Blink Fitness", coords: {lat: 36.8190183, lng: -76.1226633}, address: "4239 Holland Road, Virginia Beach, VA 23462", phone: "(757) 432-3584"},
+    {name: "Anytime Fitness", coords: {lat: 36.7762991, lng: -76.085545}, address: "3352 Princess Anne Rd, Virginia Beach, VA 23456", phone: "(757) 301-7800"},
+    {name: "Fitness 24-7", coords: {lat: 36.8429065, lng: -76.0924886}, address: "397 Little Neck Rd Building 3300, Suite 100, Virginia Beach, VA 23452", phone: "(757) 216-5636"},
+    {name: "Hillier Ignite Fitness Park", coords: {lat: 36.85004869999999, lng: -75.974616}, address: "Virginia Beach Boardwalk, Virginia Beach, VA 23451", phone: "(757) 385-6639"},
+    {name: "Onelife Fitness - Red Mill", coords: {lat: 36.7817835, lng: -75.9991134}, address: "1650 General Booth Blvd, Virginia Beach, VA 23454", phone: "(757) 350-7300"},
+    {name: "9Round Fitness", coords: {lat: 36.9106723, lng: -76.07687229999999}, address: "2301 Urchin Rd, Virginia Beach, VA 23451", phone: "(757) 321-2933"},
+    {name: "UFC GYM Virginia Beach", coords: {lat: 36.8485126, lng: -76.0184282}, address: "550 First Colonial Rd, Virginia Beach, VA 23451", phone: "(757) 963-8784"},
+  ];
+
+  let gyms_omaha = [
+    {name: "Omaha Barbell", coords: {lat: 41.2146451, lng: -96.0507214}, address: "8935 J St, Omaha, NE 68127", phone: "(402) 594-4485"},
+    {name: "Blue Moon Fitness - Omaha South", coords: {lat: 41.2063194, lng: -96.08031849999999}, address: "5103 S 108th St, Omaha, NE 68137", phone: "(402) 339-6050"},
+    {name: "Life Time Fitness", coords: {lat: 41.2306605, lng: -96.1802936}, address: "17007 Elm Plaza, Omaha, NE 68130", phone: "(402) 334-3000"},
+    {name: "Genesis Health Clubs – Midtown Crossing", coords: {lat: 41.258334, lng: -95.96038999999999}, address: "200 S 31st Ave, Farnam St, Omaha, NE 68131", phone: "(402) 916-5000"},
+    {name: "Planet Fitness", coords: {lat: 41.23537899999999, lng: -96.12271439999999}, address: "2502 S 133rd Plaza, Omaha, NE 68144", phone: "(402) 330-2911"},
+    {name: "Genesis Health Clubs - Aksarben", coords: {lat: 41.2398311, lng: -96.0157322}, address: "2110 S 67th St, Omaha, NE 68106", phone: "(402) 763-1400"},
+    {name: "Genesis Health Clubs – 132nd & Center", coords: {lat: 41.237538, lng: -96.11805299999999}, address: "2275 S 132nd St, Omaha, NE 68144", phone: "(402) 691-8546"},
+    {name: "CrossFit Omaha", coords: {lat: 41.2132808, lng: -96.05017529999999}, address: "8938 L St, Omaha, NE 68127", phone: "(402) 909-3660"},
+    {name: "Anytime Fitness West Omaha", coords: {lat: 41.2478857, lng: -96.19552580000001}, address: "1121 S 180th St, Omaha, NE 68130", phone: "(402) 934-5488"},
+    {name: "Planet Fitness", coords: {lat: 41.2075383, lng: -95.9659925}, address: "5035 S 36th St, Omaha, NE 68107", phone: "(402) 932-3737"},
+    {name: "Anytime Fitness", coords: {lat: 41.2791073, lng: -96.05199499999999}, address: "2215 N 90th St, Omaha, NE 68134", phone: "(402) 991-8663"},
+    {name: "Anytime Fitness", coords: {lat: 41.2531343, lng: -95.9300073}, address: "1027 Jones St, Omaha, NE 68102", phone: "(402) 991-2333"},
+    {name: "iThinkFit Gym", coords: {lat: 41.2359826, lng: -96.15906439999999}, address: "2424 S 156th Cir, Omaha, NE 68130", phone: "(402) 333-4348"},
+    {name: "Todd Smith Fitness", coords: {lat: 41.2629794, lng: -96.0312581}, address: "434 N 76th St, Omaha, NE 68114", phone: "(402) 932-5841"},
+    {name: "Genesis Health Clubs - Westroads", coords: {lat: 41.2712154, lng: -96.07387580000001}, address: "1212 N 102nd St, Omaha, NE 68114", phone: "(402) 706-4109"},
+    {name: "Planet Fitness", coords: {lat: 41.3001738, lng: -96.0025938}, address: "5760 Ames Ave, Omaha, NE 68104", phone: "(402) 933-3575"},
+    {name: "West O Fitness", coords: {lat: 41.2935747, lng: -96.1913599}, address: "17620 Manderson St, Omaha, NE 68116", phone: "(402) 905-0145"},
+    {name: "Orangetheory Fitness", coords: {lat: 41.2585312, lng: -96.1796277}, address: "16909 Burke St #122, Omaha, NE 68118", phone: "(402) 281-0950"},
+    {name: "Genesis Health Clubs - Sprague", coords: {lat: 41.2951888, lng: -96.14300589999999}, address: "14651 Sprague St, Omaha, NE 68116", phone: "(402) 201-2933"},
+    {name: "Better Bodies Fitness", coords: {lat: 41.2193358, lng: -96.09928389999999}, address: "4117 S 120th St #1250, Omaha, NE 68137", phone: "(402) 333-5001"},
+  ];
+
+  let gyms_oakland = [
+    {name: "Oakland Strength Factory", coords: {lat: 37.7983838, lng: -122.2078599}, address: "2819 MacArthur Blvd, Oakland, CA 94602", phone: "(510) 227-8069"},
+    {name: "FLEX", coords: {lat: 37.8253336, lng: -122.2543219}, address: "3925 Piedmont Ave, Oakland, CA 94611", phone: "(510) 653-3539"},
+    {name: "Proaction Athletics: Oakland's Boot Camp", coords: {lat: 37.8136071, lng: -122.2463361}, address: "3360 Grand Ave Floor 2, Oakland, CA 94610", phone: "(510) 847-4532"},
+    {name: "Urban Fitness Oakland", coords: {lat: 37.7928628, lng: -122.26894}, address: "121 2nd St, Oakland, CA 94607", phone: "(510) 834-0000"},
+    {name: "Game Changer Fitness", coords: {lat: 37.8397166, lng: -122.2623776}, address: "BACK of Building, 5427 Telegraph Ave, Oakland, CA 94609", phone: "(510) 255-0184"},
+    {name: "CRUfit", coords: {lat: 37.8272653, lng: -122.2107532}, address: "6125 Medau Pl, Oakland, CA 94611", phone: "(510) 842-9467"},
+    {name: "The Perfect Sidekick Queer Gym", coords: {lat: 37.7892764, lng: -122.2486164}, address: "1243 E 12th St, Oakland, CA 94606", phone: "(510) 866-4250"},
+    {name: "FOUR Elements Fitness", coords: {lat: 37.8052584, lng: -122.2722863}, address: "322 Frank H. Ogawa Plaza, Oakland, CA 94612", phone: "(510) 394-2282"},
+    {name: "Oakland YMCA", coords: {lat: 37.8128052, lng: -122.2654713}, address: "2350 Broadway, Oakland, CA 94612", phone: "(510) 451-9622"},
+    {name: "Unfair Advantage Fitness", coords: {lat: 37.8269625, lng: -122.282287}, address: "3429 Harlan St, Oakland, CA 94608", phone: "(703) 593-1176"},
+  ];
+
   let gyms = []
   .concat(gyms_chicago)
   .concat(gyms_amherst)
@@ -903,4 +977,8 @@ let gyms_chicago = [
   .concat(gyms_kansasCity)
   .concat(gyms_coloradoSprings)
   .concat(gyms_miami)
-  .concat(gyms_raleigh);
+  .concat(gyms_raleigh)
+  .concat(gyms_longBeach)
+  .concat(gyms_virginiaBeach)
+  .concat(gyms_omaha)
+  .concat(gyms_oakland);
