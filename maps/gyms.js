@@ -956,6 +956,27 @@ let gyms_chicago = [
     {name: "Los Campeones Northeast", coords: {lat: 45.0014775, lng: -93.25161469999999}, address: "1324 Quincy St NE, Minneapolis, MN 55413", phone: "(612) 623-8122"},
   ];
 
+  let gyms_arlington = [
+    {name: "Colaw Fitness of Arlington TX Gyms", coords: {lat: 32.6835791, lng: -97.13202969999999}, address: "3803 S Cooper St #129, Arlington, TX 76015", phone: "(682) 498-8600"},
+    {name: "Snap Fitness 24/7 - North Arlington GYM", coords: {lat: 32.7855441, lng: -97.0657262}, address: "2800 Forestwood Dr #130, Arlington, TX 76006", phone: "(682) 888-1463"},
+    {name: "Steel Jungle", coords: {lat: 32.760779, lng: -97.116288}, address: "751 W Lamar Blvd Ste 103, Arlington, TX 76012", phone: "(817) 459-2004"},
+    {name: "Metroflex Gym Arlington", coords: {lat: 32.6964173, lng: -97.12418009999999}, address: "2921 S Cooper St Suite 109, Arlington, TX 76015", phone: "(817) 465-9331"},
+    {name: "Planet Fitness", coords: {lat: 32.7087044, lng: -97.0984683}, address: "819 E Pioneer Pkwy, Arlington, TX 76010", phone: "(888) 237-9005"},
+    {name: "Fitness Nation", coords: {lat: 32.773005, lng: -97.09596649999999}, address: "2301 N Collins St UNIT 140, Arlington, TX 76011", phone: "(817) 962-0124"},
+    {name: "Texas FITT", coords: {lat: 32.7098755, lng: -97.1373679}, address: "1919 W Pioneer Pkwy, Arlington, TX 76013", phone: "(817) 459-3488"},
+    {name: "Anytime Fitness", coords: {lat: 32.7221504, lng: -97.1512498}, address: "2701 W Park Row Dr, Arlington, TX 76013", phone: "(817) 795-1626"},
+    {name: "Fitness Connection", coords: {lat: 32.6844821, lng: -97.13025309999999}, address: "3775 S Cooper St, Arlington, TX 76015", phone: "(817) 468-4800"},
+    {name: "Snap Fitness South Arlington", coords: {lat: 32.6389798, lng: -97.1340448}, address: "6507 S Cooper St suite 117, Arlington, TX 76001", phone: "(817) 472-7477"},
+    {name: "24 Hour Fitness", coords: {lat: 32.6833978, lng: -97.1275881}, address: "1131 W Arbrook Blvd, Arlington, TX 76015", phone: "(817) 465-2600"},
+    {name: "Anytime Fitness", coords: {lat: 32.6827446, lng: -97.1942651}, address: "4001 W Green Oaks Blvd, Arlington, TX 76016", phone: "(817) 672-5040"},
+    {name: "The Gym", coords: {lat: 32.7104609, lng: -97.1139413}, address: "2025 S Cooper St, Arlington, TX 76010", phone: "(817) 652-1555"},
+    {name: "Workout Anytime Arlington TX", coords: {lat: 32.64721, lng: -97.18235}, address: "4701 W Sublett Rd Ste 111, Arlington, TX 76017", phone: "(817) 563-9000"},
+    {name: "LA Fitness", coords: {lat: 32.7587332, lng: -97.10540549999999}, address: "141 W Road to Six Flags St W, Arlington, TX 76011", phone: "(817) 469-1384"},
+    {name: "Cross Training by Snap Fitness", coords: {lat: 32.7855441, lng: -97.0657262}, address: "2800 Forestwood Dr #130a, Arlington, TX 76006", phone: "(682) 888-1463"},
+    {name: "Edozafit", coords: {lat: 32.7476492, lng: -97.09248989999999}, address: "North A, Arlington, TX 76011", phone: "(469) 554-6143"},
+    {name: "Heart at Work Fitness", coords: {lat: 32.707162, lng: -97.18811}, address: "5300 W Arkansas Ln #118, Arlington, TX 76016", phone: "(817) 496-6260"},
+  ];
+
   let gyms = []
   .concat(gyms_chicago)
   .concat(gyms_amherst)
@@ -1003,4 +1024,5 @@ let gyms_chicago = [
   .concat(gyms_virginiaBeach)
   .concat(gyms_omaha)
   .concat(gyms_oakland)
-  .concat(gyms_minneapolis);
+  .concat(gyms_minneapolis)
+  .concat(gyms_arlington);
