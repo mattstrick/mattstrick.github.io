@@ -935,6 +935,27 @@ let gyms_chicago = [
     {name: "Unfair Advantage Fitness", coords: {lat: 37.8269625, lng: -122.282287}, address: "3429 Harlan St, Oakland, CA 94608", phone: "(703) 593-1176"},
   ];
 
+  let gyms_minneapolis = [
+    {name: "The Movement Minneapolis Gym", coords: {lat: 44.961729, lng: -93.28844819999999}, address: "2100 Lyndale Ave S, Minneapolis, MN 55405", phone: "(763) 210-2191"},
+    {name: "Los Campeones Gym", coords: {lat: 44.9625316, lng: -93.2317365}, address: "2721 E Franklin Ave, Minneapolis, MN 55406", phone: "(612) 333-8181"},
+    {name: "Alchemy 365 North Loop", coords: {lat: 44.9892117, lng: -93.2805808}, address: "246 9th Ave N, Minneapolis, MN 55401", phone: "(612) 444-6287"},
+    {name: "Los Campeones Gym", coords: {lat: 44.9521869, lng: -93.2802512}, address: "2746 Blaisdell Ave, Minneapolis, MN 55408", phone: "(612) 545-5713"},
+    {name: "Life Time Athletic Target Center", coords: {lat: 44.9795281, lng: -93.275989}, address: "600 N 1st Ave N, Minneapolis, MN 55403", phone: "(612) 486-3600"},
+    {name: "YWCA Minneapolis - Uptown", coords: {lat: 44.9510697, lng: -93.2987608}, address: "2808 Hennepin Ave S, Minneapolis, MN 55408", phone: "(612) 874-7131"},
+    {name: "Solcana Fitness", coords: {lat: 44.960729, lng: -93.243781}, address: "1915 E 22nd St, Minneapolis, MN 55404", phone: "(612) 888-1765"},
+    {name: "TwinTown Fitness", coords: {lat: 44.955302, lng: -93.28893099999999}, address: "723 W 26th St, Minneapolis, MN 55405", phone: "(612) 260-1878"},
+    {name: "The Firm", coords: {lat: 44.9791243, lng: -93.2926}, address: "1010 2nd Ave N, Minneapolis, MN 55405", phone: "(612) 377-3003"},
+    {name: "Anytime Fitness", coords: {lat: 44.9830655, lng: -93.27082899999999}, address: "111 N Washington Ave, Minneapolis, MN 55401", phone: "(612) 339-6655"},
+    {name: "Anytime Fitness", coords: {lat: 44.949699, lng: -93.288502}, address: "2910 Lyndale Ave S, Minneapolis, MN 55408", phone: "(612) 345-7753"},
+    {name: "Northeast Fitness", coords: {lat: 45.0070846, lng: -93.2722344}, address: "1828 Marshall St NE, Minneapolis, MN 55418", phone: "(612) 367-4161"},
+    {name: "Dayton YMCA at Gaviidae", coords: {lat: 44.97730259999999, lng: -93.27128890000002}, address: "651 Nicollet Mall UNIT 300, Minneapolis, MN 55402", phone: "(612) 371-9622"},
+    {name: "ALTR", coords: {lat: 44.983216, lng: -93.27140299999999}, address: "1619, 121 N Washington Ave #200, Minneapolis, MN 55401", phone: "(612) 314-7575"},
+    {name: "LA Fitness", coords: {lat: 44.94757, lng: -93.2976669}, address: "3001 Hennepin Ave Ste 2210, Minneapolis, MN 55408", phone: "(612) 392-0395"},
+    {name: "Minneapolis Bouldering Project", coords: {lat: 44.9936771, lng: -93.2770831}, address: "1433 West River Rd N, Minneapolis, MN 55411", phone: "(612) 308-2800"},
+    {name: "Anytime Fitness", coords: {lat: 44.9716554, lng: -93.2181932}, address: "2718 University Ave SE, Minneapolis, MN 55414", phone: "(612) 455-4100"},
+    {name: "Los Campeones Northeast", coords: {lat: 45.0014775, lng: -93.25161469999999}, address: "1324 Quincy St NE, Minneapolis, MN 55413", phone: "(612) 623-8122"},
+  ];
+
   let gyms = []
   .concat(gyms_chicago)
   .concat(gyms_amherst)
@@ -981,4 +1002,5 @@ let gyms_chicago = [
   .concat(gyms_longBeach)
   .concat(gyms_virginiaBeach)
   .concat(gyms_omaha)
-  .concat(gyms_oakland);
+  .concat(gyms_oakland)
+  .concat(gyms_minneapolis);
