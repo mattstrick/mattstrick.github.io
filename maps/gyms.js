@@ -1020,6 +1020,27 @@ let gyms_chicago = [
     {name: "Genesis Health Clubs - Woodland Hills", coords: {lat: 36.0668573, lng: -95.88771000000001}, address: "6612 S Memorial Dr, Tulsa, OK 74133", phone: "(918) 459-2626"},
   ];
 
+  let gyms_newOrleans = [
+    {name: "504 Fitness", coords: {lat: 29.9594777, lng: -90.0909586}, address: "2600 Gravier St, New Orleans, LA 70119", phone: "(504) 373-6611"},
+    {name: "PrimeFitnessRX - Poydras", coords: {lat: 29.95279919999999, lng: -90.08000589999999}, address: "1615 Poydras St suite 350, New Orleans, LA 70112", phone: "(504) 267-0562"},
+    {name: "G-Fit NOLA", coords: {lat: 29.96241729999999, lng: -90.1179667}, address: "8350 Earhart Blvd, New Orleans, LA 70118", phone: "(504) 399-9898"},
+    {name: "Prime Fitness Rx CBD", coords: {lat: 29.9520367, lng: -90.0703336}, address: "201 St Charles Ave #1418, New Orleans, LA 70170", phone: "(504) 267-0562"},
+    {name: "Iron Tribe Fitness Downtown NOLA", coords: {lat: 29.94480729999999, lng: -90.07288799999999}, address: "733 St Joseph St, New Orleans, LA 70130", phone: "(504) 522-5454"},
+    {name: "Snap Fitness New Orleans (Lakeview)", coords: {lat: 30.0048565, lng: -90.1059689}, address: "785 Harrison Ave, New Orleans, LA 70124", phone: "(504) 304-3638"},
+    {name: "Body Doctors Gym", coords: {lat: 29.9806893, lng: -90.10188819999999}, address: "4439 St Louis St, New Orleans, LA 70119", phone: "(504) 382-0109"},
+    {name: "Downtown Fitness Center", coords: {lat: 29.951306, lng: -90.0654788}, address: "365 Canal St #380, New Orleans, LA 70130", phone: "(504) 525-2956"},
+    {name: "Franco's on Magazine", coords: {lat: 29.9298061, lng: -90.07602720000001}, address: "2116 Magazine St, New Orleans, LA 70130", phone: "(504) 218-4637"},
+    {name: "Anytime Fitness", coords: {lat: 29.9347441, lng: -90.1058379}, address: "4600 Freret St, New Orleans, LA 70115", phone: "(504) 899-2111"},
+    {name: "Downtown Fitness Center NOHC", coords: {lat: 29.9685778, lng: -90.0523824}, address: "2372 St Claude Ave, New Orleans, LA 70117", phone: "(504) 754-1101"},
+    {name: "Anytime Fitness", coords: {lat: 29.9799236, lng: -90.1090104}, address: "4900 Canal St, New Orleans, LA 70119", phone: "(504) 373-5659"},
+    {name: "CrossFit NOLA", coords: {lat: 29.947655, lng: -90.1352553}, address: "8422 Burthe St, New Orleans, LA 70118", phone: "(734) 206-2427"},
+    {name: "Anytime Fitness", coords: {lat: 29.9279215, lng: -90.0688552}, address: "1811 Rousseau St, New Orleans, LA 70130", phone: "(504) 524-8006"},
+    {name: "LSU Health - Fitness", coords: {lat: 29.9471064, lng: -90.033665}, address: "2220 Constitution St, New Orleans, LA 70114", phone: "(504) 619-9960"},
+    {name: "New Orleans Boxing Club", coords: {lat: 29.9698355, lng: -90.0870609}, address: "2836 Conti St, New Orleans, LA 70119", phone: "(504) 881-3269"},
+    {name: "Anytime Fitness", coords: {lat: 29.960994, lng: -90.0383047}, address: "3817 Chartres St, New Orleans, LA 70117", phone: "(504) 309-0011"},
+    {name: "Orangetheory Fitness", coords: {lat: 29.9775386, lng: -90.1000152}, address: "4141 Bienville St #107, New Orleans, LA 70119", phone: "(504) 408-2602"},
+  ];
+
   let gyms = []
   .concat(gyms_chicago)
   .concat(gyms_amherst)
@@ -1070,4 +1091,5 @@ let gyms_chicago = [
   .concat(gyms_minneapolis)
   .concat(gyms_arlington)
   .concat(gyms_tampa)
-  .concat(gyms_tulsa);
+  .concat(gyms_tulsa)
+  .concat(gyms_newOrleans);
