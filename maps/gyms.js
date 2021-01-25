@@ -1000,7 +1000,24 @@ let gyms_chicago = [
   ];
 
   let gyms_tulsa = [
-
+    {name: "Genesis Health Clubs - Midtown Tulsa", coords: {lat: 36.1024424, lng: -95.92117650000002}, address: "4103 S Yale Ave, Tulsa, OK 74135", phone: "(918) 641-5501"},
+    {name: "Genesis Health Clubs - South Tulsa", coords: {lat: 36.0159023, lng: -95.90308460000001}, address: "10121 S Sheridan Rd, Tulsa, OK 74133", phone: "(918) 299-5500"},
+    {name: "VASA Fitness", coords: {lat: 36.0887004, lng: -95.88798919999999}, address: "7990 E 51st St, Tulsa, OK 74145", phone: "(918) 984-1044"},
+    {name: "Gymology Fitness Tulsa", coords: {lat: 36.1481408, lng: -95.92393589999999}, address: "4719 E 11th St, Tulsa, OK 74112", phone: "(918) 747-7725"},
+    {name: "Obtain Strength", coords: {lat: 36.0847893, lng: -95.8702153}, address: "9520 E 55th St, Tulsa, OK 74145", phone: "(918) 304-6721"},
+    {name: "Life Time Fitness", coords: {lat: 36.0093424, lng: -95.889969}, address: "10642 S Memorial Dr, Tulsa, OK 74133", phone: "(918) 364-8500"},
+    {name: "Styrka Training + Fitness", coords: {lat: 36.061577, lng: -95.89936999999999}, address: "6939 E 71st St, Tulsa, OK 74133", phone: "(918) 346-6059"},
+    {name: "Gym", coords: {lat: 36.1183202, lng: -95.93771439999999}, address: "3113 S Jamestown Ave, Tulsa, OK 74135", phone: "(918) 292-8096"},
+    {name: "10GYM", coords: {lat: 36.047648, lng: -95.9239656}, address: "4818 E 80th St Ste A, Tulsa, OK 74136", phone: "(918) 494-3644"},
+    {name: "Fenix Strength and Conditioning | Tulsa Gyms", coords: {lat: 36.0776593, lng: -95.8475337}, address: "5859 S Garnett Rd, Tulsa, OK 74146", phone: "(918) 619-3290"},
+    {name: "Planet Fitness", coords: {lat: 36.1618972, lng: -95.8995498}, address: "6925 E Admiral Pl, Tulsa, OK 74115", phone: "(855) 747-5296"},
+    {name: "Planet Fitness", coords: {lat: 36.032395, lng: -95.88323299999999}, address: "8401 E 91st Pl, Tulsa, OK 74133", phone: "(855) 747-5296"},
+    {name: "10GYM", coords: {lat: 36.1175059, lng: -95.87088609999999}, address: "9142 E 31st St, Tulsa, OK 74145", phone: "(918) 438-0193"},
+    {name: "Orangetheory Fitness", coords: {lat: 36.1408403, lng: -95.9701022}, address: "1551 E 15th St #103, Tulsa, OK 74120", phone: "(918) 900-2727"},
+    {name: "Crossfit T-Town", coords: {lat: 36.1574109, lng: -95.9811715}, address: "202 S Lansing Ave suite b, Tulsa, OK 74120", phone: "(918) 271-1603"},
+    {name: "Planet Fitness", coords: {lat: 36.0908365, lng: -95.88757679999999}, address: "5050 S Memorial Dr, Tulsa, OK 74145", phone: "(855) 747-5296"},
+    {name: "Beyond The Gym", coords: {lat: 36.1167468, lng: -95.8872468}, address: "3202 S Memorial Dr #7, Tulsa, OK 74145", phone: "(918) 660-7000"},
+    {name: "Genesis Health Clubs - Woodland Hills", coords: {lat: 36.0668573, lng: -95.88771000000001}, address: "6612 S Memorial Dr, Tulsa, OK 74133", phone: "(918) 459-2626"},
   ];
 
   let gyms = []
