@@ -977,6 +977,32 @@ let gyms_chicago = [
     {name: "Heart at Work Fitness", coords: {lat: 32.707162, lng: -97.18811}, address: "5300 W Arkansas Ln #118, Arlington, TX 76016", phone: "(817) 496-6260"},
   ];
 
+  let gyms_tampa = [
+    {name: "Optimum Gym- South Tampa", coords: {lat: 27.9445333, lng: -82.4919944}, address: "3020 W Kennedy Blvd B, Tampa, FL 33609", phone: "(813) 876-4000"},
+    {name: "Powerhouse Gym Athletic Club", coords: {lat: 27.9976512, lng: -82.49608719999999}, address: "3251-A W Hillsborough Ave, Tampa, FL 33614", phone: "(813) 875-1600"},
+    {name: "Bayshore Fit", coords: {lat: 27.9202072, lng: -82.4914771}, address: "2907 W Bay to Bay Blvd #103, Tampa, FL 33629", phone: "(813) 536-5933"},
+    {name: "Gold's Gym Tampa", coords: {lat: 28.0266535, lng: -82.5026988}, address: "3689 W Waters Ave, Tampa, FL 33614", phone: "(813) 935-2639"},
+    {name: "Crunch Fitness - South Tampa", coords: {lat: 27.9050096, lng: -82.5073364}, address: "4055 S Dale Mabry Hwy, Tampa, FL 33611", phone: "(813) 284-7777"},
+    {name: "Life Time Athletic and Life Spa", coords: {lat: 27.9656353, lng: -82.521205}, address: "2223 N Westshore Blvd, Tampa, FL 33607", phone: "(813) 262-1300"},
+    {name: "South Tampa CrossFit", coords: {lat: 27.9016976, lng: -82.5188163}, address: "4315 S Manhattan Ave, Tampa, FL 33611", phone: "(813) 252-2212"},
+    {name: "Crunch Fitness - Hillsborough", coords: {lat: 27.9952554, lng: -82.5155395}, address: "4340 W Hillsborough Ave Suite 600, Tampa, FL 33614", phone: "(813) 605-2500"},
+    {name: "Powerhouse Gym", coords: {lat: 28.0706863, lng: -82.4591239}, address: "13539 N Florida Ave, Tampa, FL 33613", phone: "(813) 961-0595"},
+    {name: "Anytime Fitness", coords: {lat: 27.9450904, lng: -82.4904407}, address: "2905 W Kennedy Blvd, Tampa, FL 33609", phone: "(813) 392-2728"},
+    {name: "Planet Fitness", coords: {lat: 28.0242033, lng: -82.461711}, address: "210 W Waters Ave, Tampa, FL 33604", phone: "(813) 444-9955"},
+    {name: "Tampa Family Fitness", coords: {lat: 28.0869543, lng: -82.4613566}, address: "14968 N Florida Ave, Tampa, FL 33613", phone: "(813) 968-6088"},
+    {name: "MI40 Gym", coords: {lat: 27.9485235, lng: -82.474345}, address: "1355 W Gray St, Tampa, FL 33606", phone: "(813) 559-1077"},
+    {name: "Elite Strength & Conditioning", coords: {lat: 27.9544211, lng: -82.4764435}, address: "1301 N Rome Ave, Tampa, FL 33607", phone: "(813) 421-3098"},
+    {name: "Cigar City CrossFit", coords: {lat: 27.9598004, lng: -82.43193889999999}, address: "1703 N 24th St, Tampa, FL 33605", phone: "(813) 603-3099"},
+    {name: "Tampa City Boxing", coords: {lat: 27.9835252, lng: -82.5184487}, address: "4435 N Lauber Way, Tampa, FL 33614", phone: "(813) 817-4014"},
+    {name: "Crunch Fitness - Tampa Palms", coords: {lat: 28.0887343, lng: -82.40514259999999}, address: "15313 Amberly Dr East, Tampa, FL 33647", phone: "(813) 609-4710"},
+    {name: "The Spartan Gym", coords: {lat: 27.9878546, lng: -82.51387009999999}, address: "4716 N Lois Ave #6936, Tampa, FL 33614", phone: "(813) 270-5692"},
+    {name: "VKNG Fitness", coords: {lat: 27.9363868, lng: -82.475929}, address: "1605 W Snow Cir, Tampa, FL 33606", phone: "(813) 260-0174"},
+  ];
+
+  let gyms_tulsa = [
+
+  ];
+
   let gyms = []
   .concat(gyms_chicago)
   .concat(gyms_amherst)
@@ -1025,4 +1051,6 @@ let gyms_chicago = [
   .concat(gyms_omaha)
   .concat(gyms_oakland)
   .concat(gyms_minneapolis)
-  .concat(gyms_arlington);
+  .concat(gyms_arlington)
+  .concat(gyms_tampa)
+  .concat(gyms_tulsa);
