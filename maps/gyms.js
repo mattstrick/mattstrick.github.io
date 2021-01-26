@@ -1,4 +1,4 @@
-let gyms_chicago = [
+  let gyms_chicago = [
     {name: "Planet Fitness", coords: { lat: 41.948164, lng: -87.6481925 }, address: "3636 N Broadway, Chicago, IL 60613", phone: "(773) 281-6700"},
     {name: "Quads Gym", coords: {lat: 41.95000599999999, lng: -87.6485787}, address: "3727 North Broadway, Chicago, IL 60613", phone: "(773) 404-7867"},
     {name: "Transform At Amy Bourque Yoga", coords: {lat: 42.10468210000001, lng: -72.63114759999999}, address: "470 Westfield St, West Springfield, MA 01089"},        
@@ -22,6 +22,20 @@ let gyms_chicago = [
     {name: "XSport Fitness", coords: {lat: 41.9373125, lng: -87.6449622}, address: "3030 N Broadway, Chicago, IL 60657", phone: "(773) 634-7333"},
     {name: "Equinox Lincoln Park", coords: {lat: 41.9141384, lng: -87.6337968}, address: "1750 N Clark St, Chicago, IL 60614", phone: "(312) 254-4000"},
     {name: "Equinox The Loop", coords: {lat: 41.8808633, lng: -87.634293}, address: "200 W Monroe St, Chicago, IL 60606", phone: "(312) 252-3100"},
+    {name: "Chicago Yoga Center", coords: {lat: 41.9373251, lng: -87.664931}, address: "3047 N Lincoln Ave #320, Chicago, IL 60657", phone: "(773) 327-3650"},
+    {name: "Chicago School of Yoga", coords: {lat: 41.9263383, lng: -87.6502811}, address: "2442 N Lincoln Ave #2415, Chicago, IL 60614", phone: "(773) 868-9642"},
+    {name: "105F Chicago's Original Hot Yoga", coords: {lat: 41.9323035, lng: -87.645179}, address: "2736 N Clark St, Chicago, IL 60614", phone: "(773) 348-9642"},
+    {name: "YogaSix", coords: {lat: 41.9202837, lng: -87.66286559999999}, address: "2105 N Southport Ave Suite 200, Chicago, IL 60614", phone: "(773) 270-5562"},
+    {name: "Moksha Yoga Center", coords: {lat: 41.9177229, lng: -87.6913265}, address: "2528 W Armitage Ave, Chicago, IL 60647", phone: "(773) 235-9642"},
+    {name: "Bloom Yoga Studio", coords: {lat: 41.9665142, lng: -87.6934728}, address: "4663 N Rockwell St, Chicago, IL 60625", phone: "(773) 463-9642"},
+    {name: "Om on the Range Yoga Studio", coords: {lat: 41.9504854, lng: -87.673419}, address: "1751 W Grace St, Chicago, IL 60613", phone: "(773) 525-9642"},
+    {name: "Namaskar Yoga Studio", coords: {lat: 41.9538815, lng: -87.6643634}, address: "3946 N Southport Ave, Chicago, IL 60613", phone: "(773) 472-0930"},
+    {name: "Gratitude Yoga", coords: {lat: 41.9107897, lng: -87.6412022}, address: "501 W North Ave, Chicago, IL 60610", phone: "(630) 803-7157"},
+    {name: "Hilltop Yoga", coords: {lat: 41.9512357, lng: -87.6603519}, address: "1222 W Grace St, Chicago, IL 60613", phone: "(312) 702-2397"},
+    {name: "Five Keys Yoga", coords: {lat: 41.9397275, lng: -87.6747496}, address: "1818 W Belmont Ave, Chicago, IL 60657", phone: "(773) 857-1763"},
+    {name: "105F Chicago's Original Hot Yoga", coords: {lat: 41.9060731, lng: -87.67116539999999}, address: "1344 N Milwaukee Ave, Chicago, IL 60622", phone: "(773) 395-9150"},
+    {name: "Eb and Flow Yoga Studio", coords: {lat: 41.9101447, lng: -87.6808805}, address: "Enter courtyard gate to side door, 2125 W North Ave 2nd floor, Chicago, IL 60622", phone: "(773) 227-7740"},
+    {name: "Coconut Yoga", coords: {lat: 41.9604313, lng: -87.6833849}, address: "4332 N Lincoln Ave, Chicago, IL 60618", phone: "(224) 372-3723"},
   ];
 
   let gyms_amherst = [
