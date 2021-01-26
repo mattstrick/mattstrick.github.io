@@ -158,25 +158,45 @@
       <script>
         let map;
         let markers = [];
+        const urlParams = new URLSearchParams(window.location.search);
+        
         updatePageValuesWithSearchQuery();
         
         document.getElementById("submit").addEventListener("click", () => {                       
             // Update url with search query
             let address = document.getElementById('address').value;
-            const urlParams = new URLSearchParams(window.location.search);
 
             urlParams.set('search', address);
             document.location = `${location.pathname}?${urlParams.toString()}`;
         });
         
         /* Functions */
-        function updatePageValuesWithSearchQuery() {   
-            const urlParams = new URLSearchParams(window.location.search);         
+        function updatePageValuesWithSearchQuery() {           
             const query = urlParams.get('search') || 'Chicago, IL';
             
             document.getElementById('address').value = query;
-            document.querySelector('title').innerHTML = `Gyms: ${query} | BarbellFinder`;
+            document.querySelector('title').innerHTML = `Gyms near ${query} | BarbellFinder`;
             document.querySelector('#side h1').innerHTML = `Searching gyms near ${query}`;
+        }
+
+        function hasAmenities(gym) {
+            const amenities = urlParams.get('amenities');
+            // if amenities does not exist or is empty
+            if (amenities == null || amenities == '') {
+                return true;
+            }
+
+            function hasAmenity(amenity) {
+                // console.log('Amenity', amenity)
+                if (gym?.amenities && gym?.amenities[amenity]) {
+                    return true;
+                }
+
+                return false;
+            }
+            
+            // console.log('amenities', amenities);
+            return amenities.split(',').every(hasAmenity);
         }
 
         function initMap() {
@@ -198,8 +218,8 @@
             // gyms is declared in gyms.js
             gyms.forEach(
                 (gym) => {
-                    if (bounds.contains(gym.coords)) {
-                        // console.log(gym);
+                    if (bounds.contains(gym.coords) && hasAmenities(gym)) {
+                        // console.log('Has Amenities', hasAmenities(gym));
                         shownMarkers++;
                         addMarker(gym);
                     }
