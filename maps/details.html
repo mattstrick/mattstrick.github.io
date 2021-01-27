@@ -59,38 +59,58 @@
         const latitude = urlParams.get('lat');
         const longitude = urlParams.get('lng');
         const gym = gyms.filter(gym => gym.coords.lat == latitude && gym.coords.lng == longitude)[0];
-
         console.log(gym);
+        const checkmark = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+</svg>`;
+        const dash = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+  <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+</svg>`
+        // Classes
+        const boxing = gym?.classes?.boxing ? `<div class="col">${checkmark}<br />Boxing</div>` : `<div class="col">${dash}<br />Boxing</div>`;
+        const yoga = gym?.classes?.yoga ? `<div class="col">${checkmark}<br />Yoga</div>` : `<div class="col">${dash}<br />Yoga</div>`;
+        const bootcamp = gym?.classes?.bootcamp ? `<div class="col">${checkmark}<br />Boot Camp</div>` : `<div class="col">${dash}<br />Boot Camp</div>`;
+        const crossfit = gym?.classes?.crossfit ? `<div class="col">${checkmark}<br />Crossfit</div>` : `<div class="col">${dash}<br />Crossfit</div>`;
+        const hiit = gym?.classes?.hiit ? `<div class="col">${checkmark}<br />HIIT</div>` : `<div class="col">${dash}<br />HIIT</div>`;
+        const spin = gym?.classes?.spin ? `<div class="col">${checkmark}<br />Spin</div>` : `<div class="col">${dash}<br />Spin</div>`;
+        const swim = gym?.classes?.swim ? `<div class="col">${checkmark}<br />Swim</div>` : `<div class="col">${dash}<br />Swim</div>`;
+        const zumba = gym?.classes?.zumba ? `<div class="col">${checkmark}<br />Zumba</div>` : `<div class="col">${dash}<br />Zumba</div>`;
+
+        // Amenities
+        const openGym = gym?.amenities?.openGym ? `<div class="col">${checkmark}<br />Open Gym</div>` : `<div class="col">${dash}<br />Open Gym</div>`;
+        const personalTraining = gym?.amenities?.personalTraining ? `<div class="col">${checkmark}<br />Personal Training</div>` : `<div class="col">${dash}<br />Personal Training</div>`;
+        const nutrition = gym?.amenities?.nutrition ? `<div class="col">${checkmark}<br />Nutrition</div>` : `<div class="col">${dash}<br />Nutrition</div>`;
+        const pool = gym?.amenities?.pool ? `<div class="col">${checkmark}<br />Pool</div>` : `<div class="col">${dash}<br />Pool</div>`;
+        const shower = gym?.amenities?.shower ? `<div class="col">${checkmark}<br />Shower</div>` : `<div class="col">${dash}<br />Shower</div>`;
+        const locallyOwned = gym?.amenities?.locallyOwned ? `<div class="col">${checkmark}<br />Locally Owned</div>` : `<div class="col">${dash}<br />Locally Owned</div>`;
+        const parking = gym?.amenities?.parking ? `<div class="col">${checkmark}<br />Parking</div>` : `<div class="col">${dash}<br />Parking</div>`;
+
         const detailsString = `
         <h1>${gym.name}</h1>
         <p>Address: ${gym.address}</p>
         <p>Phone: ${gym.phone}</p>
         <div>
             <h3>Amenities</h3>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckCheckedDisabled" checked disabled>
-                <label class="form-check-label" for="flexCheckCheckedDisabled">
-                    Coming
-                </label>                
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckCheckedDisabled" checked disabled>
-                <label class="form-check-label" for="flexCheckCheckedDisabled">
-                    Soon
-                </label>
+            <div class="row">
+                ${openGym}
+                ${pool}
+                ${shower}
+                ${locallyOwned}
+                ${parking}
+                ${nutrition}
+                ${personalTraining}
             </div>
             <h3>Classes</h3>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckCheckedDisabled" checked disabled>
-                <label class="form-check-label" for="flexCheckCheckedDisabled">
-                    Coming
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckCheckedDisabled" checked disabled>
-                <label class="form-check-label" for="flexCheckCheckedDisabled">
-                    Soon
-                </label>
+            <div class="row">
+                ${bootcamp}
+                ${boxing}
+                ${crossfit}
+                ${hiit}
+                ${spin}
+                ${swim}
+                ${yoga}
+                ${zumba}
             </div>
             <h3>Cost</h3>
             <p>Coming Soon</p>

@@ -100,42 +100,6 @@
                     <div class="col-12">
                         <h1 class="h2">Searching gyms near Chicago, IL</h1>
                         <div id="gymsShown"></div>
-                        <!-- <div id="amenities">
-                            <h3>Amenities</h3>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="amenities" value="openGym" id="flexCheckDefault1">
-                                <label class="form-check-label" for="flexCheckDefault1">
-                                  Open Gym
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="amenities" value="personalCoaching" id="flexCheckDefault2">
-                                <label class="form-check-label" for="flexCheckDefault2">
-                                  1:1 Coaching
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="amenities" value="nutrition" id="flexCheckDefault3">
-                                <label class="form-check-label" for="flexCheckDefault3">
-                                  Nutrition
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="amenities" value="pool" id="flexCheckDefault4">
-                                <label class="form-check-label" for="flexCheckDefault4">
-                                  Pool
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="amenities" value="showers" id="flexCheckDefault5">
-                                <label class="form-check-label" for="flexCheckDefault5">
-                                  Showers
-                                </label>
-                            </div>
-                        </div>
-                        <div id="classes">
-
-                        </div> -->
                         <div id="389421707">
                             <script type="text/javascript">
                             if (document.location.origin != 'file://') {
@@ -257,7 +221,6 @@
           const gymPhoneNumber = gym.phone ? "<p>" + gym.phone + "</p>" : '';
           const gymHasYoga = gym?.amenities?.yoga ? "<p>" + checkmark + " Yoga</p>" : '';
           const gymHasNutrition = gym?.amenities?.nutrition ? "<p>" + checkmark + " Nutrition</p>" : '';
-          const gymHasClasses = gym?.amenities?.classes ? "<p>" + checkmark + " Classes</p>" : '';
           const detailsLink = `<p><a href="./details.html?lat=${gym.coords.lat}&lng=${gym.coords.lng}">View Details ></a></p>`;
           const contentString =
             '<div id="content">' +
@@ -270,7 +233,6 @@
             "</p>" +
             gymPhoneNumber +
             gymHasYoga +
-            gymHasClasses +
             gymHasNutrition +
             detailsLink + 
             "</div>"
