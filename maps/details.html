@@ -53,14 +53,40 @@
             </div>
         </div>
     </div>
-    <script src="gyms.js"></script>
+    <!-- <script src="gyms.js"></script> -->
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const latitude = urlParams.get('lat');
         const longitude = urlParams.get('lng');
-        const gym = gyms.filter(gym => gym.coords.lat == latitude && gym.coords.lng == longitude)[0];
-        console.log(gym);
-        const checkmark = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+        // const gym = gyms.filter(gym => gym.coords.lat == latitude && gym.coords.lng == longitude)[0];
+        // console.log(gym);
+        getGymFromApi();
+        
+
+        function getGymFromApi() {
+            var xhr = new XMLHttpRequest();
+            var gyms_api = `http://www.barbellfinder.com/api/gym/read_one.php?lat=${latitude}&lng=${longitude}`;
+
+            xhr.open('GET', gyms_api, true);
+            xhr.send();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState != 4) {
+                    return;
+                }
+                if (xhr.status === 200) {
+                    var response = JSON.parse(xhr.responseText);
+                    console.log('Got Gym', response);
+                    
+                    // call update page
+                    updatePage(response);
+                } else {
+                    console.error(xhr.statusText);
+                }
+            }
+        }
+
+        function updatePage(gym) {
+            const checkmark = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
   <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
 </svg>`;
         const xMark = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
@@ -121,6 +147,7 @@
         `
         document.querySelector('#details').innerHTML = detailsString;
         document.querySelector('title').innerHTML = `${gym.name} Details | BarbellFinder`;
+        }
     </script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
