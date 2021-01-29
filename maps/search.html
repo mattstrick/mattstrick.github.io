@@ -123,7 +123,9 @@
         let map;
         let markers = [];
         const urlParams = new URLSearchParams(window.location.search);
+        let apiGyms = [];
         
+        getGymsFromApi();
         updatePageValuesWithSearchQuery();
         
         document.getElementById("submit").addEventListener("click", () => {                       
@@ -180,15 +182,27 @@
             let shownMarkers = 0;
             
             // gyms is declared in gyms.js
-            gyms.forEach(
-                (gym) => {
-                    if (bounds.contains(gym.coords) && hasAmenities(gym)) {
-                        // console.log('Has Amenities', hasAmenities(gym));
-                        shownMarkers++;
-                        addMarker(gym);
+            // gyms.forEach(
+            //     (gym) => {
+            //         if (bounds.contains(gym.coords) && hasAmenities(gym)) {
+            //             // console.log('Has Amenities', hasAmenities(gym));
+            //             shownMarkers++;
+            //             addMarker(gym);
+            //         }
+            //     }
+            // )
+
+            if (apiGyms.length > 0) {
+                apiGyms.forEach(
+                    (gym) => {
+                        if (bounds.contains(getCoords(gym)) && hasAmenities(gym)) {
+                            // console.log('Has Amenities', hasAmenities(gym));
+                            shownMarkers++;
+                            addMarker(gym);
+                        }
                     }
-                }
-            )
+                )
+            }
             
             document.querySelector('#side #gymsShown').innerHTML = `${shownMarkers} gyms shown`;
           });
@@ -196,6 +210,9 @@
           geocodeAddress(geocoder, map); 
         }
   
+        function getCoords(gym) {
+            return {lat: parseFloat(gym.lat),lng: parseFloat(gym.lng)};
+        }
         function geocodeAddress(geocoder, resultsMap) {
             let address = document.getElementById('address').value;
           
@@ -221,7 +238,7 @@
           const gymPhoneNumber = gym.phone ? "<p>" + gym.phone + "</p>" : '';
           const gymHasYoga = gym?.amenities?.yoga ? "<p>" + checkmark + " Yoga</p>" : '';
           const gymHasNutrition = gym?.amenities?.nutrition ? "<p>" + checkmark + " Nutrition</p>" : '';
-          const detailsLink = `<p><a href="./details.html?lat=${gym.coords.lat}&lng=${gym.coords.lng}">View Details ></a></p>`;
+          const detailsLink = `<p><a href="./details.html?lat=${gym.lat}&lng=${gym.lng}">View Details ></a></p>`;
           const contentString =
             '<div id="content">' +
             '<div id="bodyContent">' +
@@ -244,7 +261,7 @@
 
           // Red Marker
           const marker = new google.maps.Marker({
-            position: gym.coords,
+            position: getCoords(gym),
             map: map,
           });
 
@@ -275,6 +292,27 @@
           clearMarkers();
           markers = [];
         }
+
+        function getGymsFromApi() {
+            var xhr = new XMLHttpRequest();
+            var gyms_api = 'http://www.barbellfinder.com/api/gym/read.php';
+
+            xhr.open('GET', gyms_api, true);
+            xhr.send();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState != 4) {
+                    return;
+                }
+                if (xhr.status === 200) {
+                    var response = JSON.parse(xhr.responseText);
+                    console.log('Got Gyms');
+                    apiGyms = response.records;
+                } else {
+                    console.error(xhr.statusText);
+                }
+            }
+        }        
+        
       </script>
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
