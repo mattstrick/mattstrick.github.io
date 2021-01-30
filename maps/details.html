@@ -53,15 +53,12 @@
             </div>
         </div>
     </div>
-    <!-- <script src="gyms.js"></script> -->
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const latitude = urlParams.get('lat');
         const longitude = urlParams.get('lng');
-        // const gym = gyms.filter(gym => gym.coords.lat == latitude && gym.coords.lng == longitude)[0];
-        // console.log(gym);
-        getGymFromApi();
-        
+
+        getGymFromApi();        
 
         function getGymFromApi() {
             var xhr = new XMLHttpRequest();

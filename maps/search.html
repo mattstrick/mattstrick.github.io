@@ -118,7 +118,6 @@
           </div>
           <div id="map"></div>
       </div>
-      <script src="gyms.js"></script>
       <script>
         let map;
         let markers = [];
@@ -180,17 +179,6 @@
           google.maps.event.addListener(map, 'bounds_changed', function() {
             const bounds =  map.getBounds();
             let shownMarkers = 0;
-            
-            // gyms is declared in gyms.js
-            // gyms.forEach(
-            //     (gym) => {
-            //         if (bounds.contains(gym.coords) && hasAmenities(gym)) {
-            //             // console.log('Has Amenities', hasAmenities(gym));
-            //             shownMarkers++;
-            //             addMarker(gym);
-            //         }
-            //     }
-            // )
 
             if (apiGyms.length > 0) {
                 apiGyms.forEach(
@@ -213,6 +201,7 @@
         function getCoords(gym) {
             return {lat: parseFloat(gym.lat),lng: parseFloat(gym.lng)};
         }
+        
         function geocodeAddress(geocoder, resultsMap) {
             let address = document.getElementById('address').value;
           
