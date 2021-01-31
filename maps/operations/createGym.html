@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        getGymFromApi();        
+
+        function getGymFromApi() {
+//             var xhr = new XMLHttpRequest();
+            var gyms_api = `http://barbellfinder.com/api/gym/create.php`;
+
+
+            fetch(gyms_api, {
+                method: 'post',
+                headers: {
+                "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+                },
+                body: 'name=bar&lat=1&lng=-1&address=test&phone=123-456-7890',
+                mode: 'same-origin'
+            })
+            .then(function (data) {
+                console.log('Request succeeded with JSON response', data);
+            })
+            .catch(function (error) {
+                console.log('Request failed', error);
+            });
+        }
+    </script>
+</body>
+</html>

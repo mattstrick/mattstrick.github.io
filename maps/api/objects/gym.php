@@ -147,5 +147,40 @@ class Gym{
         $this->yoga = $row['yoga'];
         $this->zumba = $row['zumba'];
     }
+
+    // create product
+    function create(){
+    
+        // query to insert record
+        $query = "INSERT INTO
+                    " . $this->table_name . "
+                SET
+                    name=:name, lat=:lat, lng=:lng, address=:address, phone=:phone";
+    
+        // prepare query
+        $stmt = $this->conn->prepare($query);
+    
+        // sanitize
+        $this->name=htmlspecialchars(strip_tags($this->name));
+        $this->lat=htmlspecialchars(strip_tags($this->lat));
+        $this->lng=htmlspecialchars(strip_tags($this->lng));
+        $this->address=htmlspecialchars(strip_tags($this->address));
+        $this->phone=htmlspecialchars(strip_tags($this->phone));
+    
+        // bind values
+        $stmt->bindParam(":name", $this->name);
+        $stmt->bindParam(":lat", $this->lat);
+        $stmt->bindParam(":lng", $this->lng);
+        $stmt->bindParam(":address", $this->address);
+        $stmt->bindParam(":phone", $this->phone);
+    
+        // execute query
+        if($stmt->execute()){
+            return true;
+        }
+    
+        return false;
+        
+    }
 }
 ?>

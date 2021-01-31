@@ -144,8 +144,34 @@
         document.querySelector('#details').innerHTML = detailsString;
         document.querySelector('title').innerHTML = `${gym.name} Details | BarbellFinder`;
         }
+
+        // Utils
+        function getPrettyPrice(price) {
+            switch (price) {
+                case 0:
+                    return 'None Given';
+                    break;
+                case 1:
+                    return 'Less than $30/month';
+                    break;
+                case 2:
+                    return 'Less than $60/month';
+                    break;
+                case 3:
+                    return 'Less than $90/month';
+                    break;
+                case 4:
+                    return 'Less than $120/month';
+                    break;
+                case 5:
+                    return 'More than $120/month';
+                    break;
+                default:
+                    return 'None Given';
+                    break;
+            }
+        }
     </script>
-    <script src="./utils.js" />
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
