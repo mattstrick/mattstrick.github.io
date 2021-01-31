@@ -31,7 +31,23 @@ if($gym->name!=null){
         "lat" => $gym->lat,
         "lng" => $gym->lng,
         "address" => $gym->address,
-        "phone" => $gym->phone
+        "phone" => $gym->phone,
+        "opengym" => $gym->opengym,
+        "pool" => $gym->pool,
+        "shower" => $gym->shower,
+        "locallyowned" => $gym->locallyowned,
+        "parking" => $gym->parking,
+        "nutrition" => $gym->nutrition,
+        "personaltraining" => $gym->personaltraining,
+        "climbingwall" => $gym->climbingwall,
+        "bootcamp" => $gym->bootcamp,
+        "boxing" => $gym->boxing,
+        "crossfit" => $gym->crossfit,
+        "hiit" => $gym->hiit,
+        "spin" => $gym->spin,
+        "swim" => $gym->swim,
+        "yoga" => $gym->yoga,
+        "zumba" => $gym->zumba
     );
   
     // set response code - 200 OK

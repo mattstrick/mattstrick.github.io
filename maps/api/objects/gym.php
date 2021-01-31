@@ -41,11 +41,31 @@ class Gym{
     
         // query to read single record
         $query = "SELECT
-                    name, lat, lng, address, phone
+                    p.name, 
+                    p.lat, 
+                    p.lng, 
+                    p.address, 
+                    p.phone, 
+                    a.opengym, 
+                    a.pool, 
+                    a.shower, 
+                    a.locallyowned, 
+                    a.parking, 
+                    a.nutrition, 
+                    a.personaltraining, 
+                    a.climbingwall,
+                    c.bootcamp,
+                    c.boxing,
+                    c.crossfit,
+                    c.hiit,
+                    c.spin,
+                    c.swim,
+                    c.yoga,
+                    c.zumba
                 FROM
-                    " . $this->table_name . " p                    
+                    " . $this->table_name . " p , amenities a, classes c                   
                 WHERE
-                    p.lat = ? AND p.lng = ?
+                    p.lat = ? AND p.lng = ? AND p.id = a.id
                 LIMIT
                     0,1";
     
@@ -68,6 +88,22 @@ class Gym{
         $this->lng = $row['lng'];
         $this->address = $row['address'];
         $this->phone = $row['phone'];
+        $this->opengym = $row['opengym'];
+        $this->pool = $row['pool'];
+        $this->shower = $row['shower'];
+        $this->locallyowned = $row['locallyowned'];
+        $this->parking = $row['parking'];
+        $this->nutrition = $row['nutrition'];
+        $this->personaltraining = $row['personaltraining'];
+        $this->climbingwall = $row['climbingwall'];
+        $this->bootcamp = $row['bootcamp'];
+        $this->boxing = $row['boxing'];
+        $this->crossfit = $row['crossfit'];
+        $this->hiit = $row['hiit'];
+        $this->spin = $row['spin'];
+        $this->swim = $row['swim'];
+        $this->yoga = $row['yoga'];
+        $this->zumba = $row['zumba'];
     }
 }
 ?>
