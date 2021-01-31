@@ -23,3 +23,7 @@ function getPrettyPrice(price) {
             break;
     }
 }
+
+function getCoords(gym) {
+    return {lat: parseFloat(gym.lat),lng: parseFloat(gym.lng)};
+}
