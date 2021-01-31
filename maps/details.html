@@ -91,24 +91,24 @@
   <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
 </svg>`
         // Classes
-        const boxing = gym?.classes?.boxing ? `<div class="col">${checkmark}<br />Boxing</div>` : `<div class="col">${xMark}<br />Boxing</div>`;
-        const yoga = gym?.classes?.yoga ? `<div class="col">${checkmark}<br />Yoga</div>` : `<div class="col">${xMark}<br />Yoga</div>`;
-        const bootcamp = gym?.classes?.bootcamp ? `<div class="col">${checkmark}<br />Boot Camp</div>` : `<div class="col">${xMark}<br />Boot Camp</div>`;
-        const crossfit = gym?.classes?.crossfit ? `<div class="col">${checkmark}<br />Crossfit</div>` : `<div class="col">${xMark}<br />Crossfit</div>`;
-        const hiit = gym?.classes?.hiit ? `<div class="col">${checkmark}<br />HIIT</div>` : `<div class="col">${xMark}<br />HIIT</div>`;
-        const spin = gym?.classes?.spin ? `<div class="col">${checkmark}<br />Spin</div>` : `<div class="col">${xMark}<br />Spin</div>`;
-        const swim = gym?.classes?.swim ? `<div class="col">${checkmark}<br />Swim</div>` : `<div class="col">${xMark}<br />Swim</div>`;
-        const zumba = gym?.classes?.zumba ? `<div class="col">${checkmark}<br />Zumba</div>` : `<div class="col">${xMark}<br />Zumba</div>`;
+        const boxing = gym?.boxing != 0 ? `<div class="col">${checkmark}<br />Boxing</div>` : `<div class="col">${xMark}<br />Boxing</div>`;
+        const yoga = gym?.yoga != 0 ? `<div class="col">${checkmark}<br />Yoga</div>` : `<div class="col">${xMark}<br />Yoga</div>`;
+        const bootcamp = gym?.bootcamp != 0 ? `<div class="col">${checkmark}<br />Boot Camp</div>` : `<div class="col">${xMark}<br />Boot Camp</div>`;
+        const crossfit = gym?.crossfit != 0 ? `<div class="col">${checkmark}<br />Crossfit</div>` : `<div class="col">${xMark}<br />Crossfit</div>`;
+        const hiit = gym?.hiit != 0 ? `<div class="col">${checkmark}<br />HIIT</div>` : `<div class="col">${xMark}<br />HIIT</div>`;
+        const spin = gym?.spin != 0 ? `<div class="col">${checkmark}<br />Spin</div>` : `<div class="col">${xMark}<br />Spin</div>`;
+        const swim = gym?.swim != 0 ? `<div class="col">${checkmark}<br />Swim</div>` : `<div class="col">${xMark}<br />Swim</div>`;
+        const zumba = gym?.zumba != 0 ? `<div class="col">${checkmark}<br />Zumba</div>` : `<div class="col">${xMark}<br />Zumba</div>`;
 
         // Amenities
-        const openGym = gym?.amenities?.openGym ? `<div class="col">${checkmark}<br />Open Gym</div>` : `<div class="col">${xMark}<br />Open Gym</div>`;
-        const personalTraining = gym?.amenities?.personalTraining ? `<div class="col">${checkmark}<br />Personal Training</div>` : `<div class="col">${xMark}<br />Personal Training</div>`;
-        const nutrition = gym?.amenities?.nutrition ? `<div class="col">${checkmark}<br />Nutrition</div>` : `<div class="col">${xMark}<br />Nutrition</div>`;
-        const pool = gym?.amenities?.pool ? `<div class="col">${checkmark}<br />Pool</div>` : `<div class="col">${xMark}<br />Pool</div>`;
-        const shower = gym?.amenities?.shower ? `<div class="col">${checkmark}<br />Shower</div>` : `<div class="col">${xMark}<br />Shower</div>`;
-        const locallyOwned = gym?.amenities?.locallyOwned ? `<div class="col">${checkmark}<br />Locally Owned</div>` : `<div class="col">${xMark}<br />Locally Owned</div>`;
-        const parking = gym?.amenities?.parking ? `<div class="col">${checkmark}<br />Parking</div>` : `<div class="col">${xMark}<br />Parking</div>`;
-        const climbing = gym?.amenities?.climbing ? `<div class="col">${checkmark}<br />Climbing Wall</div>` : `<div class="col">${xMark}<br />Climbing Wall</div>`;
+        const openGym = gym?.opengym != 0 ? `<div class="col">${checkmark}<br />Open Gym</div>` : `<div class="col">${xMark}<br />Open Gym</div>`;
+        const personalTraining = gym?.personaltraining != 0 ? `<div class="col">${checkmark}<br />Personal Training</div>` : `<div class="col">${xMark}<br />Personal Training</div>`;
+        const nutrition = gym?.nutrition != 0 ? `<div class="col">${checkmark}<br />Nutrition</div>` : `<div class="col">${xMark}<br />Nutrition</div>`;
+        const pool = gym?.pool != 0 ? `<div class="col">${checkmark}<br />Pool</div>` : `<div class="col">${xMark}<br />Pool</div>`;
+        const shower = gym?.shower != 0 ? `<div class="col">${checkmark}<br />Shower</div>` : `<div class="col">${xMark}<br />Shower</div>`;
+        const locallyOwned = gym?.locallyowned != 0 ? `<div class="col">${checkmark}<br />Locally Owned</div>` : `<div class="col">${xMark}<br />Locally Owned</div>`;
+        const parking = gym?.parking != 0 ? `<div class="col">${checkmark}<br />Parking</div>` : `<div class="col">${xMark}<br />Parking</div>`;
+        const climbing = gym?.climbingwall != 0 ? `<div class="col">${checkmark}<br />Climbing Wall</div>` : `<div class="col">${xMark}<br />Climbing Wall</div>`;
 
         const detailsString = `
         <h1>${gym.name}</h1>
