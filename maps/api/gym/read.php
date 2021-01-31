@@ -39,7 +39,8 @@ if($num>0){
             "lat" => $lat,
             "lng" => $lng,
             "address" => $address,
-            "phone" => $phone
+            "phone" => $phone,
+            "price" => $price
         );
   
         array_push($gyms_arr["records"], $gym_item);

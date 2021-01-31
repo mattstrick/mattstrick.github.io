@@ -12,6 +12,7 @@ class Gym{
     public $lng;
     public $address;
     public $phone;
+    public $price;
   
     // constructor with $db as database connection
     public function __construct($db){
@@ -23,7 +24,7 @@ class Gym{
     
         // select all query
         $query = "SELECT
-                    name, lat, lng, address, phone
+                    name, lat, lng, address, phone, price
                 FROM
                     " . $this->table_name . " p";
     
@@ -46,6 +47,7 @@ class Gym{
                     p.lng, 
                     p.address, 
                     p.phone, 
+                    p.price,
                     a.opengym, 
                     a.pool, 
                     a.shower, 
@@ -88,6 +90,7 @@ class Gym{
         $this->lng = $row['lng'];
         $this->address = $row['address'];
         $this->phone = $row['phone'];
+        $this->price = $row['price'];
         $this->opengym = $row['opengym'];
         $this->pool = $row['pool'];
         $this->shower = $row['shower'];

@@ -32,6 +32,7 @@ if($gym->name!=null){
         "lng" => $gym->lng,
         "address" => $gym->address,
         "phone" => $gym->phone,
+        "price" => $gym->price,
         "opengym" => $gym->opengym,
         "pool" => $gym->pool,
         "shower" => $gym->shower,
