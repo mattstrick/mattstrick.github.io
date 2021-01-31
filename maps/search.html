@@ -201,7 +201,7 @@
         function getCoords(gym) {
             return {lat: parseFloat(gym.lat),lng: parseFloat(gym.lng)};
         }
-        
+
         function geocodeAddress(geocoder, resultsMap) {
             let address = document.getElementById('address').value;
           
@@ -224,25 +224,22 @@
             const checkmark = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">' +
   '<path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>' +
 "</svg>";
-          const gymPhoneNumber = gym.phone ? "<p>" + gym.phone + "</p>" : '';
+          const gymPhoneNumber = gym?.phone ? "<p>" + gym.phone + "</p>" : '';
           const gymHasYoga = gym?.amenities?.yoga ? "<p>" + checkmark + " Yoga</p>" : '';
           const gymHasNutrition = gym?.amenities?.nutrition ? "<p>" + checkmark + " Nutrition</p>" : '';
           const detailsLink = `<p><a href="./details.html?lat=${gym.lat}&lng=${gym.lng}">View Details ></a></p>`;
           const contentString =
-            '<div id="content">' +
-            '<div id="bodyContent">' +
-            "<h3>" + 
-            gym.name +
-            "</h3>" +
-            "<p>" +
-            gym.address +
-            "</p>" +
-            gymPhoneNumber +
-            gymHasYoga +
-            gymHasNutrition +
-            detailsLink + 
-            "</div>"
-            "</div>";
+            `<div id="content">
+            <div id="bodyContent">
+            <h3>${gym.name}</h3>
+            <p>${gym.address}</p>
+            ${gymPhoneNumber}
+            <p>Price: ${getPrettyPrice(gym.price)}</p>
+            ${gymHasYoga}
+            ${gymHasNutrition}
+            ${detailsLink}  
+            </div>
+            </div>`;
   
           const infowindow = new google.maps.InfoWindow({
             content: contentString,
@@ -303,6 +300,7 @@
         }        
         
       </script>
+      <script src="./utils.js" />
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
