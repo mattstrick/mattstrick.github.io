@@ -197,10 +197,6 @@
   
           geocodeAddress(geocoder, map); 
         }
-  
-        function getCoords(gym) {
-            return {lat: parseFloat(gym.lat),lng: parseFloat(gym.lng)};
-        }
 
         function geocodeAddress(geocoder, resultsMap) {
             let address = document.getElementById('address').value;
@@ -224,22 +220,62 @@
             const checkmark = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">' +
   '<path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>' +
 "</svg>";
-          const gymPhoneNumber = gym?.phone ? "<p>" + gym.phone + "</p>" : '';
-          const gymHasYoga = gym?.amenities?.yoga ? "<p>" + checkmark + " Yoga</p>" : '';
-          const gymHasNutrition = gym?.amenities?.nutrition ? "<p>" + checkmark + " Nutrition</p>" : '';
+          const gymPhoneNumber = gym?.phone ? `<p>${gym.phone}</p>` : '';
           const detailsLink = `<p><a href="./details.html?lat=${gym.lat}&lng=${gym.lng}">View Details ></a></p>`;
-          const contentString =
-            `<div id="content">
+console.log('boxing', gym.boxing);
+          // Classes
+        const boxing = gym?.boxing != (0 || undefined) ? `<div class="col">${checkmark}<br />Boxing</div>` : '';
+        const yoga = gym?.yoga != (0 || undefined) ? `<div class="col">${checkmark}<br />Yoga</div>` : '';
+        const bootcamp = gym?.bootcamp != (0 || undefined) ? `<div class="col">${checkmark}<br />Boot Camp</div>` : '';
+        const crossfit = gym?.crossfit != (0 || undefined) ? `<div class="col">${checkmark}<br />Crossfit</div>` : '';
+        const hiit = gym?.hiit != (0 || undefined) ? `<div class="col">${checkmark}<br />HIIT</div>` : '';
+        const spin = gym?.spin != (0 || undefined) ? `<div class="col">${checkmark}<br />Spin</div>` : '';
+        const swim = gym?.swim != (0 || undefined) ? `<div class="col">${checkmark}<br />Swim</div>` : '';
+        const zumba = gym?.zumba != (0 || undefined) ? `<div class="col">${checkmark}<br />Zumba</div>` : '';
+
+        // Amenities
+        const openGym = gym?.opengym != (0 || undefined) ? `<div class="col">${checkmark}<br />Open Gym</div>` : '';
+        const personalTraining = gym?.personaltraining != (0 || undefined) ? `<div class="col">${checkmark}<br />Personal Training</div>` : '';
+        const nutrition = gym?.nutrition != (0 || undefined) ? `<div class="col">${checkmark}<br />Nutrition</div>` : '';
+        const pool = gym?.pool != (0 || undefined) ? `<div class="col">${checkmark}<br />Pool</div>` : '';
+        const shower = gym?.shower != (0 || undefined) ? `<div class="col">${checkmark}<br />Shower</div>` : '';
+        const locallyOwned = gym?.locallyowned != (0 || undefined) ? `<div class="col">${checkmark}<br />Locally Owned</div>` : '';
+        const parking = gym?.parking != (0 || undefined) ? `<div class="col">${checkmark}<br />Parking</div>` : '';
+        const climbing = gym?.climbingwall != (0 || undefined) ? `<div class="col">${checkmark}<br />Climbing Wall</div>` : '';
+
+          const contentString =`
+            <div id="content">
             <div id="bodyContent">
             <h3>${gym.name}</h3>
             <p>${gym.address}</p>
             ${gymPhoneNumber}
             <p>Price: ${getPrettyPrice(gym.price)}</p>
-            ${gymHasYoga}
-            ${gymHasNutrition}
+            <div class="container">
+                <div class="row">
+                    ${bootcamp}
+                    ${boxing}
+                    ${crossfit}
+                    ${hiit}
+                    ${spin}
+                    ${swim}
+                    ${yoga}
+                    ${zumba}
+                </div>
+                <div class="row">
+                    ${openGym}
+                    ${personalTraining}
+                    ${nutrition}
+                    ${pool}
+                    ${shower}
+                    ${locallyOwned}
+                    ${parking}
+                    ${climbing}
+                </div>
+            </div>
             ${detailsLink}  
             </div>
-            </div>`;
+            </div>
+            `;
   
           const infowindow = new google.maps.InfoWindow({
             content: contentString,
