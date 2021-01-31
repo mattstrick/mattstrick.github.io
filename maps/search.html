@@ -222,26 +222,26 @@
 "</svg>";
           const gymPhoneNumber = gym?.phone ? `<p>${gym.phone}</p>` : '';
           const detailsLink = `<p><a href="./details.html?lat=${gym.lat}&lng=${gym.lng}">View Details ></a></p>`;
-console.log('boxing', gym.boxing);
+          
           // Classes
-        const boxing = gym?.boxing != (0 || undefined) ? `<div class="col">${checkmark}<br />Boxing</div>` : '';
-        const yoga = gym?.yoga != (0 || undefined) ? `<div class="col">${checkmark}<br />Yoga</div>` : '';
-        const bootcamp = gym?.bootcamp != (0 || undefined) ? `<div class="col">${checkmark}<br />Boot Camp</div>` : '';
-        const crossfit = gym?.crossfit != (0 || undefined) ? `<div class="col">${checkmark}<br />Crossfit</div>` : '';
-        const hiit = gym?.hiit != (0 || undefined) ? `<div class="col">${checkmark}<br />HIIT</div>` : '';
-        const spin = gym?.spin != (0 || undefined) ? `<div class="col">${checkmark}<br />Spin</div>` : '';
-        const swim = gym?.swim != (0 || undefined) ? `<div class="col">${checkmark}<br />Swim</div>` : '';
-        const zumba = gym?.zumba != (0 || undefined) ? `<div class="col">${checkmark}<br />Zumba</div>` : '';
+        const boxing = gym?.boxing != 0 ? `<div class="col">${checkmark}<br />Boxing</div>` : '';
+        const yoga = gym?.yoga != 0 ? `<div class="col">${checkmark}<br />Yoga</div>` : '';
+        const bootcamp = gym?.bootcamp != 0 ? `<div class="col">${checkmark}<br />Boot Camp</div>` : '';
+        const crossfit = gym?.crossfit != 0 ? `<div class="col">${checkmark}<br />Crossfit</div>` : '';
+        const hiit = gym?.hiit != 0 ? `<div class="col">${checkmark}<br />HIIT</div>` : '';
+        const spin = gym?.spin != 0 ? `<div class="col">${checkmark}<br />Spin</div>` : '';
+        const swim = gym?.swim != 0 ? `<div class="col">${checkmark}<br />Swim</div>` : '';
+        const zumba = gym?.zumba != 0 ? `<div class="col">${checkmark}<br />Zumba</div>` : '';
 
         // Amenities
-        const openGym = gym?.opengym != (0 || undefined) ? `<div class="col">${checkmark}<br />Open Gym</div>` : '';
-        const personalTraining = gym?.personaltraining != (0 || undefined) ? `<div class="col">${checkmark}<br />Personal Training</div>` : '';
-        const nutrition = gym?.nutrition != (0 || undefined) ? `<div class="col">${checkmark}<br />Nutrition</div>` : '';
-        const pool = gym?.pool != (0 || undefined) ? `<div class="col">${checkmark}<br />Pool</div>` : '';
-        const shower = gym?.shower != (0 || undefined) ? `<div class="col">${checkmark}<br />Shower</div>` : '';
-        const locallyOwned = gym?.locallyowned != (0 || undefined) ? `<div class="col">${checkmark}<br />Locally Owned</div>` : '';
-        const parking = gym?.parking != (0 || undefined) ? `<div class="col">${checkmark}<br />Parking</div>` : '';
-        const climbing = gym?.climbingwall != (0 || undefined) ? `<div class="col">${checkmark}<br />Climbing Wall</div>` : '';
+        const openGym = gym?.opengym != 0 ? `<div class="col">${checkmark}<br />Open Gym</div>` : '';
+        const personalTraining = gym?.personaltraining != 0 ? `<div class="col">${checkmark}<br />Personal Training</div>` : '';
+        const nutrition = gym?.nutrition != 0 ? `<div class="col">${checkmark}<br />Nutrition</div>` : '';
+        const pool = gym?.pool != 0 ? `<div class="col">${checkmark}<br />Pool</div>` : '';
+        const shower = gym?.shower != 0 ? `<div class="col">${checkmark}<br />Shower</div>` : '';
+        const locallyOwned = gym?.locallyowned != 0 ? `<div class="col">${checkmark}<br />Locally Owned</div>` : '';
+        const parking = gym?.parking != 0 ? `<div class="col">${checkmark}<br />Parking</div>` : '';
+        const climbing = gym?.climbingwall != 0 ? `<div class="col">${checkmark}<br />Climbing Wall</div>` : '';
 
           const contentString =`
             <div id="content">
@@ -298,6 +298,7 @@ console.log('boxing', gym.boxing);
         //   });
   
           marker.addListener("click", () => {
+              console.log(gym);
             infowindow.open(map, marker);
           });
   

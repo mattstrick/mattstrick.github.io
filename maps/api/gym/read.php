@@ -40,7 +40,23 @@ if($num>0){
             "lng" => $lng,
             "address" => $address,
             "phone" => $phone,
-            "price" => $price
+            "price" => $price,
+            "opengym" => $opengym,
+            "pool" => $pool,
+    "shower" => $shower,
+    "locallyowned" => $locallyowned, 
+    "parking" => $parking, 
+    "nutrition" => $nutrition, 
+    "personaltraining" => $personaltraining,
+    "climbingwall" => $climbingwall,
+    "bootcamp" => $bootcamp,
+    "boxing" => $boxing, 
+    "crossfit" => $crossfit,
+    "hiit" => $hiit,
+    "spin" => $spin,
+    "swim" => $swim,
+    "yoga" => $yoga,
+    "zumba" => $zumba
         );
   
         array_push($gyms_arr["records"], $gym_item);
