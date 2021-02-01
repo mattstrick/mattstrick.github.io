@@ -8,7 +8,7 @@
     <title>BarbellFinder - Fast and Easy Gym Search</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWUIVQ6XyFm2qpZwJD1OY2rdJ1BOKw9lE&callback=initMap&libraries=&v=weekly"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWUIVQ6XyFm2qpZwJD1OY2rdJ1BOKw9lE&callback=&libraries=&v=weekly"
       defer
     ></script>
     <style type="text/css">
@@ -153,7 +153,7 @@
 
             function hasAmenity(amenity) {
                 // console.log('Amenity', amenity)
-                if (gym?.amenities && gym?.amenities[amenity]) {
+                if (gym && gym[amenity] == 1) {
                     return true;
                 }
 
@@ -162,6 +162,26 @@
             
             // console.log('amenities', amenities);
             return amenities.split(',').every(hasAmenity);
+        }
+
+        function hasClasses(gym) {
+            const classes = urlParams.get('classes');
+            // if classes does not exist or is empty
+            if (classes == null || classes == '') {
+                return true;
+            }
+
+            function hasClass(classType) {
+                // console.log('Class', classType);
+                if (gym && gym[classType] == 1) {
+                    return true;
+                }
+
+                return false;
+            }
+            
+            // console.log('amenities', amenities);
+            return classes.split(',').every(hasClass);
         }
 
         function initMap() {
@@ -183,7 +203,7 @@
             if (apiGyms.length > 0) {
                 apiGyms.forEach(
                     (gym) => {
-                        if (bounds.contains(getCoords(gym)) && hasAmenities(gym)) {
+                        if (bounds.contains(getCoords(gym)) && hasAmenities(gym) && hasClasses(gym)) {
                             // console.log('Has Amenities', hasAmenities(gym));
                             shownMarkers++;
                             addMarker(gym);
@@ -330,6 +350,7 @@
                     var response = JSON.parse(xhr.responseText);
                     console.log('Got Gyms');
                     apiGyms = response.records;
+                    initMap();
                 } else {
                     console.error(xhr.statusText);
                 }
