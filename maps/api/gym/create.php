@@ -26,7 +26,8 @@ if(
     !empty($data->lat) &&
     !empty($data->lng) &&
     !empty($data->address) &&
-    !empty($data->phone)
+    !empty($data->phone) &&
+    !empty($data->price)
 ){
   
     // set gym property values
@@ -35,6 +36,7 @@ if(
     $gym->lng = $data->lng;
     $gym->address = $data->address;
     $gym->phone = $data->phone;
+    $gym->price = $data->price;
   
     // create the gym
     if($gym->create()){

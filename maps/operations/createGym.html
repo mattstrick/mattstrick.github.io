@@ -4,22 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWUIVQ6XyFm2qpZwJD1OY2rdJ1BOKw9lE&callback=&libraries=&v=weekly"
+    ></script>
 </head>
 <body>
+    
+        <div><label for="name">Name</label><input type="text" name="name" id="name"></div>
+        <div><label for="address">Address</label><input type="text" name="address" id="address"></div>
+        <div><label for="phone">Phone</label><input type="text" name="phone" id="phone"></div>
+        <div><label for="price">Price</label>
+            <select name="price" id="price">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            </select>
+        </div>
+        <button id="submit" type="submit" onsubmit="validateAndSubmit()">Submit</button>
+    
     <script>
-        getGymFromApi();        
+        // createGym({name: "bar", lat:"1", lng: "-1", address: "test", phone: "123-456-7890"});        
+        const geocoder = new google.maps.Geocoder();
+        document.querySelector('#submit').addEventListener("click", () => {                       
+            let address = document.getElementById('address').value;
 
-        function getGymFromApi() {
-//             var xhr = new XMLHttpRequest();
+            geocoder.geocode({ address: address }, (results, status) => {
+                if (status === "OK") {
+                    // Log out the lat long coordinate
+                    console.log({"lat": results[0].geometry.location.lat(), "lng": results[0].geometry.location.lng()});
+                    validateAndSubmit(results[0].geometry.location.lat(), results[0].geometry.location.lng());
+                } else {
+                alert(
+                    "Geocode was not successful for the following reason: " + status
+                );
+                }
+            });
+        });
+
+        function validateAndSubmit(lat, lng) {
+            const data = {
+                name:document.querySelector('#name').value, 
+                lat: lat,
+                lng: lng,
+                address: document.querySelector('#address').value,
+                phone: document.querySelector('#phone').value,
+                price: document.querySelector('#price').value,
+            }
+
+            console.log('Data', data);
+
+            createGym(data);
+        }
+
+        function createGym(data) {
             var gyms_api = `http://barbellfinder.com/api/gym/create.php`;
-
 
             fetch(gyms_api, {
                 method: 'post',
                 headers: {
-                "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+                    'Content-Type': 'application/json'
                 },
-                body: 'name=bar&lat=1&lng=-1&address=test&phone=123-456-7890',
+                body: JSON.stringify(data),
                 mode: 'same-origin'
             })
             .then(function (data) {

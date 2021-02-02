@@ -155,7 +155,7 @@ class Gym{
         $query = "INSERT INTO
                     " . $this->table_name . "
                 SET
-                    name=:name, lat=:lat, lng=:lng, address=:address, phone=:phone";
+                    name=:name, lat=:lat, lng=:lng, address=:address, phone=:phone, price=:price";
     
         // prepare query
         $stmt = $this->conn->prepare($query);
@@ -166,6 +166,7 @@ class Gym{
         $this->lng=htmlspecialchars(strip_tags($this->lng));
         $this->address=htmlspecialchars(strip_tags($this->address));
         $this->phone=htmlspecialchars(strip_tags($this->phone));
+        $this->price=htmlspecialchars(strip_tags($this->price));
     
         // bind values
         $stmt->bindParam(":name", $this->name);
@@ -173,6 +174,7 @@ class Gym{
         $stmt->bindParam(":lng", $this->lng);
         $stmt->bindParam(":address", $this->address);
         $stmt->bindParam(":phone", $this->phone);
+        $stmt->bindParam(":price", $this->price);
     
         // execute query
         if($stmt->execute()){
