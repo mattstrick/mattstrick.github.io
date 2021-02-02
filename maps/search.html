@@ -100,6 +100,13 @@
                     <div class="col-12">
                         <h1 class="h2">Searching gyms near Chicago, IL</h1>
                         <div id="gymsShown"></div>
+                        <hr />
+                        <h3>Filters</h3>
+                        <h5>Classes</h5>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="yogaCheck" onclick="updateClassesOnClick('yoga')">
+                            <label class="form-check-label" for="yogaCheck">Yoga</label>
+                        </div>
                         <div id="389421707">
                             <script type="text/javascript">
                             if (document.location.origin != 'file://') {
@@ -138,10 +145,67 @@
         /* Functions */
         function updatePageValuesWithSearchQuery() {           
             const query = urlParams.get('search') || 'Chicago, IL';
+            const classes = urlParams.get('classes');
             
+            // Search Value
             document.getElementById('address').value = query;
             document.querySelector('title').innerHTML = `Gyms near ${query} | BarbellFinder`;
             document.querySelector('#side h1').innerHTML = `Searching gyms near ${query}`;
+
+            // Classes Value
+            classes && classes.split(',').forEach(function(element) {
+                document.querySelector(`#${element}Check`).checked = true;
+            });
+        }
+
+        function removeElementFromArray(array, element) {
+            console.log('array', array);
+
+            if (array.lastIndexOf(element) != -1) {
+                const index = array.lastIndexOf(element);
+                array.splice(index, 1);
+
+                return array;
+            } else {
+                return array;
+            }
+        }
+
+        function updateClassesOnClick(classType) {
+            const isChecked = document.querySelector(`#${classType}Check`).checked;
+            const classes = urlParams.get('classes');
+
+            if (isChecked) {
+                // Add value
+                if (classes && classes.includes(classType)) {
+                    // Do Nothing
+                } else {
+                    console.log('Classes', classes);
+                    if (classes == '' || classes == null) {
+                        urlParams.set('classes', classType);
+                    } else {
+                        urlParams.set('classes', `,${classType}`);
+                    } 
+                    document.location = `${location.pathname}?${urlParams.toString()}`;                  
+                }
+            } else {
+                // Remove value
+                if (classes == '') {
+                    // Do Nothing
+                } else {
+                    if (classes && classes.includes(classType)) {
+                        let array = classes.split(',');
+                        let newArray = removeElementFromArray(array, classType);
+                        console.log('New Array', newArray);
+                        urlParams.set('classes', newArray.toString());
+                        document.location = `${location.pathname}?${urlParams.toString()}`;
+                    } else {
+                        // Do Nothing
+                    }
+                }
+            }
+
+            
         }
 
         function hasAmenities(gym) {
