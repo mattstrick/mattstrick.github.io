@@ -19,33 +19,24 @@ $gym = new Gym($db);
   
 // get posted data
 $data = json_decode(file_get_contents("php://input"));
-
-// make sure data is not empty
-if(
-    !empty($data->name) &&
-    !empty($data->lat) &&
-    !empty($data->lng) &&
-    !empty($data->address) &&
-    !empty($data->phone)
-){
   
     // set gym property values
-    $gym->name = $data->name;
-    $gym->lat = $data->lat;
-    $gym->lng = $data->lng;
-    $gym->address = $data->address;
-    $gym->phone = $data->phone;
-    $gym->price = $data->price;
-    $gym->classes_id = $data->classes_id;
+    $gym->opengym = $data->opengym;
+    $gym->pool = $data->pool;
+    $gym->shower = $data->shower;
+    $gym->locallyowned = $data->locallyowned;
+    $gym->parking = $data->parking;
+    $gym->nutrition = $data->nutrition;
+    $gym->personaltraining = $data->personaltraining;
+    $gym->climbingwall = $data->climbingwall;
   
     // create the gym
-    if($gym->create()){
-  
+    if($gym->createAmenities()){
         // set response code - 201 created
         http_response_code(201);
   
         // tell the user
-        echo json_encode(array("message" => "Gym was created."));
+        echo json_encode(array("message" => "Amenities was created."));
     }
   
     // if unable to create the gym, tell the user
@@ -55,17 +46,6 @@ if(
         http_response_code(503);
   
         // tell the user
-        echo json_encode(array("message" => "Unable to create gym."));
+        echo json_encode(array("message" => "Unable to create amenities."));
     }
-}
-  
-// tell the user data is incomplete
-else{
-  
-    // set response code - 400 bad request
-    http_response_code(400);
-  
-    // tell the user
-    echo json_encode(array("message" => "Unable to create gym. Data is incomplete."));
-}
 ?>

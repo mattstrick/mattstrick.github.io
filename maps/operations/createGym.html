@@ -25,6 +25,7 @@
             </select>
         </div>
         <div><label for="classes_id">Classes ID</label><input type="text" name="classes_id" id="classes_id"></div>
+        <div><label for="amenities_id">Amenities ID</label><input type="text" name="amenities_id" id="amenities_id"></div>
         <button id="submitGym" type="submit">Create Gym</button>
     </div>
     <div>
@@ -79,6 +80,58 @@
         </div>
         <button id="submitClasses" type="submit">Create Classes</button>
     </div>
+    <div>
+        <h3>Create Amenities</h3>
+        <div><label for="opengym">opengym</label>
+            <select name="opengym" id="opengym">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            </select>
+        </div>
+        <div><label for="pool">pool</label>
+            <select name="pool" id="pool">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            </select>
+        </div>
+        <div><label for="shower">shower</label>
+            <select name="shower" id="shower">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            </select>
+        </div>
+        <div><label for="locallyowned">locallyowned</label>
+            <select name="locallyowned" id="locallyowned">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            </select>
+        </div>
+        <div><label for="parking">parking</label>
+            <select name="parking" id="parking">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            </select>
+        </div>
+        <div><label for="nutrition">nutrition</label>
+            <select name="nutrition" id="nutrition">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            </select>
+        </div>
+        <div><label for="personaltraining">personaltraining</label>
+            <select name="personaltraining" id="personaltraining">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            </select>
+        </div>
+        <div><label for="climbingwall">climbingwall</label>
+            <select name="climbingwall" id="climbingwall">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            </select>
+        </div>
+        <button id="submitAmenities" type="submit">Create Amenities</button>
+    </div>
     <script>     
         const geocoder = new google.maps.Geocoder();
 
@@ -104,6 +157,47 @@
             validateAndSubmitClasses();
         });
 
+        document.querySelector('#submitAmenities').addEventListener("click", () => {                                   
+            console.log('Creating new Amenities listing');
+            validateAndSubmitAmenities();
+        });
+
+        function validateAndSubmitAmenities() {
+            const data = {
+                opengym: document.querySelector('#opengym').value, 
+                pool: document.querySelector('#pool').value, 
+                shower: document.querySelector('#shower').value, 
+                locallyowned: document.querySelector('#locallyowned').value,
+                parking: document.querySelector('#parking').value,
+                nutrition: document.querySelector('#nutrition').value,
+                personaltraining: document.querySelector('#personaltraining').value, 
+                climbingwall: document.querySelector('#climbingwall').value, 
+            };
+
+            console.log('Data', data);
+            createAmenities(data);
+        }
+
+        function createAmenities(data) {
+            var api = `http://barbellfinder.com/api/gym/create_amenities.php`;   
+            fetch(api, {
+                method: 'post',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data),
+                mode: 'same-origin'
+            })
+            .then(function (data) {
+                console.log('Request succeeded with JSON response', data);
+                console.log('Fetching last amenities row');
+                getLastRowFromApi(`http://barbellfinder.com/api/gym/read_last_amenities_row.php`, 'amenities');        
+            })
+            .catch(function (error) {
+                console.log('Request failed', error);
+            });
+        }
+
         function validateAndSubmitClasses() {
             const data = {
                 bootcamp: document.querySelector('#bootcamp').value, 
@@ -114,7 +208,7 @@
                 swim: document.querySelector('#swim').value,
                 yoga: document.querySelector('#yoga').value, 
                 zumba: document.querySelector('#zumba').value, 
-            }
+            };
 
             console.log('Data', data);
             createClasses(data);
@@ -134,7 +228,8 @@
             .then(function (data) {
                 console.log('Request succeeded with JSON response', data);
                 console.log('Fetching last classes row');
-                getLastRowFromApi(`http://barbellfinder.com/api/gym/read_last_classes_row.php`, 'classes');        
+                getLastRowFromApi(`http://barbellfinder.com/api/gym/read_last_classes_row.php`, 'classes'); 
+                // getLastRowFromApi(`http://barbellfinder.com/api/gym/read_last_amenities_row.php`, 'amenities');        
             })
             .catch(function (error) {
                 console.log('Request failed', error);
@@ -173,10 +268,6 @@
 
             console.log('Data', data);
 
-            createGym(data);
-        }
-
-        function createGym(data) {
             var gyms_api = `http://barbellfinder.com/api/gym/create.php`;
 
             fetch(gyms_api, {

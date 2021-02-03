@@ -246,5 +246,66 @@ class Gym{
         $this->yoga = $row['yoga'];
         $this->zumba = $row['zumba'];
     }
+
+    // create amenities
+    function createAmenities() {
+        // query to insert record
+        $query = "INSERT INTO
+                    amenities
+                SET
+                opengym=:opengym, pool=:pool, shower=:shower, locallyowned=:locallyowned, parking=:parking, nutrition=:nutrition, personaltraining=:personaltraining, climbingwall=:climbingwall";
+    
+        // prepare query
+        $stmt = $this->conn->prepare($query);
+
+        // bind values
+        $stmt->bindParam(":opengym", $this->opengym);
+        $stmt->bindParam(":pool", $this->pool);
+        $stmt->bindParam(":shower", $this->shower);
+        $stmt->bindParam(":locallyowned", $this->locallyowned);
+        $stmt->bindParam(":parking", $this->parking);
+        $stmt->bindParam(":nutrition", $this->nutrition);
+        $stmt->bindParam(":personaltraining", $this->personaltraining);
+        $stmt->bindParam(":climbingwall", $this->climbingwall);
+
+        // execute query
+        if($stmt->execute()){
+            return true;
+        }
+    
+        return false;
+    }
+
+    // read last amenities row
+    function readLastAmenitiesRow() {
+        // query to read single record
+        $query = "SELECT
+                    * 
+                FROM
+                    amenities p                   
+                ORDER BY ID DESC
+                LIMIT
+                    1";
+
+        // prepare query statement
+        $stmt = $this->conn->prepare( $query );
+
+        // execute query
+        $stmt->execute();
+
+        // get retrieved row
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        // set values to object properties
+        $this->id = $row['id'];
+        $this->opengym = $row['opengym'];
+        $this->pool = $row['pool'];
+        $this->shower = $row['shower'];
+        $this->locallyowned = $row['locallyowned'];
+        $this->parking = $row['parking'];
+        $this->nutrition = $row['nutrition'];
+        $this->personaltraining = $row['personaltraining'];
+        $this->climbingwall = $row['climbingwall'];
+    }
 }
 ?>
