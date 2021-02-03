@@ -19,34 +19,38 @@ $gym = new Gym($db);
   
 // get posted data
 $data = json_decode(file_get_contents("php://input"));
-
-// make sure data is not empty
-if(
-    !empty($data->name) &&
-    !empty($data->lat) &&
-    !empty($data->lng) &&
-    !empty($data->address) &&
-    !empty($data->phone) &&
-    !empty($data->price) 
-){
   
     // set gym property values
-    $gym->name = $data->name;
-    $gym->lat = $data->lat;
-    $gym->lng = $data->lng;
-    $gym->address = $data->address;
-    $gym->phone = $data->phone;
-    $gym->price = $data->price;
-    $gym->classes_id = $data->classes_id;
+    $gym->bootcamp = $data->bootcamp;
+    $gym->boxing = $data->boxing;
+    $gym->crossfit = $data->crossfit;
+    $gym->hiit = $data->hiit;
+    $gym->spin = $data->spin;
+    $gym->swim = $data->swim;
+    $gym->yoga = $data->yoga;
+    $gym->zumba = $data->zumba;
   
     // create the gym
-    if($gym->create()){
+    if($gym->createClasses()){
   
+        if($gym->id!=null){
+            // create array
+            $gym_arr = array(
+                "id" => $gym->id,                
+            );
+          
+            // set response code - 200 OK
+            http_response_code(200);
+          
+            // make it json format
+            echo json_encode($gym_arr);
+        }
+
         // set response code - 201 created
-        http_response_code(201);
+        // http_response_code(201);
   
         // tell the user
-        echo json_encode(array("message" => "Gym was created."));
+        // echo json_encode(array("message" => "Classes was created."));
     }
   
     // if unable to create the gym, tell the user
@@ -56,17 +60,6 @@ if(
         http_response_code(503);
   
         // tell the user
-        echo json_encode(array("message" => "Unable to create gym."));
+        echo json_encode(array("message" => "Unable to create classes."));
     }
-}
-  
-// tell the user data is incomplete
-else{
-  
-    // set response code - 400 bad request
-    http_response_code(400);
-  
-    // tell the user
-    echo json_encode(array("message" => "Unable to create gym. Data is incomplete."));
-}
 ?>

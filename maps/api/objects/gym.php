@@ -148,14 +148,13 @@ class Gym{
         $this->zumba = $row['zumba'];
     }
 
-    // create product
+    // create gym
     function create(){
-    
         // query to insert record
         $query = "INSERT INTO
                     " . $this->table_name . "
                 SET
-                    name=:name, lat=:lat, lng=:lng, address=:address, phone=:phone, price=:price";
+                    name=:name, lat=:lat, lng=:lng, address=:address, phone=:phone, price=:price, classes_id=:classes_id";
     
         // prepare query
         $stmt = $this->conn->prepare($query);
@@ -167,6 +166,7 @@ class Gym{
         $this->address=htmlspecialchars(strip_tags($this->address));
         $this->phone=htmlspecialchars(strip_tags($this->phone));
         $this->price=htmlspecialchars(strip_tags($this->price));
+        $this->classes_id=htmlspecialchars(strip_tags($this->classes_id));
     
         // bind values
         $stmt->bindParam(":name", $this->name);
@@ -175,6 +175,7 @@ class Gym{
         $stmt->bindParam(":address", $this->address);
         $stmt->bindParam(":phone", $this->phone);
         $stmt->bindParam(":price", $this->price);
+        $stmt->bindParam(":classes_id", $this->classes_id);
     
         // execute query
         if($stmt->execute()){
@@ -183,6 +184,67 @@ class Gym{
     
         return false;
         
+    }
+
+    // create classes
+    function createClasses() {
+        // query to insert record
+        $query = "INSERT INTO
+                    classes
+                SET
+                    bootcamp=:bootcamp, boxing=:boxing, crossfit=:crossfit, hiit=:hiit, spin=:spin, swim=:swim, yoga=:yoga, zumba=:zumba";
+    
+        // prepare query
+        $stmt = $this->conn->prepare($query);
+
+        // bind values
+        $stmt->bindParam(":bootcamp", $this->bootcamp);
+        $stmt->bindParam(":boxing", $this->boxing);
+        $stmt->bindParam(":crossfit", $this->crossfit);
+        $stmt->bindParam(":hiit", $this->hiit);
+        $stmt->bindParam(":spin", $this->spin);
+        $stmt->bindParam(":swim", $this->swim);
+        $stmt->bindParam(":yoga", $this->yoga);
+        $stmt->bindParam(":zumba", $this->zumba);
+
+        // execute query
+        if($stmt->execute()){
+            return true;
+        }
+    
+        return false;
+    }
+
+    // read last classes row
+    function readLastClassesRow() {
+        // query to read single record
+        $query = "SELECT
+                    * 
+                FROM
+                    classes p                   
+                ORDER BY ID DESC
+                LIMIT
+                    1";
+    
+        // prepare query statement
+        $stmt = $this->conn->prepare( $query );
+    
+        // execute query
+        $stmt->execute();
+    
+        // get retrieved row
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+    
+        // set values to object properties
+        $this->id = $row['id'];
+        $this->bootcamp = $row['bootcamp'];
+        $this->boxing = $row['boxing'];
+        $this->crossfit = $row['crossfit'];
+        $this->hiit = $row['hiit'];
+        $this->spin = $row['spin'];
+        $this->swim = $row['swim'];
+        $this->yoga = $row['yoga'];
+        $this->zumba = $row['zumba'];
     }
 }
 ?>

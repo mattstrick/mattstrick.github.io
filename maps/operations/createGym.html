@@ -9,7 +9,8 @@
     ></script>
 </head>
 <body>
-    
+    <div>
+        <h3>Create Gym</h3>
         <div><label for="name">Name</label><input type="text" name="name" id="name"></div>
         <div><label for="address">Address</label><input type="text" name="address" id="address"></div>
         <div><label for="phone">Phone</label><input type="text" name="phone" id="phone"></div>
@@ -23,19 +24,73 @@
             <option value="5">5</option>
             </select>
         </div>
-        <button id="submit" type="submit" onsubmit="validateAndSubmit()">Create Gym</button>
-    
-    <script>
-        // createGym({name: "bar", lat:"1", lng: "-1", address: "test", phone: "123-456-7890"});        
+        <div><label for="classes_id">Classes ID</label><input type="text" name="classes_id" id="classes_id"></div>
+        <button id="submitGym" type="submit">Create Gym</button>
+    </div>
+    <div>
+        <h3>Create Classes</h3>
+        <div><label for="bootcamp">bootcamp</label>
+            <select name="bootcamp" id="bootcamp">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            </select>
+        </div>
+        <div><label for="boxing">boxing</label>
+            <select name="boxing" id="boxing">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            </select>
+        </div>
+        <div><label for="crossfit">crossfit</label>
+            <select name="crossfit" id="crossfit">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            </select>
+        </div>
+        <div><label for="hiit">hiit</label>
+            <select name="hiit" id="hiit">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            </select>
+        </div>
+        <div><label for="spin">spin</label>
+            <select name="spin" id="spin">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            </select>
+        </div>
+        <div><label for="swim">swim</label>
+            <select name="swim" id="swim">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            </select>
+        </div>
+        <div><label for="yoga">yoga</label>
+            <select name="yoga" id="yoga">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            </select>
+        </div>
+        <div><label for="zumba">zumba</label>
+            <select name="zumba" id="zumba">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            </select>
+        </div>
+        <button id="submitClasses" type="submit">Create Classes</button>
+    </div>
+    <script>     
         const geocoder = new google.maps.Geocoder();
-        document.querySelector('#submit').addEventListener("click", () => {                       
+
+        document.querySelector('#submitGym').addEventListener("click", () => {                       
+            console.log('Creating new Gym listing');
             let address = document.getElementById('address').value;
 
             geocoder.geocode({ address: address }, (results, status) => {
                 if (status === "OK") {
                     // Log out the lat long coordinate
                     console.log({"lat": results[0].geometry.location.lat(), "lng": results[0].geometry.location.lng()});
-                    validateAndSubmit(results[0].geometry.location.lat(), results[0].geometry.location.lng());
+                    validateAndSubmitGym(results[0].geometry.location.lat(), results[0].geometry.location.lng());
                 } else {
                 alert(
                     "Geocode was not successful for the following reason: " + status
@@ -44,7 +99,68 @@
             });
         });
 
-        function validateAndSubmit(lat, lng) {
+        document.querySelector('#submitClasses').addEventListener("click", () => {                                   
+            console.log('Creating new Classes listing');
+            validateAndSubmitClasses();
+        });
+
+        function validateAndSubmitClasses() {
+            const data = {
+                bootcamp: document.querySelector('#bootcamp').value, 
+                boxing: document.querySelector('#boxing').value, 
+                crossfit: document.querySelector('#crossfit').value, 
+                hiit: document.querySelector('#hiit').value,
+                spin: document.querySelector('#spin').value,
+                swim: document.querySelector('#swim').value,
+                yoga: document.querySelector('#yoga').value, 
+                zumba: document.querySelector('#zumba').value, 
+            }
+
+            console.log('Data', data);
+            createClasses(data);
+        }
+
+        function createClasses(data) {
+            var api = `http://barbellfinder.com/api/gym/create_classes.php`;   
+          
+            fetch(api, {
+                method: 'post',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data),
+                mode: 'same-origin'
+            })
+            .then(function (data) {
+                console.log('Request succeeded with JSON response', data);
+                console.log('Fetching last classes row');
+                getLastRowFromApi(`http://barbellfinder.com/api/gym/read_last_classes_row.php`, 'classes');        
+            })
+            .catch(function (error) {
+                console.log('Request failed', error);
+            });
+        }
+
+        function getLastRowFromApi(api, type) {
+            var xhr = new XMLHttpRequest();
+
+            xhr.open('GET', api, true);
+            xhr.send();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState != 4) {
+                    return;
+                }
+                if (xhr.status === 200) {
+                    var response = JSON.parse(xhr.responseText);
+                    console.log('Got ID', response.id); 
+                    document.querySelector(`#${type}_id`).value = response.id;                           
+                } else {
+                    console.error(xhr.statusText);
+                }
+            }
+        }
+
+        function validateAndSubmitGym(lat, lng) {
             const data = {
                 name:document.querySelector('#name').value, 
                 lat: lat,
@@ -52,6 +168,7 @@
                 address: document.querySelector('#address').value,
                 phone: document.querySelector('#phone').value,
                 price: document.querySelector('#price').value,
+                classes_id: document.querySelector('#classes_id').value,
             }
 
             console.log('Data', data);
