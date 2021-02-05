@@ -108,6 +108,8 @@
         const pool = gym?.pool != 0 ? `<div class="col">${checkmark}<br />Pool</div>` : `<div class="col">${xMark}<br />Pool</div>`;
         const shower = gym?.shower != 0 ? `<div class="col">${checkmark}<br />Shower</div>` : `<div class="col">${xMark}<br />Shower</div>`;
         const locallyOwned = gym?.locallyowned != 0 ? `<div class="col">${checkmark}<br />Locally Owned</div>` : `<div class="col">${xMark}<br />Locally Owned</div>`;
+        const femaleOwned = gym?.femaleowned != 0 ? `<div class="col">${checkmark}<br />Female Owned</div>` : `<div class="col">${xMark}<br />Female Owned</div>`;
+        const minorityOwned = gym?.minorityowned != 0 ? `<div class="col">${checkmark}<br />Minority Owned</div>` : `<div class="col">${xMark}<br />Minority Owned</div>`;
         const parking = gym?.parking != 0 ? `<div class="col">${checkmark}<br />Parking</div>` : `<div class="col">${xMark}<br />Parking</div>`;
         const climbing = gym?.climbingwall != 0 ? `<div class="col">${checkmark}<br />Climbing Wall</div>` : `<div class="col">${xMark}<br />Climbing Wall</div>`;
 
@@ -123,6 +125,8 @@
                 ${pool}
                 ${shower}
                 ${locallyOwned}
+                ${femaleOwned}
+                ${minorityOwned}
                 ${parking}
                 ${nutrition}
                 ${personalTraining}

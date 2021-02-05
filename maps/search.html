@@ -21,12 +21,24 @@
 
       #side {
           width: 400px;
-          overflow-y: scroll;
+      }
+
+      @media screen and (min-device-width: 575px) {
+          #side {
+            overflow-y: scroll;
+          }
       }
 
       #content {
         display: flex;
         height: calc(100% - 64px);
+      }
+
+      @media only screen 
+        and (max-device-width: 575px) { 
+        #content {
+            flex-direction: column;
+        }
       }
 
       /* Optional: Makes the sample page fill the window. */
@@ -45,6 +57,14 @@
         text-align: center;
         font-family: "Roboto", "sans-serif";
         line-height: 30px;
+      }
+
+      @media only screen 
+        and (max-device-width: 575px) { 
+        #floating-panel {
+            top: 300px;
+            left: 5px;
+        }
       }
     </style>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -94,7 +114,7 @@
         <input id="submit" type="button" value="Search" />
       </div>
       <div id="content">
-          <div id="side" class="d-none d-sm-block">
+          <div id="side" class="">
               <div class="container">
                   <div class="row">
                     <div class="col-12">
@@ -324,6 +344,8 @@
         const pool = gym?.pool != 0 ? `<div class="col">${checkmark}<br />Pool</div>` : '';
         const shower = gym?.shower != 0 ? `<div class="col">${checkmark}<br />Shower</div>` : '';
         const locallyOwned = gym?.locallyowned != 0 ? `<div class="col">${checkmark}<br />Locally Owned</div>` : '';
+        const femaleOwned = gym?.femaleowned != 0 ? `<div class="col">${checkmark}<br />Female Owned</div>` : '';
+        const minorityOwned = gym?.minorityowned != 0 ? `<div class="col">${checkmark}<br />Minority Owned</div>` : '';
         const parking = gym?.parking != 0 ? `<div class="col">${checkmark}<br />Parking</div>` : '';
         const climbing = gym?.climbingwall != 0 ? `<div class="col">${checkmark}<br />Climbing Wall</div>` : '';
 
@@ -352,6 +374,8 @@
                     ${pool}
                     ${shower}
                     ${locallyOwned}
+                    ${femaleOwned}
+                    ${minorityOwned}
                     ${parking}
                     ${climbing}
                 </div>

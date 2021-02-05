@@ -37,6 +37,7 @@ if(
     $gym->phone = $data->phone;
     $gym->price = $data->price;
     $gym->classes_id = $data->classes_id;
+    $gym->amenities_id = $data->amenities_id;
   
     // create the gym
     if($gym->create()){

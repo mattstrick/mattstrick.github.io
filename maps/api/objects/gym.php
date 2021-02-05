@@ -16,7 +16,9 @@ class Gym{
     public $opengym;
     public $pool; 
     public $shower; 
-    public $locallyowned; 
+    public $locallyowned;
+    public $femaleowned;
+    public $minorityowned; 
     public $parking; 
     public $nutrition; 
     public $personaltraining;
@@ -49,7 +51,9 @@ class Gym{
                     a.opengym, 
                     a.pool, 
                     a.shower, 
-                    a.locallyowned, 
+                    a.locallyowned,
+                    a.femaleowned,
+                    a.minorityowned, 
                     a.parking, 
                     a.nutrition, 
                     a.personaltraining, 
@@ -90,7 +94,9 @@ class Gym{
                     a.opengym, 
                     a.pool, 
                     a.shower, 
-                    a.locallyowned, 
+                    a.locallyowned,
+                    a.femaleowned,
+                    a.minorityowned, 
                     a.parking, 
                     a.nutrition, 
                     a.personaltraining, 
@@ -134,6 +140,8 @@ class Gym{
         $this->pool = $row['pool'];
         $this->shower = $row['shower'];
         $this->locallyowned = $row['locallyowned'];
+        $this->femaleowned = $row['femaleowned'];
+        $this->minorityowned = $row['minorityowned'];
         $this->parking = $row['parking'];
         $this->nutrition = $row['nutrition'];
         $this->personaltraining = $row['personaltraining'];
@@ -154,7 +162,7 @@ class Gym{
         $query = "INSERT INTO
                     " . $this->table_name . "
                 SET
-                    name=:name, lat=:lat, lng=:lng, address=:address, phone=:phone, price=:price, classes_id=:classes_id";
+                    name=:name, lat=:lat, lng=:lng, address=:address, phone=:phone, price=:price, classes_id=:classes_id, amenities_id=:amenities_id";
     
         // prepare query
         $stmt = $this->conn->prepare($query);
@@ -167,6 +175,7 @@ class Gym{
         $this->phone=htmlspecialchars(strip_tags($this->phone));
         $this->price=htmlspecialchars(strip_tags($this->price));
         $this->classes_id=htmlspecialchars(strip_tags($this->classes_id));
+        $this->amenities_id=htmlspecialchars(strip_tags($this->amenities_id));
     
         // bind values
         $stmt->bindParam(":name", $this->name);
@@ -176,6 +185,7 @@ class Gym{
         $stmt->bindParam(":phone", $this->phone);
         $stmt->bindParam(":price", $this->price);
         $stmt->bindParam(":classes_id", $this->classes_id);
+        $stmt->bindParam(":amenities_id", $this->amenities_id);
     
         // execute query
         if($stmt->execute()){
@@ -253,7 +263,7 @@ class Gym{
         $query = "INSERT INTO
                     amenities
                 SET
-                opengym=:opengym, pool=:pool, shower=:shower, locallyowned=:locallyowned, parking=:parking, nutrition=:nutrition, personaltraining=:personaltraining, climbingwall=:climbingwall";
+                opengym=:opengym, pool=:pool, shower=:shower, locallyowned=:locallyowned, femaleowned=:femaleowned, minorityowned=:minorityowned, parking=:parking, nutrition=:nutrition, personaltraining=:personaltraining, climbingwall=:climbingwall";
     
         // prepare query
         $stmt = $this->conn->prepare($query);
@@ -263,6 +273,8 @@ class Gym{
         $stmt->bindParam(":pool", $this->pool);
         $stmt->bindParam(":shower", $this->shower);
         $stmt->bindParam(":locallyowned", $this->locallyowned);
+        $stmt->bindParam(":femaleowned", $this->femaleowned);
+        $stmt->bindParam(":minorityowned", $this->minorityowned);
         $stmt->bindParam(":parking", $this->parking);
         $stmt->bindParam(":nutrition", $this->nutrition);
         $stmt->bindParam(":personaltraining", $this->personaltraining);
@@ -302,6 +314,8 @@ class Gym{
         $this->pool = $row['pool'];
         $this->shower = $row['shower'];
         $this->locallyowned = $row['locallyowned'];
+        $this->femaleowned = $row['femaleowned'];
+        $this->minorityowned = $row['minorityowned'];
         $this->parking = $row['parking'];
         $this->nutrition = $row['nutrition'];
         $this->personaltraining = $row['personaltraining'];

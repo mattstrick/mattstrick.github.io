@@ -106,6 +106,18 @@
             <option value="1">1</option>
             </select>
         </div>
+        <div><label for="femaleowned">femaleowned</label>
+            <select name="femaleowned" id="femaleowned">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            </select>
+        </div>
+        <div><label for="minorityowned">minorityowned</label>
+            <select name="minorityowned" id="minorityowned">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            </select>
+        </div>
         <div><label for="parking">parking</label>
             <select name="parking" id="parking">
             <option value="0">0</option>
@@ -168,6 +180,8 @@
                 pool: document.querySelector('#pool').value, 
                 shower: document.querySelector('#shower').value, 
                 locallyowned: document.querySelector('#locallyowned').value,
+                femaleowned: document.querySelector('#femaleowned').value,
+                minorityowned: document.querySelector('#minorityowned').value,
                 parking: document.querySelector('#parking').value,
                 nutrition: document.querySelector('#nutrition').value,
                 personaltraining: document.querySelector('#personaltraining').value, 
@@ -264,6 +278,7 @@
                 phone: document.querySelector('#phone').value,
                 price: document.querySelector('#price').value,
                 classes_id: document.querySelector('#classes_id').value,
+                amenities_id: document.querySelector('#amenities_id').value,
             }
 
             console.log('Data', data);
