@@ -8,7 +8,7 @@
     <title>BarbellFinder - Fast and Easy Gym Search</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWUIVQ6XyFm2qpZwJD1OY2rdJ1BOKw9lE&callback=&libraries=&v=weekly"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWUIVQ6XyFm2qpZwJD1OY2rdJ1BOKw9lE&callback=initMap&libraries=&v=weekly"
       defer
     ></script>
     <style type="text/css">
@@ -150,8 +150,7 @@
         let markers = [];
         const urlParams = new URLSearchParams(window.location.search);
         let apiGyms = [];
-        
-        getGymsFromApi();
+                
         updatePageValuesWithSearchQuery();
         
         document.getElementById("submit").addEventListener("click", () => {                       
@@ -282,21 +281,8 @@
 
           google.maps.event.addListener(map, 'bounds_changed', function() {
             const bounds =  map.getBounds();
-            let shownMarkers = 0;
 
-            if (apiGyms.length > 0) {
-                apiGyms.forEach(
-                    (gym) => {
-                        if (bounds.contains(getCoords(gym)) && hasAmenities(gym) && hasClasses(gym)) {
-                            // console.log('Has Amenities', hasAmenities(gym));
-                            shownMarkers++;
-                            addMarker(gym);
-                        }
-                    }
-                )
-            }
-            
-            document.querySelector('#side #gymsShown').innerHTML = `${shownMarkers} gyms shown`;
+            getGymsFromApi(bounds.getSouthWest(), bounds.getNorthEast());
           });
   
           geocodeAddress(geocoder, map); 
@@ -424,9 +410,9 @@
           markers = [];
         }
 
-        function getGymsFromApi() {
+        function getGymsFromApi(sw, ne) {
             var xhr = new XMLHttpRequest();
-            var gyms_api = 'http://www.barbellfinder.com/api/gym/read.php';
+            var gyms_api = `http://barbellfinder.com/api/gym/read_within_bounds.php?latLower=${sw.lat()}&latUpper=${ne.lat()}&lngLower=${sw.lng()}&lngUpper=${ne.lng()}`;
 
             xhr.open('GET', gyms_api, true);
             xhr.send();
@@ -436,9 +422,25 @@
                 }
                 if (xhr.status === 200) {
                     var response = JSON.parse(xhr.responseText);
-                    console.log('Got Gyms');
+                    let shownMarkers = 0;
+            
                     apiGyms = response.records;
-                    initMap();
+                    apiGyms.forEach(
+                        (gym) => {
+                            if (hasAmenities(gym) && hasClasses(gym)) {
+                                // console.log('Has Amenities', hasAmenities(gym));
+                                shownMarkers++;
+                                addMarker(gym);
+                            }
+                        }
+                    )
+
+                    if (shownMarkers > 0) {
+                        document.querySelector('#side #gymsShown').innerHTML = `${shownMarkers} gyms shown`;
+                    } else {
+                        document.querySelector('#side #gymsShown').innerHTML = `No gyms shown`;
+                    }
+                    
                 } else {
                     console.error(xhr.statusText);
                 }
