@@ -321,5 +321,53 @@ class Gym{
         $this->personaltraining = $row['personaltraining'];
         $this->climbingwall = $row['climbingwall'];
     }
+
+    // read all gyms within bounds
+    function readWithinBounds() {
+        // select all query
+        $query = "SELECT
+                    p.name, 
+                    p.lat, 
+                    p.lng, 
+                    p.address, 
+                    p.phone, 
+                    p.price,
+                    a.opengym, 
+                    a.pool, 
+                    a.shower, 
+                    a.locallyowned,
+                    a.femaleowned,
+                    a.minorityowned, 
+                    a.parking, 
+                    a.nutrition, 
+                    a.personaltraining, 
+                    a.climbingwall,
+                    c.bootcamp,
+                    c.boxing,
+                    c.crossfit,
+                    c.hiit,
+                    c.spin,
+                    c.swim,
+                    c.yoga,
+                    c.zumba
+                FROM
+                    " . $this->table_name . " p, amenities a, classes c
+                WHERE
+                    p.lat BETWEEN ? AND ? AND p.lng BETWEEN ? AND ? AND p.id = a.id AND p.id = c.id";
+    
+        // prepare query statement
+        $stmt = $this->conn->prepare($query);
+    
+        // bind id of product to be updated
+        $stmt->bindParam(1, $this->latLower);
+        $stmt->bindParam(2, $this->latUpper);
+        $stmt->bindParam(3, $this->lngLower);
+        $stmt->bindParam(4, $this->lngUpper);
+
+        // execute query
+        $stmt->execute();
+    
+        return $stmt;
+    }
 }
 ?>
