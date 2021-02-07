@@ -155,7 +155,9 @@
                 if (status === "OK") {
                     // Log out the lat long coordinate
                     console.log({"lat": results[0].geometry.location.lat(), "lng": results[0].geometry.location.lng()});
-                    validateAndSubmitGym(results[0].geometry.location.lat(), results[0].geometry.location.lng());
+                    
+                    // Check if read one returns a result, if not, create gym
+                    getReadOneResultOrValidateAndSubmitGym(results[0].geometry.location.lat(), results[0].geometry.location.lng())
                 } else {
                 alert(
                     "Geocode was not successful for the following reason: " + status
@@ -173,6 +175,30 @@
             console.log('Creating new Amenities listing');
             validateAndSubmitAmenities();
         });
+
+        function getReadOneResultOrValidateAndSubmitGym(lat,lng) {
+            var xhr = new XMLHttpRequest();
+            var gyms_api = `http://www.barbellfinder.com/api/gym/read_one.php?lat=${lat.toFixed(8)}&lng=${lng.toFixed(8)}`;
+
+            xhr.open('GET', gyms_api, true);
+            xhr.send();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState != 4) {
+                    return;
+                }
+                if (xhr.status === 200) {
+                    var response = JSON.parse(xhr.responseText);
+                    console.log('Got Gym', response);
+                    
+                    // Already have a gym with this lat/lng
+                } else {
+                    // console.error(xhr.statusText);
+                    
+                    // Dont have a gym, so add one
+                    validateAndSubmitGym(lat, lng);
+                }
+            }
+        }
 
         function validateAndSubmitAmenities() {
             const data = {
