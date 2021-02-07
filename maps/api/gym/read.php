@@ -76,8 +76,8 @@ else{
     // set response code - 404 Not found
     http_response_code(404);
   
-    // tell the user no products found
+    // tell the user no gyms found
     echo json_encode(
-        array("message" => "No products found.")
+        array("message" => "No gyms found.")
     );
 }
