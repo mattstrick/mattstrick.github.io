@@ -332,6 +332,7 @@ class Gym{
                     p.address, 
                     p.phone, 
                     p.price,
+                    p.selfverified,
                     a.opengym, 
                     a.pool, 
                     a.shower, 

@@ -47,6 +47,7 @@ if($num>0){
             "address" => $address,
             "phone" => $phone,
             "price" => $price,
+            "selfverified" => $selfverified,
             "opengym" => $opengym,
             "pool" => $pool,
             "shower" => $shower,
