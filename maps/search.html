@@ -52,24 +52,6 @@
         margin: 0;
         padding: 0;
       }
-
-      #floating-panel {
-        position: absolute;
-        top: 75px;
-        left: 50%;
-        z-index: 5;
-        text-align: center;
-        font-family: "Roboto", "sans-serif";
-        line-height: 30px;
-      }
-
-      @media only screen 
-        and (max-device-width: 575px) { 
-        #floating-panel {
-            top: 300px;
-            left: 5px;
-        }
-      }
     </style>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -115,11 +97,7 @@
             </ul>
           </div>
         </div>
-      </nav>
-      <div id="floating-panel">
-        <input id="address" type="textbox" value="Chicago, IL" />
-        <input id="submit" type="button" value="Search" />
-      </div>
+      </nav>      
       <div id="content">
           <div id="side" class="">
               <div class="container">
@@ -128,6 +106,12 @@
                         <h1 class="h2">Searching gyms near Chicago, IL</h1>
                         <div id="gymsShown"></div>
                         <hr />
+                        <div class="container">
+                            <div class="row my-3">
+                                <input id="address" class="col-8" type="textbox" value="Chicago, IL" />
+                                <input id="submit" class="col-4 btn btn-primary" type="button" value="Search" />
+                            </div>
+                        </div>
                         <h3>Filters</h3>
                         <h5>Classes</h5>
                         <div class="form-check">
