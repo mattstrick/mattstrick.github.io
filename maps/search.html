@@ -24,7 +24,8 @@
       }
 
       #side {
-          width: 400px;
+          max-width: 400px;
+          min-width: 260px;
       }
 
       @media screen and (min-device-width: 575px) {
@@ -43,6 +44,25 @@
         #content {
             flex-direction: column;
         }
+      }
+
+      #center {
+          overflow-y: scroll;
+          min-width: 200px;
+          max-width: 400px;
+      }
+
+      #center .gymCard {
+        border-bottom: 1px solid #ebebeb;
+        border-left: 1px solid #ebebeb;
+      }
+
+      #center .gymCard:first-child {
+        border-top: 1px solid #ebebeb;
+      }
+
+      #center .gymCard:hover {
+        background-color: #fafafa;
       }
 
       /* Optional: Makes the sample page fill the window. */
@@ -106,18 +126,21 @@
                         <h1 class="h2">Searching gyms near Chicago, IL</h1>
                         <div id="gymsShown"></div>
                         <hr />
-                        <div class="container">
+                        <div class="container search">
                             <div class="row my-3">
                                 <input id="address" class="col-8" type="textbox" value="Chicago, IL" />
                                 <input id="submit" class="col-4 btn btn-primary" type="button" value="Search" />
                             </div>
                         </div>
-                        <h3>Filters</h3>
-                        <h5>Classes</h5>
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="yogaCheck" onclick="updateClassesOnClick('yoga')">
-                            <label class="form-check-label" for="yogaCheck">Yoga</label>
+                        <div id="filters" class="d-none d-sm-block">
+                            <h3>Filters</h3>
+                            <h5>Classes</h5>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="yogaCheck" onclick="updateClassesOnClick('yoga')">
+                                <label class="form-check-label" for="yogaCheck">Yoga</label>
+                            </div>
                         </div>
+                        
                         <div id="389421707">
                             <script type="text/javascript">
                             if (document.location.origin != 'file://') {
@@ -134,6 +157,11 @@
                   </div>
               </div>
           </div>
+          <div id="center">
+              <div class="container cards">
+                  
+              </div>
+          </div>
           <div id="map"></div>
       </div>
       <script>
@@ -141,6 +169,7 @@
         let markers = [];
         const urlParams = new URLSearchParams(window.location.search);
         let apiGyms = [];
+        let cards = [];
                 
         updatePageValuesWithSearchQuery();
         
@@ -213,9 +242,7 @@
                         // Do Nothing
                     }
                 }
-            }
-
-            
+            }  
         }
 
         function hasAmenities(gym) {
@@ -270,13 +297,13 @@
             streetViewControl: false,
           });
 
+          geocodeAddress(geocoder, map); 
+
           google.maps.event.addListener(map, 'bounds_changed', function() {
             const bounds =  map.getBounds();
 
-            getGymsFromApi(bounds.getSouthWest(), bounds.getNorthEast());
+            getGymsFromApi(bounds.getSouthWest(), bounds.getNorthEast());            
           });
-  
-          geocodeAddress(geocoder, map); 
         }
 
         function geocodeAddress(geocoder, resultsMap) {
@@ -420,7 +447,7 @@
                 if (xhr.status === 200) {
                     var response = JSON.parse(xhr.responseText);
                     let shownMarkers = 0;
-            
+                    cards = [];
                     apiGyms = response.records;
                     apiGyms.forEach(
                         (gym) => {
@@ -428,12 +455,14 @@
                                 // console.log('Has Amenities', hasAmenities(gym));
                                 shownMarkers++;
                                 addMarker(gym);
+                                addCard(gym);
                             }
                         }
                     )
 
                     if (shownMarkers > 0) {
                         document.querySelector('#side #gymsShown').innerHTML = `${shownMarkers} gyms shown`;
+                        addCards()
                     } else {
                         document.querySelector('#side #gymsShown').innerHTML = `No gyms shown`;
                     }
@@ -443,6 +472,32 @@
                 }
             }
         } 
+
+        function addCards() {
+            let cardsHTML = '';
+            cards.forEach(card => {
+                const detailsLink = `<p><a href="./details.html?lat=${card.lat}&lng=${card.lng}">View Details ></a></p>`;
+                const gymPhoneNumber = card?.phone ? `<p>${card.phone}</p>` : '';
+
+                // console.log('Card', card);
+                cardsHTML += `
+                <div class="row gymCard">
+                    <div class="col">
+                        <h5>${card.name}</h5>
+                        <p>${card.address}</p>
+                        ${gymPhoneNumber}
+                        <p>Price: ${getPrettyPrice(card.price)}</p>
+                        ${detailsLink}
+                    </div>                    
+                </div>
+                `
+            });
+            document.querySelector('#center .cards').innerHTML = cardsHTML;
+        }
+
+        function addCard(gym) {
+            cards.push(gym);
+        }
         
         // Utils
         function getPrettyPrice(price) {
