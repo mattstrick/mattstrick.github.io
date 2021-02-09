@@ -295,6 +295,7 @@
             fullscreenControl: false,
             mapTypeControl: false,
             streetViewControl: false,
+            minZoom: 9,
           });
 
           geocodeAddress(geocoder, map); 
@@ -324,42 +325,66 @@
         }
   
         // Adds a marker to the map and push to the array.
-        function addMarker(gym) {
-            const checkmark = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">' +
-  '<path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>' +
-"</svg>";
+        function addMarker(gym) {            
           const gymPhoneNumber = gym?.phone ? `<p>${gym.phone}</p>` : '';
           const detailsLink = `<p><a href="./details.html?lat=${gym.lat}&lng=${gym.lng}">View Details ></a></p>`;
-
-          // Classes
-        const boxing = gym?.boxing != 0 ? `<div class="col">${checkmark}<br />Boxing</div>` : '';
-        const yoga = gym?.yoga != 0 ? `<div class="col">${checkmark}<br />Yoga</div>` : '';
-        const bootcamp = gym?.bootcamp != 0 ? `<div class="col">${checkmark}<br />Boot Camp</div>` : '';
-        const crossfit = gym?.crossfit != 0 ? `<div class="col">${checkmark}<br />Crossfit</div>` : '';
-        const hiit = gym?.hiit != 0 ? `<div class="col">${checkmark}<br />HIIT</div>` : '';
-        const spin = gym?.spin != 0 ? `<div class="col">${checkmark}<br />Spin</div>` : '';
-        const swim = gym?.swim != 0 ? `<div class="col">${checkmark}<br />Swim</div>` : '';
-        const zumba = gym?.zumba != 0 ? `<div class="col">${checkmark}<br />Zumba</div>` : '';
-
-        // Amenities
-        const openGym = gym?.opengym != 0 ? `<div class="col">${checkmark}<br />Open Gym</div>` : '';
-        const personalTraining = gym?.personaltraining != 0 ? `<div class="col">${checkmark}<br />Personal Training</div>` : '';
-        const nutrition = gym?.nutrition != 0 ? `<div class="col">${checkmark}<br />Nutrition</div>` : '';
-        const pool = gym?.pool != 0 ? `<div class="col">${checkmark}<br />Pool</div>` : '';
-        const shower = gym?.shower != 0 ? `<div class="col">${checkmark}<br />Shower</div>` : '';
-        const locallyOwned = gym?.locallyowned != 0 ? `<div class="col">${checkmark}<br />Locally Owned</div>` : '';
-        const femaleOwned = gym?.femaleowned != 0 ? `<div class="col">${checkmark}<br />Female Owned</div>` : '';
-        const minorityOwned = gym?.minorityowned != 0 ? `<div class="col">${checkmark}<br />Minority Owned</div>` : '';
-        const parking = gym?.parking != 0 ? `<div class="col">${checkmark}<br />Parking</div>` : '';
-        const climbing = gym?.climbingwall != 0 ? `<div class="col">${checkmark}<br />Climbing Wall</div>` : '';
-
+        
           const contentString =`
             <div id="content">
-            <div id="bodyContent">
-            <h3>${gym.name}</h3>
-            <p>${gym.address}</p>
-            ${gymPhoneNumber}
-            <p>Price: ${getPrettyPrice(gym.price)}</p>
+                <div id="bodyContent">
+                    <h3>${gym.name}</h3>
+                    <p>${gym.address}</p>
+                    ${gymPhoneNumber}
+                    <p>Price: ${getPrettyPrice(gym.price)}</p>
+                    ${getContentStringFromGym(gym)}
+                    ${detailsLink}  
+                </div>
+            </div>
+            `;
+  
+          const infowindow = new google.maps.InfoWindow({
+            content: contentString,
+          });
+
+          const marker = createMarker(gym, map);
+  
+          marker.addListener("click", () => {
+              console.log(gym);
+            infowindow.open(map, marker);
+          });
+  
+          markers.push(marker);
+        }
+
+        function getContentStringFromGym(gym) {
+            const checkmark = `
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                </svg>
+            `;
+            // Classes
+            const boxing = gym?.boxing != 0 ? `<div class="col">${checkmark}<br />Boxing</div>` : '';
+            const yoga = gym?.yoga != 0 ? `<div class="col">${checkmark}<br />Yoga</div>` : '';
+            const bootcamp = gym?.bootcamp != 0 ? `<div class="col">${checkmark}<br />Boot Camp</div>` : '';
+            const crossfit = gym?.crossfit != 0 ? `<div class="col">${checkmark}<br />Crossfit</div>` : '';
+            const hiit = gym?.hiit != 0 ? `<div class="col">${checkmark}<br />HIIT</div>` : '';
+            const spin = gym?.spin != 0 ? `<div class="col">${checkmark}<br />Spin</div>` : '';
+            const swim = gym?.swim != 0 ? `<div class="col">${checkmark}<br />Swim</div>` : '';
+            const zumba = gym?.zumba != 0 ? `<div class="col">${checkmark}<br />Zumba</div>` : '';
+
+            // Amenities
+            const openGym = gym?.opengym != 0 ? `<div class="col">${checkmark}<br />Open Gym</div>` : '';
+            const personalTraining = gym?.personaltraining != 0 ? `<div class="col">${checkmark}<br />Personal Training</div>` : '';
+            const nutrition = gym?.nutrition != 0 ? `<div class="col">${checkmark}<br />Nutrition</div>` : '';
+            const pool = gym?.pool != 0 ? `<div class="col">${checkmark}<br />Pool</div>` : '';
+            const shower = gym?.shower != 0 ? `<div class="col">${checkmark}<br />Shower</div>` : '';
+            const locallyOwned = gym?.locallyowned != 0 ? `<div class="col">${checkmark}<br />Locally Owned</div>` : '';
+            const femaleOwned = gym?.femaleowned != 0 ? `<div class="col">${checkmark}<br />Female Owned</div>` : '';
+            const minorityOwned = gym?.minorityowned != 0 ? `<div class="col">${checkmark}<br />Minority Owned</div>` : '';
+            const parking = gym?.parking != 0 ? `<div class="col">${checkmark}<br />Parking</div>` : '';
+            const climbing = gym?.climbingwall != 0 ? `<div class="col">${checkmark}<br />Climbing Wall</div>` : '';
+
+            return `
             <div class="container">
                 <div class="row">
                     ${bootcamp}
@@ -386,23 +411,7 @@
                     ${minorityOwned}
                 </div>
             </div>
-            ${detailsLink}  
-            </div>
-            </div>
             `;
-  
-          const infowindow = new google.maps.InfoWindow({
-            content: contentString,
-          });
-
-          const marker = createMarker(gym, map);
-  
-          marker.addListener("click", () => {
-              console.log(gym);
-            infowindow.open(map, marker);
-          });
-  
-          markers.push(marker);
         }
 
         // Decides what kind of marker to display
@@ -462,9 +471,10 @@
 
                     if (shownMarkers > 0) {
                         document.querySelector('#side #gymsShown').innerHTML = `${shownMarkers} gyms shown`;
-                        addCards()
+                        addCards();
                     } else {
                         document.querySelector('#side #gymsShown').innerHTML = `No gyms shown`;
+                        addCards();
                     }
                     
                 } else {
@@ -487,6 +497,7 @@
                         <p>${card.address}</p>
                         ${gymPhoneNumber}
                         <p>Price: ${getPrettyPrice(card.price)}</p>
+                        ${getContentStringFromGym(card)}
                         ${detailsLink}
                     </div>                    
                 </div>
