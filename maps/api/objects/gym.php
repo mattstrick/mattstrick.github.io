@@ -69,7 +69,7 @@ class Gym{
                 FROM
                     " . $this->table_name . " p, amenities a, classes c
                 WHERE
-                    p.id = a.id AND p.id = c.id";
+                    p.amenities_id = a.id AND p.classes_id = c.id";
     
         // prepare query statement
         $stmt = $this->conn->prepare($query);
