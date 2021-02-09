@@ -112,7 +112,7 @@ class Gym{
                 FROM
                     " . $this->table_name . " p , amenities a, classes c                   
                 WHERE
-                    p.lat = ? AND p.lng = ? AND p.id = a.id AND p.id = c.id
+                    p.lat = ? AND p.lng = ? AND p.amenities_id = a.id AND p.classes_id = c.id
                 LIMIT
                     0,1";
     
@@ -354,7 +354,7 @@ class Gym{
                 FROM
                     " . $this->table_name . " p, amenities a, classes c
                 WHERE
-                    p.lat BETWEEN ? AND ? AND p.lng BETWEEN ? AND ? AND p.id = a.id AND p.id = c.id";
+                    p.lat BETWEEN ? AND ? AND p.lng BETWEEN ? AND ? AND p.amenities_id = a.id AND p.classes_id = c.id";
     
         // prepare query statement
         $stmt = $this->conn->prepare($query);
