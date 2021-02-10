@@ -59,13 +59,17 @@
             <div id="details" class="col-12">
             </div>
         </div>
+        <div class="row">
+            <div id="blog" class="col-12">
+            </div>
+        </div>
     </div>
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const latitude = urlParams.get('lat');
         const longitude = urlParams.get('lng');
 
-        getGymFromApi();        
+        getGymFromApi();                
 
         function getGymFromApi() {
             var xhr = new XMLHttpRequest();
@@ -83,10 +87,45 @@
                     
                     // call update page
                     updatePage(response);
+                
+                    if (response.blog_id != 0) {
+                        getBlogFromApi(response.blog_id);
+                    }
                 } else {
                     console.error(xhr.statusText);
                 }
             }
+        }
+
+        function getBlogFromApi(id) {
+            console.log('ID', id);
+            var xhr = new XMLHttpRequest();
+            var blog_api = `http://barbellfinder.com/blog/wp-json/wp/v2/posts/${id}`;
+
+            xhr.open('GET', blog_api, true);
+            xhr.send();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState != 4) {
+                    return;
+                }
+                if (xhr.status === 200) {
+                    var response = JSON.parse(xhr.responseText);
+                    console.log('Got Blog', response);
+                                        
+                    updateBlog(response);
+                } else {
+                    console.error(xhr.statusText);
+                }
+            }
+        }
+
+        function updateBlog(blog) {
+            const blogString = `
+                <h3>Interview</h3>
+                ${blog.content.rendered}
+            `;
+
+            document.querySelector('#blog').innerHTML = blogString;
         }
 
         function updatePage(gym) {

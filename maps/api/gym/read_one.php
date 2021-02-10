@@ -50,7 +50,8 @@ if($gym->name!=null){
         "spin" => $gym->spin,
         "swim" => $gym->swim,
         "yoga" => $gym->yoga,
-        "zumba" => $gym->zumba
+        "zumba" => $gym->zumba,
+        "blog_id" => $gym->blog_id
     );
   
     // set response code - 200 OK

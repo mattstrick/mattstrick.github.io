@@ -91,6 +91,7 @@ class Gym{
                     p.address, 
                     p.phone, 
                     p.price,
+                    p.blog_id,
                     a.opengym, 
                     a.pool, 
                     a.shower, 
@@ -154,6 +155,7 @@ class Gym{
         $this->swim = $row['swim'];
         $this->yoga = $row['yoga'];
         $this->zumba = $row['zumba'];
+        $this->blog_id = $row['blog_id'];
     }
 
     // create gym
